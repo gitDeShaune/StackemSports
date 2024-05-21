@@ -1,0 +1,20 @@
+/*page styles css */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+.sports-available-page{
+	
+	font-family:Shrikhand;
+	
+}
+
+.sports-available-page .grid{
+	display:flex;
+	justify-content:center;
+	
+}
+
+.sports-available-page img{
+	margin:15px;
+	
+	
+}

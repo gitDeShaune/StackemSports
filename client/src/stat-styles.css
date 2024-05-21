@@ -1,0 +1,1194 @@
+/*td{
+	border: 1px solid black;
+	
+}*/
+
+/*body{
+	//margin:0;
+	min-height:100vh;
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+
+
+
+
+/*move this to header editing file, reorganize stuff */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*             */
+
+
+/*th{
+	display: table-cell;
+    vertical-align: inherit;
+	//padding-right50%; //thats why stuff was so close
+	
+	
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+	//padding-right:1em;
+	
+	padding:2px 6px 2px 6px;//for space between columns in table
+}*/
+td {
+    display: table-cell;
+}
+th{
+	display: table-cell;
+}
+
+
+
+
+.card-back-player-info{/*will contain extra info, bulleted list probably*/ /*for now, just sttic player info so don't have to reach into some other database for it*/
+	/*needs margin and positioning*/
+	//text-align:left;
+	max-width:100%;
+	max-height: 100%;
+	position:absolute;/*this keeps card back from being overgrown*/
+	font-size:0.75rem;
+	display:block;
+	
+}
+
+.player-season-stats{
+	
+	display:block;
+	max-width:100%;
+	//position:absolute;
+	
+	
+}
+
+.player-bio-element{
+	
+	//display:inline-block;
+	margin:3px;
+	font-size:0.8rem;
+}
+
+
+
+
+
+.stat-nav{
+	//margin:auto;
+	height:40px;
+	background:red;
+	position:relative;/*keep relative!!!*/
+	margin:0;
+	width:100%;
+}
+
+.stat-searchbar{
+	
+	width:40%;
+	min-width:50px;
+	min-height:100px;
+}
+
+.search-icon{
+	//background-image: url(/src/icons/basketball-player-outline.jpg);
+	width:20%;
+	height:20px;
+	background-size: cover;/*keeps image in size when resizing; for all cases?*/
+}
+
+
+
+
+.stat-box{
+	//font-family: Impact, fantasy;/*gets everytthing in statbox(except table),might be only one needed*/
+	font-family: Shrikhand;
+	
+	position:relative;
+	
+	
+	align-items:center;
+	//display:flex;
+	//width:30%;
+	//height:10%;
+	border-style:solid;
+	border-width:3px;
+	//position:relative;
+	float:left;
+	
+	//min-width:25vw;
+	min-width:15em;
+	//min-width:20%;
+	min-height:24em;
+	//background-color:grey;
+	//background-image: url(/src/icons/baseball-card.jpg);
+	
+}
+
+.player-info{
+	background-color:purple;
+	
+}
+.name-container{
+	
+	
+	//display:flex;
+	//display:grid;
+	display:table;
+	grid-auto-rows:35px;
+	
+	margin-bottom:10%;
+	margin-left:3%;
+	margin-top:3%;
+	
+	
+}
+.team-name{
+	width: 100%;
+	display:flex;
+	//margin:0;
+}
+
+.team-pos{
+	width: 100%;
+	display:flex;
+	
+}
+
+
+.circle {
+        height: 75px;
+        width: 75px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+}
+
+.cardLabel{
+	
+	letter-spacing:1px;
+	
+}
+
+.ss-title{
+	//background-color:#66FF99;
+	background-color:#ADD8E6;
+	height:10%;
+	width:100%;
+	position:relative;
+	//border-style:solid;
+	//border-width:3px;
+	//border-color:black;
+	display:table-row;
+	
+}
+.ss-stat{
+	//background-color:grey;
+	//color:dark-grey;
+	background-color:white;
+	//height:25%;
+	//width:100%;
+	position:relative;
+	//border-style:solid;
+	//border-width:3px;
+	//border-color:black;
+	display:table-row;
+	//font-size:1.6em;
+	font-size:1.15rem;
+	margin-top:20%;
+	margin:auto;
+	bottom:0;
+	
+	
+	
+}
+
+
+.ss-hi{
+	/*assuming orientation(from left to right) is Hi-AVG-lo*/
+	//margin-left:2%;
+	//margin-top:10%;/*for vertical stack; before the stat-square-div ws moved to under playername box*/
+	//z-index:2;
+	margin-right:15px;
+}
+.ss-avg{
+	
+	
+	//margin-left:30%;
+	//margin-left:2%;/*for vertical stack*/
+	//z-index:2;
+	//margin-left:10%;
+	
+	margin-right:15px;
+
+}
+
+.ss-lo{
+	//margin-left:50%;
+	//margin-left:2%;/*for vertical stack*/
+	//z-index:2;
+}
+
+.stat-square-div{
+	margin-top:140%;/*this percentage needs to be good with % on height of inner-card-frame*/
+	//margin-bottom:10px;
+	
+	z-index:-1;/*used to be 2, but changed to -1 to match inenr card frame and automatically be put under*/
+	
+	
+	margin-left:23px;
+	display:flex;/*display flex lets the circles horizontal*/
+	
+	//margin:auto;
+	
+}
+.stat-square{/*actually a circle, but wont rename yet*/
+	//position:relative;
+	z-index:2;
+	//height:1.5em;
+	
+	
+	//height:3em;
+	//width:30%;
+	
+	
+	
+	
+	
+	//height:25px;
+	//width:35px;
+	//padding-bottom:20%;
+	
+	//background-color:green;
+	
+	//margin:auto;
+	//display:inline-block;
+	display:table;
+	
+	//display:table-row;
+	//margin:auto;
+	margin-bottom:5%;
+	//border-radius: 25px;
+	
+	/*circle effecting elements*/
+	//box-shadow: 0px 0px 0px 2px rgba(0,0,255,0.6); 
+	//border-style:solid;
+	//border-width:2px;
+	//border-color:blue;
+	height:25%;
+	width:25%;
+	border-radius: 45%;/*the value is subject to change when resizing other parts of the card*/
+	/*^ was 35% bf grouping the circle elements*/
+	
+	
+	/*i want this to look like a ball/circle consistently. The size keeps changing*/
+	overflow:hidden;
+	
+	/*^circle effecting elements*/
+	
+	font-size:0.80em;
+	
+}
+
+
+.stat-player-name-box{
+	
+	//display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //font-family: 'IndustryDemi';
+    letter-spacing: normal;
+    font-size: 0.89rem;/*rem keeps the font relative and stay in box!!*/
+    //line-height: 1.33;
+	color: white;
+	
+	width:60%;
+	height:10%;
+	
+	
+	
+	
+	/*^imported from name pp*/
+	//object-fit:cover;
+	
+	
+	z-index:2;
+	//font-size:1.3em;
+	//margin:auto;
+	
+	//border-width:2px;
+	
+	//background-color:grey;
+	//width:60%;
+	//margin-left:10%;
+	//height: 40px;
+	//border-color:#EC70EC;/*used to be orange at start*/
+	//border-style:solid;
+	//border-width:3px;
+	//border-color:black;
+	
+	border-bottom-right-radius:15px;/*round corner of box*/
+	border-bottom-left-radius:15px;
+	
+}
+.player-name{
+	//font-size:1.3em;
+	 display:flex;
+	 height:100%;
+	 //width: 100%;/*the width of this determines how much of background statbox color is shown*/
+	 //width:1rem;
+	 //left:10;
+	 
+	 
+	 
+	 min-width:80%;
+	 
+	   align-items: center;
+	justify-content: center;
+	 
+	 font-family:Shrikhand;
+	 letter-spacing: 1px;/*space between letters for certain spots*/
+	 
+	 background-color:blue;
+	 //width:10px;
+	 //min-width:5px;
+	 //font-size: 1.8rem;
+	 //font-size:14px;
+	//margin:0;
+	//margin:auto;
+	//float:left;
+	
+	border-bottom-right-radius:15px;/*round corner of box*/
+	//border-bottom-left-radius:15px;
+	//text-align:right;
+}
+
+.player-position{
+	display:flex;
+	font-size:0.91em;
+	font-weight:bold;
+	width: 20%;
+	
+	margin-top:25%;
+	//height:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.front-card, .back-card{
+	
+	position:absolute;
+	//width:100%;
+	//height:100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background:skyblue;
+	
+	
+}
+
+.front-card{
+	z-index:2;
+	transform: rotateY(0deg);
+	transform-style:preserve-3d;
+	
+}
+.back-card{
+	
+	transform: rotateY(180deg);
+	background-color: light-blue;
+}
+
+/*.front-card{
+	
+}*/
+
+
+
+
+
+
+/*GRAPH STUFF*/
+
+
+/*.table-and-graph{
+	
+	width:85%; 
+	//width:0;
+	
+	height:60%;
+	//background-color:green;
+	margin:auto;
+	display:flex-box;
+	//overflow:visible;
+	//overflow:hidden;
+
+	font-family: Shrikhand;
+	border-style:solid;
+	border-color:green;
+	
+	
+}*//*was deleted, may not need to be anymore*/
+
+.table-and-graph{/*border of recharts graph*/
+	//border-style:solid;
+	//width:80%;
+	
+}
+
+
+table{
+	border-collapse: collapse;
+	
+}
+.table-containers{
+	border-style:solid;
+	//background-color:grey;
+	//width:62.5%;/*kepth the color of thead aligned with chart*/
+	max-width:100%;
+	//margin:auto;
+	z-index:3;
+	
+	bottom:0;
+	//font-family: Impact, fantasy;/*only effects before table break*/
+	font-family: Shrikhand;
+	//position:absolute;
+}
+
+.table-break{
+	
+	background-color:blue;
+	width:565%;
+	height:10px;
+	margin-right:auto;
+	
+	
+}
+
+
+.stat-table th{ 
+	border-right:solid;
+	border-style:solid;
+	border-color:blue;
+	
+	border-right: solid 1px black; 
+  border-left: solid 1px black;
+	//justify-content:center;
+	
+}
+
+.stat-table th{
+	border-right:solid;
+	border-style:solid;
+	border-color:blue;
+	color:white;
+	background-color:blue;
+	
+	border-right: solid 1px black; 
+  border-left: solid 1px black;
+	//justify-content:center;
+	
+}
+
+.stat-table{
+	font-size:.6rem;
+	background-color:lightgrey;
+	//border-collapse:collapse;
+}
+.graph{
+	
+	//position:absolute;
+	
+	
+	position:relative;
+	//margin:0;
+	//width:300px;
+	//margin:20px;
+	//object-fit:contain;
+	//display:flex-box;
+	background-color:white;
+	
+	
+	min-height:12em;
+	min-width:8em;
+	//margin:auto;
+	//margin:9px;
+	
+	//width:80%;
+	//margin:auto;
+	
+    //border-style:solid;
+    //border-width:1px;
+	//width:50%;
+	/*height:250px;
+	width:250px;
+	object-fit:contain;
+    
+    /*height:10em;
+    padding:10px 10px;*/
+	//padding:1px;
+	//overflow:hidden;
+	//position:relative;
+	//float:left;
+	//flex-wrap:nowrap;
+	/*
+	margin-left:auto;
+	margin-bottom:auto;
+	margin-right:auto;
+	margin-top:auto;*/
+	
+    //flex-direction:left;
+    
+	z-index: 3;/*as high as possible to prevent being hidden*/
+}
+
+/*END of GRAPH stuff*/
+
+.front-stat-title{
+	position:absolute;
+	bottom:17%;
+	//justify-content:center;
+	width:80%;
+	margin:auto;
+	
+	
+}
+
+.inner-card-frame{
+
+
+font-family: Shrikhand;
+
+z-index:-1;	
+//margin:5px;
+margin-top:5%;
+//margin-left:14%;
+margin-left:5%;
+
+
+//background-image: url(/src/icons/mantle.jpg);
+background-image: url(/src/icons/jordan.png);
+background-image: url(/src/icons/jordan.jpg);
+//background-image: url(/src/icons/basketball-player-outline.jpg);
+
+	background-size: cover;/*keeps image in size when resizing; for all cases?*/
+
+position:absolute;
+//top:5px;
+overflow:visible;
+//height:77%;
+height:73%;
+ 
+ width:90%;
+ 
+ //border-color:green;
+//border-style:solid;
+//border-width:5px;
+
+border-bottom-right-radius:15px;/*round corner of box*/
+border-bottom-left-radius:15px;
+
+
+//box-shadow: 0 0 0 12px #333;
+//border-radius: 3px;
+	/*probably put inside card frame; nmot currently being used, just put the stuff in card=frame*/
+	
+}
+
+
+.card-frame{
+	
+	font-family: Shrikhand;
+position:absolute;
+top:0;
+overflow:visible;
+ height:100%;
+ 
+ width:100%;
+ background-color:red;
+ //background-color:black;
+ 
+ 
+ 
+ //background-image: url(/src/icons/purple-blue-gradient.jpg);
+ //background-image: url(/src/icons/orange-gradient.JPG);
+ background-image: url(/src/icons/blue-white-gradient.jpg);
+ /*will have to make my own gradient diaogna lpattern since I cant find any*/
+
+ //border-color:green;
+//border-style:solid;
+//border-width:25px;
+z-index:-1;
+
+
+//border-width:15px;
+/*makes inner part and outer of card round*/
+
+
+//background-image: url(/src/icons/mickey-mantle.jpg);
+//background-image: url(/src/icons/jordan.jpg);
+//background-image: url(/src/icons/mantle.jpg);
+
+	
+background-size: cover;
+//border-left:-25px;
+//border-right:-20px;
+//border-left: 30px solid green;
+//border-top:-5px;
+//border-bottom:-1px;
+/*negative values work to make it show up*/
+	
+	box-shadow: 0 0 0 10px grey;
+	border-radius: 2px;
+	//border-style:triple;
+	/*rounded outer, to look more like a card*/
+	
+}
+
+
+
+.logo-link-container{
+	/*this contains logo img and needs to be formatted or formats removed from default to have 
+	logo appear like when not in container (ie. just in header)*/
+	position:absolute;
+	
+	
+}
+
+.logo-box{
+	background-image: url(/src/icons/youtube-logo.png);/*background image works at least, so dont worry about svg specific parent div or whatever*/	
+	
+	
+	
+	background-size: cover;
+	//object-fit:contain;/*might be useful, idk*/
+	/*curent solution to size prolem, must define size in tag?*/
+	/*had to shrink image file size to avoid too big problems*/
+	/*quick solution, have border and make width large-->make broder translucent?nope doesnt work has reflection*/
+	//border: 10px solid transparent;/*not working well*/
+	/*^...i guess jsut make border same color as background*/
+	
+	
+	width:120px;
+	height:100%;
+	border-style:solid; 
+	border-width:20px;
+	//border-color:blue;
+	
+	//position:absolute;
+	//margin:auto;
+}
+
+.h-title{
+	
+	position:absolute;
+	//padding:20px;
+	bottom:0;
+	
+}
+.ss-logo-letters{
+	//margin:0;
+	//margin-bottom:20px;
+	//display:flex;
+	//justify-content:center;
+	
+	font-family:Shrikhand;
+	bottom:0;
+	border-style:solid; 
+	border-width:6px;
+	
+	position:static;
+	margin:auto;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ignore this stuff, at least for now*/
+.back-face{
+	
+	font-family: Shrikhand;
+}
+
+.front-face{
+	
+	
+	
+}
+
+.corner-circle{
+	//width:30px;/*corner-circle is what will hold the SS logo somewhere in the card*/
+	padding:15px;
+	
+	//margin-bottom:15px;
+}
+
+
+/*PAGE-FRAME and stucture: needs its own css file!!!!!!!!!*/
+
+
+.stackedsports{/*header? or at least the all encompassing div of the site(for backgroudn color, etc)*/
+
+   background-image: url(/src/icons/pokemon-checkered.jpg);/*only does strip under navbar, may be more effective to do for entire page*/
+	
+}
+
+.flip-card-container{
+	font-family: Shrikhand;
+	
+	//background-image: url(/src/icons/pattern-stackedsports-bigger.png);
+	background-image: url(/src/icons/stacked-sports-logo-outline-with-words-blue-background.jpg);
+	
+	background-color:lightblue;
+	
+	min-width:300px;
+	min-height:300px;
+	height:100%;
+	width:100%;
+	border-style:solid;
+	
+	border-width:2px;
+	
+	justify-content: center;
+	//display:contents;/*display flex makes rotate in place, but now there is overflow horizontally*/
+	//display:table-row-group;
+	
+	//display:block flex;
+	//overflow:visible;
+	
+	/*like on cat thing ; decent enough*/
+	display:flex;
+	flex-flow:wrap;
+	justify-content:center;
+	
+	//display:inline;
+	//margin-left:8%;
+	//margin-right:8%;
+	//overflow:auto;
+	
+}
+
+.react-card-flip{
+	//perspective:none;
+	//color:blue;
+	//transition: transform 500ms ease-in-out;
+	//z-index:auto;
+	
+}
+
+
+.CardBack{
+	//display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  //font-family: Shrikhand;
+	
+}
+
+.CardFront{
+	//transform: rotateY(-180deg);
+	//transition: transform 500ms ease-in-out;
+	animation:none;
+	
+}
+
+
+
+
+
+
+.league-nav{/*hold list of divs*/
+	
+	grid-gap: 8px;
+    box-sizing: border-box;
+    align-items: center;
+    font-size: 0.85rem;
+    //-webkit-user-select: none;
+    //-moz-user-select: none;
+    user-select: none;
+    display: flex;
+    //overflow-x: scroll;/*but there is overflow, so make space/margin at some point*/
+	width:100%;
+	
+	
+	font-family: Shrikhand;
+	
+}
+
+
+
+.inner-league-name{/*this has saved the card and fixed the problem, just put it around the league name text*/
+	display:flex;
+	//margin: 2px;
+	margin:auto;
+	font-family:Shrikhand;
+	letter-spacing: .2rem;
+	font-size: 0.78em;
+	
+}
+.card-link{
+	position:relative;
+	display:flex;
+	
+}
+
+.league-link{/*styling of Link to remove padding sheesh*/
+	
+	/*display:inline-block;
+	
+	
+	padding:0;
+	margin:0;
+	//bottom:0px;
+	//border-style:solid;
+	position:absolute;
+	//bottom: 0;
+	//width:100%;
+	max-width:50px;
+	height:100%;
+	
+	object-fit:contain;
+	*/
+	
+	//bottom:0;
+	//position:relative;
+	
+	
+	//background-size: cover;
+	//object-fit:fill;
+}
+
+
+.about-page{
+	
+	//width:100%;
+	//height:100%;
+	
+	
+	
+}
+
+.info-page{
+	display:grid;
+	width:100%;
+	min-height:100%;
+	border-style:solid;
+	border-color:green;
+	//position:relative;
+	height:500px;
+}
+
+.about-us-container{
+	margin:auto;
+	padding:10px;
+	padding-top:20px;
+	//font-family: Shrikhand;
+	
+}
+
+.about-us-text-container{
+	font-size:.9rem;
+	
+}
+
+.page-image-text-container{/*the image goes over the lightblue background div when zooming in*/
+	
+	//height:100%;
+	
+	position:relative;
+	//position:absolute;
+	
+	/*max-width: fit-content;
+	  //margin-left: auto;
+	 // margin-right: auto;*/
+  
+  
+	background-image:url(/src/icons/sports-cards-collection.jpg);
+	background-size:cover;
+	//height:auto;
+	//display:grid;
+	/*object-fit:contain or *fill* or cover*/
+	padding:0;
+	margin:auto;
+	top:0;
+	object-fit:contain;
+	max-width:90%;
+	//height:40px;
+	min-height:30%;
+	//font-family: Shrikhand;
+	
+	
+	
+	//border-style:solid;
+	//border-color:blue;
+	
+}
+
+.league-icon-container{
+	max-width:90%;
+	top:0;
+	max-height:60%;
+	position:absolute;
+	
+}
+
+.league-icon-container img{
+	object-fit:cover;
+	
+}
+
+.league-icon{/*goes on top of league name*/
+	
+	//height:100%;
+	background-size:cover;
+	//height:auto;
+	//display:grid;
+	/*object-fit:contain or *fill* or cover*/
+	//padding:0;
+	//margin:0;
+	//margin:auto;
+	//top:0;
+	//max-width:100%;
+	//max-height:100%;
+	
+	width:100%;
+	height:100%;
+	
+	//border-style:solid;
+	
+}
+
+a{
+	
+	position:relative;
+	
+}Link{
+	
+	position:relative;
+	
+}
+
+.league-name{/*must have matching color as border(if there is border) of league card*/
+
+
+	
+	//background-color:orange;
+	background-color:blue;
+	//color:black;
+	
+	width:100%;
+	bottom:0;
+	//margin-left:px;
+	//height:25%;
+	height:20%;
+	position:absolute;
+	padding:0px;
+	//margin:2px;
+	//margin-left:3px;
+	
+	
+	/*display:flex;
+	z-index: 2;
+	height:25%;
+	min-width:100%;
+	//width:100%;
+	//width:100px;
+	
+	//width:100%;
+	//justify-content:center;
+	//text-align: center;
+	
+	//align-items:center;
+	
+	
+	font-family: Shrikhand;
+	font-size:0.95rem;
+	//font-size:1em;
+	
+	//margin:0;
+	bottom:0; /*after all this hassle, learned that parent must be relative before the child is absolute*/
+	/*position:absolute;
+	//position:relative;
+	margin:3px;
+	//padding:0;*/
+	
+	
+	
+}	
+
+
+
+
+.league-card{
+	//object-fit:contain;/*might be useful, idk*/
+	//object-fit:fill;
+	//background-size: cover;
+	//position:relative;
+	overflow:clip;
+	display:flex;
+	//display:table-cell;
+	
+	justify-content:center;
+	align-items: center;
+    
+	position:relative; /*this is parent that needs to be relative; the league-name div is absolute for stacking*/
+	//position:absolute;
+	
+	 border-radius: 2px;
+   
+    background-color: lightblue;
+	
+	/*border and strip for league name*/
+
+	//height:80%;
+	//height:78%;
+	height:98%;
+
+    //max-width: 60px;
+	//width:55px;
+	//width:65px; /*commented out on 5/14*/
+	width:75px;
+	
+	border-width:6px;
+	//border-color:red;
+	border-color:blue;
+	border-top:12px;
+	border-top-color:blue;
+	border-style:solid;
+	margin:0;
+	padding:0;
+	
+	
+	
+
+	
+}
+
+
+
+
+
+/*.logo-stacked{
+	background-image: url(/src/icons/STACKED.png);/*background image works at least, so dont worry about svg specific parent div or whatever	
+	background-size: cover;
+	//border-style:solid; 
+	//border-width:6px;
+	width:100px;
+	height:100%;
+}
+.logo-sports{
+	background-image: url(/src/icons/SPORTS.png);/*background image works at least, so dont worry about svg specific parent div or whatever	
+	background-size: cover;
+	
+}*/
+
+
+.stat-search-n-nav{
+	
+	height:100%;
+	
+}
+
+
+.stat-button{
+	
+	border-radius:6px;
+	//min-width:70px;
+	//min-width:12%;
+	font-family: Shrikhand;
+	font-size:0.8rem;
+	color:white;
+	background-color:blue;
+	//border-color:#001acd;
+	border-color:blue;
+}
+
+.stat-nav{/*contains stat gallery*/
+	display: flex;
+	//display:1;
+    flex-wrap: flex-shrink;
+    //flex-wrap: wrap;
+	
+	justify-content:center;
+    //overflow-x: scroll;
+    gap: 10px;
+	background:#aeb5fe;
+	border-radius:6px;
+	min-height:100%;
+	min-width:100%;
+	
+	
+	margin-bottom: 5px ;/*for space at bottom between divs*/
+}
+
+
+
+
+
+
+
+
+
+
+/*at some point may have to adjust code to not look exactly like prizepicks in only copy paste parts, but maybe not even at all*/
+
+
+
+
+
+
+
+
+/* I dont think any of this was being used in the most worked version
+.flipper{
+	transition:0.8s;
+	transform-style:preserve-3d;
+	position:relative;
+	
+}
+
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+
+*/

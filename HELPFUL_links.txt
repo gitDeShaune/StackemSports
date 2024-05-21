@@ -1,0 +1,62 @@
+
+UPLOAD THIS AS-IS TO VISUALSTUDIO, then make the mbig pretty changes
+
+
+
+https://www.olioapps.com/blog/graph-hacking
+^ conditionally changing colors of bars
+
+
+https://jsfiddle.net/alidingling/xqjtetw0/
+
+
+making circle:
+	https://www.youtube.com/watch?v=3nFfkfK9RxY
+
+
+
+flipping card:
+
+https://stackoverflow.com/questions/38261931/implementing-flipcard-on-click-instead-of-on-hover
+
+
+https://www.youtube.com/watch?v=Kc8P2F1WmIc
+
+https://www.youtube.com/watch?v=QGVXmoZWZuw
+
+ANSWER: https://codesandbox.io/s/react-rgq42?file=/src/components/CharacterCard.jsx; also the design of it might be helpful for optimizing the search bar functionality
+live dota2 scores:
+https://dltv.org/matches/409864
+
+
+side-by-side, evil   -- earth wind fire
+
+maybe have player body come out frame a bit, but still in card
+
+https://codepen.io/team/pierbridge/pres/obLZRW/top/
+
+https://github.com/recharts/recharts/issues/280
+
+
+MLB Radio: https://www.free-sportsradio.com/scores/mlb
+
+
+https://codemyui.com/comicbook-inspired-hand-drawn-borders/#google_vignette
+^comic hand drawn box
+
+
+
+How to Code a Card Matching Game on Youtube(for flip help?)
+
+https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
+
+
+https://www.youtube.com/watch?v=f6ocDCkCmhM - searchbar used
+
+https://www.framer.community/c/support/blank-space-at-the-bottom-of-the-screen-on-desktop
+
+^getting rid of blank space at bottom of screen when zooming out
+
+https://stackoverflow.com/questions/46160461/how-do-you-set-the-document-title-in-react
+
+^ change tab titles for different pages

@@ -1,0 +1,27 @@
+/*recharts elements css */
+.recharts-surface{
+	
+	/*cant do viewbox in here, but find appropirate dimensions to do it viewbox = 5;*/
+	/*add y-axis line to recharts */
+	
+	//width:115%;
+	margin:auto;
+	
+	//min-height:8em;
+	//min-width:8em;
+	z-index:3;
+}
+
+.recharts-cartesian-axis-ticks {    
+  /* for tick sizes and fonts on axes*/
+    font-size: 0.80rem;
+    font-family: Impact, fantasy;
+}
+
+ResponsiveContainer{
+	
+	background-color:blue;
+	z-index:3;
+	//width:100%;
+	
+}

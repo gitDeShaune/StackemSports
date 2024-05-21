@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/47928735/react-scripts-is-not-recognized-as-an-internal-or-external-command
+
+https://stackoverflow.com/questions/25093276/node-js-windows-error-enoent-stat-c-users-rt-appdata-roaming-npm
+
+https://stackoverflow.com/questions/66597544/enoent-no-such-file-or-directory-lstat-users-desktop-node-modules
+

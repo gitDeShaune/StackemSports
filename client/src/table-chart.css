@@ -1,0 +1,121 @@
+
+.card-container{
+	position:relative;
+	background-color:blue;
+	width:150px;
+	height:170px;
+	min-width:15em;
+	min-height:20em;
+	
+}
+
+.card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+	
+}
+.graph-container{
+	
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	
+}
+
+.stat-box .card-front,.card-back{
+	//position:absolute;
+	width:100%;
+	height:100%;
+	
+	
+}
+
+.quick-stats{
+	position:relative;
+	
+	
+	background-image: url(/src/icons/baseball-card.jpg);
+	//background-size: contain;
+	background-size: cover;
+	z-index : 0;
+	
+	margin:10px;
+	//margin-bottom:15px;/*could be a solution but need to make cards stay same size*/
+	/*margin is for spae between cards*/
+
+}
+
+
+
+
+fieldset {
+    text-align: center;
+    font-size: 25px;
+	border-color:black;
+	border-style:solid;
+	border-width:20px;
+}
+
+legend {
+    font-size: 15px; 
+}
+
+
+.color-background{
+	
+	background:blue;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*.stat-box .stat-table tbody tr {
+    font-size: 1rem;
+    font-family: "IndustryBook";
+    height: 30px;
+	
+}
+@media (max-width: 576px)
+.stat-box .stat-table tr {
+    height: 30px;
+    font-size: 1rem;
+}
+@media (max-width: 576px)
+.stat-box .stat-table tr {
+    height: 30px;
+    font-size: 1rem;
+	margin-right:30%;
+	
+}
+.stat-box .stat-table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    color: black;
+	text-align:center;
+	width:80%;
+}*/
+
+
+
+
+
+
+/*put this in a separate css file, dedicated to the card table*/
+
+/*   * {box-sizing: border-box;}*/
+
+
+

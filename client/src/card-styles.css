@@ -1,0 +1,12 @@
+/*this css is for the card relevant classes/items: CardBack, (not graph), stat-box*/
+
+.card-footer{
+	//color:red;
+	//background-color:green;
+	font-size:0.60rem;
+	bottom:5;
+	margin:0;
+	
+}
+
+/*<div className = "card-footer"> * This data is based off the last 5 games played </div> */
