@@ -1,5 +1,8 @@
 import {Link} from 'react-router-dom'
 
+import nba from '../icons/nba-logo (1).jpg';
+import wnba from '../icons/wnba-logo.jpg';
+
 
 
 export default function SportsAvailable(){
@@ -17,8 +20,8 @@ export default function SportsAvailable(){
 		
 		<h2> BASKETBALL </h2>
 		<div class="grid">
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
+		  <img src={nba}/>
+		  <img src={wnba}/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  
 		</div>

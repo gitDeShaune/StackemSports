@@ -4,12 +4,25 @@
 	/*cant do viewbox in here, but find appropirate dimensions to do it viewbox = 5;*/
 	/*add y-axis line to recharts */
 	
-	//width:115%;
+	width:70%;/*resize graph / recharts */
 	margin:auto;
+	height:68%;
 	
+	//margin-right:61px;/*bad practice to hardcode these values, especially when resizing/mobile*/
+	
+	margin-right:25%;
+	//margin-bottom:40%;
 	//min-height:8em;
 	//min-width:8em;
 	z-index:3;
+}
+
+.recharts-wrapper{
+	
+	/*might not need anything*/
+	//width:100%;
+	//height:80%;
+	
 }
 
 .recharts-cartesian-axis-ticks {    
@@ -23,5 +36,6 @@ ResponsiveContainer{
 	background-color:blue;
 	z-index:3;
 	//width:100%;
+	width:80%;
 	
 }

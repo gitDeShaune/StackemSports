@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
-import logo from '../icons/stacked-sports-logo-with-words.png';
+//import logo from '../icons/stacked-sports-logo-with-words.png';
+import logo from '../icons/stackem-with-text-mid.png';
 
 //probably have this include the help links and about and contact at bottom of page
 

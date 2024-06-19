@@ -17,6 +17,11 @@ hr{
 	border-top: 1px solid red;
 }
 
+br .card-br{
+	height:8px;
+	width:100%;
+}
+
 
 #colored-div{/*website background */
 	//background-color: lightblue;
@@ -25,7 +30,10 @@ hr{
 	 //background-image: url(/src/icons/pokemon-checkered.jpg);
 	 //background-image: url(/src/icons/blue-white-gradient.jpg);
 	 //background-image: url(/src/icons/purple-blue-gradient.jpg);
-	background-size: cover;
+	//background-size: cover;
+	
+	
+    background-repeat: repeat;
 }
 
 /*img{
@@ -50,19 +58,25 @@ body {
   //background-image: url(/src/icons/pokemon-checkered.jpg);
   //background-image: url(/src/icons/stacked-sports-logo-outline-with-words.svg);
   //background-image: url(/src/icons/stacked-sports-logo-outline-with-words-blue-background.jpg);
-  background-image: url(/src/icons/pattern-stackedsports-bigger.png);
+  //background-image: url(/src/icons/pattern-stackedsports-bigger.png);
   //background-color: green;
+  
+  background-image: url(/src/icons/stackem-logo-pattern.jpg);
+  background-repeat: repeat;
 }
 
 body .container {
   //margin: 1rem;/*this margin effects the space between navbar*/
+  
+  padding-top: 60px;/*space on top of cards*/
+  
   text-align: center;
   //min-height:640px;
   //min-height:1200px;
   
   //min-width:768px;
   
-  border-style:solid;
+  //border-style:solid;
   
   position:relative;
   
@@ -80,7 +94,8 @@ body .container {
   //background-image: url(/src/icons/pokemon-checkered.jpg);
   //background-image: url(/src/icons/pattern-stackedsports-bigger.png);
   //background-color:lightblue;
-  background-color:#F0FFFF;
+  //background-color:#F0FFFF;
+  background-color:white;
   
   /*need to find a way to get the checkered just in card box, not full container, will probably need solution not in this class */
   /* TAKEN FROM PRIZEPICKS
@@ -94,7 +109,7 @@ body .container {
 }
 
 .nav {
-  background-color: grey;
+  //background-color: grey; /*next to cards*/
   color: white;/*just seems to affect text color*/
   display: flex;
   //justify-content: space-between;
@@ -109,7 +124,11 @@ body .container {
   position:relative;/*relative is needed, not fixed or absolute; this is for the sections to fall under and not just overlap/obstructu each other*/
   //position:sticky;
   width:100%;
-  height:8em;
+  
+  
+  //height:8em;
+  height:6em;
+  
   //margin:auto;
   //margin:0;
   
@@ -131,14 +150,23 @@ Link{
 .header{
 	background-color: blue;
 	margin:0;
-	height:120px;
-	position:relative;
+	
+	//height:120px;
+	height:60px;
+	
+	//position:relative;
+	//position:absolute;
 	display: flex;/*also seems to cntribute to no space between divs*/
 	
 	
 	font-family:Shrikhand;
 	
 	
+	width:100%;
+	top:0px;
+	////width:100%;
+	position:fixed;
+	z-index:5;
 	
 	/*maybe column format may be better for holding logo and words/titles?*/
 	/*STACKED SPORTS should be a svg/image */

@@ -1,6 +1,6 @@
 //OLD FUNCTIONS
 
-
+//DELETED form client package json : "homepage":"http://gitdeshaune.github.io/stackemsports"
 
 /* used to be in sports pages (ie. Mlb, Nba.js)*/
 function graphJSON(user){

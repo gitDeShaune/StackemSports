@@ -1,6 +1,8 @@
 const express = require("express")
 const app = express() 
 const mongoose = require("mongoose")
+
+
 const UserModel = require('./models/Users')
 const nbaModel = require('./models/NBA-model')
 const mlbModel = require('./models/MLB-model')
@@ -223,9 +225,10 @@ app.post("/create-user", async (req,res) => {
 })
 
 
-app.listen(3001, ()=> {
+app.listen(process.env.PORT ||3001, ()=> {
 	console.log("SERVER RUNS PERFECTLY");
-})
+})//added env PORT
+
 
 
 async function getItems(){

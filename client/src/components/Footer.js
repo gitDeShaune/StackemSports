@@ -2,6 +2,9 @@ import {Link} from 'react-router-dom'
 
 import logo_footer from '../icons/stacked-sports-logo-outline-with-words.svg';
 
+//import logo_footer from '../icons/stackem-with-text-mid.png';
+
+
 //probably have this include the help links and about and contact at bottom of page
 
 
@@ -9,10 +12,10 @@ import logo_footer from '../icons/stacked-sports-logo-outline-with-words.svg';
 /*no longer this ^; https://mdbootstrap.com/snippets/standard/mdbootstrap/2885047#html-tab-view*/
 
 
-/*deleting my-5 from top div makes the bottom setion and cards section connect*/
+/*deleting my-5 from top div(container)makes the bottom setion and cards section connect*/
 export default function Footer() {
 	//<Link to = "/" className = "site-title">PICKS.COM</Link>
-	return <div class="container my-5">
+	return <div class="container ">
   
   <footer class = "text-black" >
    
@@ -20,6 +23,8 @@ export default function Footer() {
       
       <section class="mt-5">
         
+		<hr class="my-5" />
+		
         <div class="row text-center d-flex justify-content-center">
           
           <div class="col-md-2">
@@ -44,7 +49,7 @@ export default function Footer() {
          
           <div class="col-md-2">
             <h6 class="text-uppercase ">
-              <a href="#" class="text-black">Contact Us/ Request A Player</a>
+              <a href="/contact-us" class="text-black">Contact Us/ Request A Player</a>
             </h6>
           </div>
         
@@ -63,12 +68,9 @@ export default function Footer() {
 			<img src={logo_footer} alt="Logo-Footer" /> 
 			
             <p>
-			StackedSports is dedicated to giving our fellow sports fans the stats to go with their favorite players. 
+			Stack'em Sports is dedicated to giving our fellow sports enthusiasts the stats to go with their favorite players. 
 			We currently provide stats for several leagues from basketball to rugby to esports, including the NBA, MLS, NFL, MLB, League of Legends, and more. 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-              distinctio earum repellat quaerat voluptatibus placeat nam,
-              commodi optio pariatur est quia magnam eum harum corrupti
-              dicta, aliquam sequi voluptate quas.
+
             </p>
 					
           </div>
@@ -93,7 +95,7 @@ export default function Footer() {
 	  
 	  Copyright ©2024  
       <a class="text-black" href="https://mdbootstrap.com/"
-         > Stackedsports.com</a
+         > Stackemsports.com</a
         >
    
     </div>

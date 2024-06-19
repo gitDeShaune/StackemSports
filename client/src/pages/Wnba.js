@@ -83,7 +83,7 @@ export default function NBA(){
 	/*setUsersByCategory(e.target.name)*/
 	
 	useEffect(() => {
-		document.title = 'NBA - StackedSports';
+		document.title = "NBA - Stack'em Sports";
 	}, []);/*to change tab title for different pages */
 	
 	/*buttoner and sample_flippers was here*/

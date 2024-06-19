@@ -83,7 +83,7 @@ export default function MLB(){
 	/*setUsersByCategory(e.target.name)*/
 	
 	useEffect(() => {
-		document.title = 'MLB - StackedSports';
+		document.title = "MLB - Stack'em Sports";
 	}, []);/*to change tab title for different pages */
 	
 	/*buttoner and sample_flippers was here*/
@@ -103,10 +103,7 @@ export default function MLB(){
 	return(<div >
 	
 
-		
-		<div class="stat-search-n-nav">
-			
-				<div name = 'baseball-stat-gallery' class="stat-nav"  >
+		<nav name = 'baseball-stat-gallery' class="stat-nav"  >
 					<button name = 'hits' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits </button>
 					<button name = 'RBIs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> RBIs</button>
 					<button name = 'runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Runs </button>
@@ -116,20 +113,27 @@ export default function MLB(){
 					<button name = 'triples' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Triples </button>
 					<button name = 'HRs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Home Runs </button>
 					<button name = 'SOs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts </button>
-				</div>
 				
 				
-				
-				<div name = 'baseball-stat-gallery' class="stat-nav"  >
-					<div class = "stat-subtitle"> PITCHER </div>
 					<button name = 'HAs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits Allowed</button>
 					<button name = 'Ks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts(K)</button>
 					<button name = 'RAs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Runs Allowed </button>
 					<button name = 'ERs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Earned Runs </button>
 					<button name = 'POs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Pitching Outs </button>
 					<button name = 'BBs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Walks </button>
+				
+				
+		</nav>
+		
+		<div class="stat-search-n-nav">
+			
+				
+				
+				
+				
+				
 					
-				</div>
+					
 			
 			
 			

@@ -34,11 +34,11 @@ import { PieChart,
   ResponsiveContainer} from 'recharts'
 
 import {Route,Routes} from 'react-router-dom'
-import Home from './pages/Home'
+//.import Home from './pages/Home'
 import About from './components/About'
 import PrivacyPolicy from './components/PrivacyPolicy' /*need to move About and priv and etc to pages and make it work*/
 import SportsAvailable from './components/Sports-Available' /*need to move About and priv and etc to pages and make it work*/
-
+import ContactUs from './components/ContactUs'
 
 import WNBA from './pages/Wnba'
 import NBA from './pages/Nba'
@@ -393,19 +393,24 @@ function App() {
 	
 	//<BarChart chartData={data}/>
 	//<> </> empty tag des the trick for encolsing leements
+	
+	/*
+	
+	temporarily took <Header/> out of colored-div*/
 	return (
 		<>
 		
 		<div id="colored-div">
-			
 			<Header/>
+			
 			
 			
 			<div className = "container">
 			
+				
 			    <Navbar/>
 				<Routes>
-				<Route path ="/" element = {<Home />} />
+				<Route path ="/" element = {<NBA />} />
 				</Routes>
 				<Routes>
 					
@@ -417,6 +422,7 @@ function App() {
 					<Route path ="/about" element = {<About />} />
 					<Route path ="/privacy-policy" element = {<PrivacyPolicy />} />
 					<Route path ="/sports-available" element = {<SportsAvailable />} />
+					<Route path ="/contact-us" element = {<ContactUs />} />
 					
 					
 				</Routes>

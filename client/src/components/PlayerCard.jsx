@@ -23,7 +23,7 @@ const CardStyle = {
   border: "1px solid black",
   
   margin: "20px",
-  width: "160px",
+  width: "180px",
   height: "250px"
 }; //might not really want this, it may overwrite some styles but that just means I need to make to stlyes mroe organized and  undesrtandable/accessible
 //there is some small square that is still the size of previous behind/still existing with the back card
@@ -226,7 +226,12 @@ function fill_GRAPHDATA(stats,dates,opps){//added dates to have xaxis with dates
 }
 
 
-function makeSeasonTable(last_ssn_stats,league){
+
+
+
+function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_title to filter for stat in chart*/
+	
+	
 	let size_array = [] //is made flex so to get data in case of non-five previous games(ie. only 3,or just 7 when looking for 10)
 	//to completely implement, wil have to remove 5 expected constants anyhere in the code
 	size_array = [0,1,2,3,4,5];
@@ -256,15 +261,16 @@ function makeSeasonTable(last_ssn_stats,league){
 	
 	)
 	
+	
+	//[table_prop,prop_idx] = 
+	
+	
+	
 	switch (league) {
 	  case "MLB":
-		size_array = [0,1,2,3,4,5];//keep it same for now
+		size_array = [0,1,2];//keep it same for now
 		row_headers = (
 			<tr >
-					<th>MLB</th>
-					<th>MLB</th>
-					<th>MLB</th>
-					<th>MLB</th>
 					<th>MLB</th>
 					<th>MLB</th>
 					<th>MLB</th>
@@ -278,10 +284,6 @@ function makeSeasonTable(last_ssn_stats,league){
 					<td>{last_ssn_stats[0]}</td>
 					<td>{last_ssn_stats[1]}</td>
 					<td>{last_ssn_stats[2]}</td>
-					<td>{last_ssn_stats[3]}</td>
-					<td>{last_ssn_stats[4]}</td>
-					<td>{last_ssn_stats[5]}</td>
-					<td>{last_ssn_stats[6]}</td>
 					
 					
 			</tr>				
@@ -292,13 +294,10 @@ function makeSeasonTable(last_ssn_stats,league){
 		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
 			<tr >
-					<th>TEAM</th>
 					<th>YEAR</th>
+					<th>TEAM</th>
 					<th>PTS</th>
-					<th>FG%</th>
-					<th>3PT%</th>
-					<th>REB</th>
-					<th>AST</th>
+					
 			</tr>
 		
 		
@@ -309,12 +308,7 @@ function makeSeasonTable(last_ssn_stats,league){
 					<td>{last_ssn_stats[0]}</td>
 					<td>{last_ssn_stats[1]}</td>
 					<td>{last_ssn_stats[2]}</td>
-					<td>{last_ssn_stats[3]}</td>
-					<td>{last_ssn_stats[4]}</td>
-					<td>{last_ssn_stats[5]}</td>
-					<td>{last_ssn_stats[6]}</td>
-					
-					
+									
 			</tr>				
 		)
 		break;
@@ -364,6 +358,26 @@ function makeSeasonTable(last_ssn_stats,league){
 	
 }
 
+function propABRV(prop_title,league){/*abbreviate prop*/
+	
+	
+	//abrv = ''
+	//idx = ''
+
+	switch (league) {
+	  case "NBA":
+			//switch(prop_title){
+				//case "
+				
+				
+			//}
+	  
+	  
+	}
+	
+	//return [abrv,idx]
+	
+}
 
 
 
@@ -469,9 +483,9 @@ const PlayerCard = ( {userData, crossUserData}) => {
       flipDirection="horizontal"
     >
       <div
-       
+       style={CardStyle}
         onClick={() => setIsFlipped((prev) => !prev)}
-        className="CardFront quick-stats stat-box"
+        className="CardFront quick-stats "
       >
 	  
 	    
@@ -519,9 +533,9 @@ const PlayerCard = ( {userData, crossUserData}) => {
 		
       </div>
       <div
-        
+        style={CardStyle}
         onClick={() => setIsFlipped((prev) => !prev)}
-        className="CardBack"
+        className="CardBack quick-stats"
       >
         {/* This is the back of the card. */}
 		
@@ -536,7 +550,7 @@ const PlayerCard = ( {userData, crossUserData}) => {
             flexDirection: "column",
             alignContent: "space-between"
           }}
-		  class = "stat-box quick-stats"
+		  class = ""
         >
 		
 		<div class="card-frame"></div>
@@ -563,12 +577,12 @@ const PlayerCard = ( {userData, crossUserData}) => {
 		 
           <div className="cardTitle">{name}</div>
           
-		  <div className = "player-season-stats">{makeSeasonTable(last_season_stats,league)}</div>
+		  <div className = "player-season-stats">{makeSeasonTable(last_season_stats,league,prop_title)}</div>
 		  
 		    <div class = "player-bio-element">Position: {position}     Year: {year}  </div>
 			<div class = "player-bio-element">Team: {team}  </div>
 		  
-		  <br/>
+		  
 		  <div className="cardLabel">{fullProp(prop_title)}</div>
 		  <div className="table-and-graph">
 			  <div>{makeGraph(graph_data,max,lfg_stats)}</div>
@@ -587,6 +601,7 @@ const PlayerCard = ( {userData, crossUserData}) => {
   );
 };
 
+/* removed <br class= "card-br"/> from above cardLabel*/
 /* removed <div>{makeTable(lfg_opps,lfg_stats,lfg_dates)}</div> from inside table-and-graph*/
 
 export default PlayerCard;

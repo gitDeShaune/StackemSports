@@ -83,7 +83,7 @@ export default function MLB(){
 	/*setUsersByCategory(e.target.name)*/
 	
 	useEffect(() => {
-		document.title = 'MLB - StackedSports';
+		document.title = "MLB - Stack'em Sports";
 	}, []);/*to change tab title for different pages */
 	
 	/*buttoner and sample_flippers was here*/
@@ -103,28 +103,25 @@ export default function MLB(){
 	return(<div >
 	
 
-		
-		<div class="stat-search-n-nav">
-			
-				<div name = 'hockey-stat-gallery' class="stat-nav"  >
+		<nav name = 'hockey-stat-gallery' class="stat-nav"  >
 					<button name = 'SOG' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Shots On Goal </button>
 					<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points</button>
 					<button name = 'assists' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists </button>
 					<button name = 'hits' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits </button>
 					<button name = 'blocks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Blocks </button>		
-					
-				</div>
 				
-				
-				
-				<div name = 'hockey-stat-gallery' class="stat-nav"  >
-					<div class = "stat-subtitle"> GOALIE</div>
 					<button name = 'goals_allowed' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Goals Allowed</button>
 					<button name = 'save%' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Save Percentage</button>
 					<button name = 'saves' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Saves </button>
 					
 					
-				</div>
+		</nav>
+		
+		
+		
+		<div class="stat-search-n-nav">
+			
+				
 			
 			
 			

@@ -47,6 +47,7 @@ import '../search-styles.css'
 
 
 
+
 export default function NBA(){
 	//<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	const [listOfUsers, setListOfUsers] = useState([ ])
@@ -68,6 +69,7 @@ export default function NBA(){
 		setIsFlipped(!isFlipped);
 	}
 	
+	//"http://localhost:3001/api/stats/nba"
 	useEffect(()=>{
 		Axios.get("http://localhost:3001/api/stats/nba").then((response) => {
 			setListOfUsers(response.data)
@@ -102,16 +104,17 @@ export default function NBA(){
 					
 	return(<div >
 	
-
+		
 		
 		<div class="stat-search-n-nav">
-			<div name = 'basketball-stat-gallery' class="stat-nav"  >
+			
+			<nav name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points </button>
 				<button name = 'rebs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Rebounds </button>
 				<button name = 'assists' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists </button>
 				<button name = 'blocks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Blocks </button>
 				<button name = 'steals' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Steals </button>
-				</div>
+			</nav>
 			
 			
 			
