@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom'
 
-import logo_footer from '../icons/stacked-sports-logo-outline-with-words.svg';
+//import logo_footer from '../icons/stacked-sports-logo-outline-with-words.svg';
 
-//import logo_footer from '../icons/stackem-with-text-mid.png';
+import logo_footer from '../icons/stackem-with-text-mid-footer.png';
 
 
 //probably have this include the help links and about and contact at bottom of page
@@ -49,7 +49,7 @@ export default function Footer() {
          
           <div class="col-md-2">
             <h6 class="text-uppercase ">
-              <a href="/contact-us" class="text-black">Contact Us/ Request A Player</a>
+              <Link to="/contact-us" class="text-black">Contact Us/ Request A Player</Link>
             </h6>
           </div>
         
