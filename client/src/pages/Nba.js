@@ -85,7 +85,7 @@ export default function NBA(){
 	/*setUsersByCategory(e.target.name)*/
 	
 	useEffect(() => {
-		document.title = 'NBA - StackedSports';
+		document.title = "NBA - Stack'em Sports";
 	}, []);/*to change tab title for different pages */
 	
 	/*buttoner and sample_flippers was here*/
@@ -110,7 +110,7 @@ export default function NBA(){
 			
 			<nav name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points </button>
-				<button name = 'rebs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Rebounds </button>
+				<button name = 'rebounds' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Rebounds </button>
 				<button name = 'assists' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists </button>
 				<button name = 'blocks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Blocks </button>
 				<button name = 'steals' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Steals </button>

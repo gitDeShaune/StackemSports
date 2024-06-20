@@ -95,7 +95,7 @@ body .container {
   //background-image: url(/src/icons/pattern-stackedsports-bigger.png);
   //background-color:lightblue;
   //background-color:#F0FFFF;
-  background-color:white;
+  background-color:white;/*white background*/
   
   /*need to find a way to get the checkered just in card box, not full container, will probably need solution not in this class */
   /* TAKEN FROM PRIZEPICKS
@@ -106,6 +106,12 @@ body .container {
     min-height: 70vh;
   
   */
+}
+
+@media (max-width: 768px) {
+.container {
+grid-template-columns: repeat(2, 1fr);
+}
 }
 
 .nav {
