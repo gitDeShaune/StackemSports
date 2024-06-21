@@ -14,40 +14,40 @@ export default function SportsAvailable(){
 	<h1> SPORTS AVAILABLE </h1>
 		
 		
-		
+		<br/>
 		
 		
 		
 		<h2> BASKETBALL </h2>
-		<div class="grid">
+		<div class="photo-grid">
 		  <img src={nba}/>
 		  <img src={wnba}/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  
 		</div>
 		<h2> FOOTBALL </h2>
-		<div class="grid">
+		<div class="photo-grid">
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  
 		</div>
 		<h2> SOCCER </h2>
-		<div class="grid">
+		<div class="photo-grid">
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  
 		</div>
 		<h2> BASEBALL </h2>
-		<div class="grid">
+		<div class="photo-grid">
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  
 		</div>
 		<h2> ESPORTS </h2>
-		<div class="grid">
+		<div class="photo-grid">
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>

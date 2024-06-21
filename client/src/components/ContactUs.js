@@ -10,7 +10,7 @@ export default function ContactUs(){
 	
 	
 	
-	<h1> CONTACT US </h1>
+	<h1 class = "contact-header "> CONTACT US </h1>
 		
 		
 	

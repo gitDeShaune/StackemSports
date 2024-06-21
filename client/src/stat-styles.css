@@ -962,6 +962,20 @@ background-size: cover;
 .about-us-text-container{
 	font-size:.9rem;
 	
+	
+}
+
+.about-us-header{
+	font-family:Shrikhand;
+}
+
+.contact-header{
+	font-family:Shrikhand;
+}
+
+.page-image-container{
+	object-fit:cover;
+
 }
 
 .page-image-text-container{/*the image goes over the lightblue background div when zooming in*/
@@ -1167,6 +1181,7 @@ a{
 	
 	height:100%;
 	
+	background-color:lightgreen;
 }
 
 

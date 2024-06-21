@@ -15,11 +15,12 @@ import logo_footer from '../icons/stackem-with-text-mid-footer.png';
 /*deleting my-5 from top div(container)makes the bottom setion and cards section connect*/
 export default function Footer() {
 	//<Link to = "/" className = "site-title">PICKS.COM</Link>
-	return <div class="container ">
+	//changed from container to footer-container
+	return <div class="footer-container ">
   
   <footer class = "text-black" >
    
-    <div class="container footer-container">
+    <div class = "footer-container">
       
       <section class="mt-5">
         
@@ -64,8 +65,9 @@ export default function Footer() {
       <section class="mb-5">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8">
-		  
+			<div class="logo-footer">
 			<img src={logo_footer} alt="Logo-Footer" /> 
+			</div>
 			
             <p>
 			Stack'em Sports is dedicated to giving our fellow sports enthusiasts the stats to go with their favorite players. 
@@ -94,9 +96,10 @@ export default function Footer() {
       </section>
 	  
 	  Copyright ©2024  
-      <a class="text-black" href="https://mdbootstrap.com/"
+	  <b>
+      <a class="text-black text-uppercase " href="https://stackemsports.com/"
          > Stackemsports.com</a
-        >
+        ></b>
    
     </div>
   

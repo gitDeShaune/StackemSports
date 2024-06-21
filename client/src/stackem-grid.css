@@ -23,3 +23,11 @@ r-sidebar{
 .container{
 	grid-area:container;
 }
+
+/*put below in different css file*/
+.photo-grid{
+	width:90%;
+	object-fit:contain;
+	//justify-content:center;
+	margin:auto;
+}
