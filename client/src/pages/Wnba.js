@@ -69,13 +69,13 @@ export default function NBA(){
 	}
 	
 	useEffect(()=>{
-		Axios.get("http://localhost:3001/api/stats/nba").then((response) => {
+		Axios.get("https://stackemsports.onrender.com/api/stats/nba").then((response) => {
 			setListOfUsers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
 	
 	useEffect(()=>{
-		Axios.get("http://localhost:3001/api/players/nba").then((response) => {
+		Axios.get("https://stackemsports.onrender.com/api/players/nba").then((response) => {
 			setListOfLeaguePlayers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])

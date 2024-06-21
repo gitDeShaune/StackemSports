@@ -69,13 +69,13 @@ export default function MLB(){
 	}
 	
 	useEffect(()=>{
-		Axios.get("http://localhost:3001/api/stats/mlb").then((response) => {
+		Axios.get("https://stackemsports.onrender.com/api/stats/mlb").then((response) => {
 			setListOfUsers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
 	
 	useEffect(()=>{
-		Axios.get("http://localhost:3001/api/players/mlb").then((response) => {
+		Axios.get("https://stackemsports.onrender.com/api/players/mlb").then((response) => {
 			setListOfLeaguePlayers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
