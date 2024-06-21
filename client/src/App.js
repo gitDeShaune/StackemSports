@@ -11,6 +11,8 @@ import './recharts-styles.css'
 
 import './footer-style.css'
 
+import './stackem-grid.css'
+
 import {useState, useEffect} from 'react'
 import Axios from 'axios'
 //import BarChart from "./components/BarChart"
@@ -397,18 +399,20 @@ function App() {
 	/*
 	
 	temporarily took <Header/> out of colored-div*/
+	/*temporarily took id="colored-div" out of div immediately after <> */
 	return (
 		<>
+		<Header/>
 		
-		<div id="colored-div">
-			<Header/>
+		<div className = 'stackem-grid'>
+			
 			
 			
 			
 			<div className = "container">
 			
-				
-			    <Navbar/>
+				<Navbar/>
+			    
 				<Routes>
 				<Route path ="/" element = {<NBA />} />
 				</Routes>

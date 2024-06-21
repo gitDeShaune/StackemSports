@@ -108,11 +108,12 @@ body .container {
   */
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
 .container {
 grid-template-columns: repeat(2, 1fr);
 }
 }
+*/
 
 .nav {
   //background-color: grey; /*next to cards*/
