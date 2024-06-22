@@ -16,7 +16,7 @@ export default function SportsAvailable(){
 		
 		<br/>
 		
-		
+		<div class="sports-available-content">
 		
 		<h2> BASKETBALL </h2>
 		<div class="photo-grid">
@@ -52,6 +52,8 @@ export default function SportsAvailable(){
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  <img src="https://via.placeholder.com/200x200.jpg"/>
 		  
+		</div>
+		
 		</div>
 		
 	

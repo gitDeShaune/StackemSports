@@ -1104,7 +1104,11 @@ a{
 	
 }	
 
-
+.league-icon-container img{
+	
+	width:90%;
+	//height:60%;
+}
 
 
 .league-card{
@@ -1221,6 +1225,7 @@ a{
 	//height:80px;
 	
 	height:auto;/*auto height allows div/nav to resize as contents fill*/
+	
 	
 	margin-bottom: 5px ;/*for space at bottom between divs*/
 }

@@ -103,7 +103,12 @@ export default function MLB(){
 	return(<div >
 	
 
-		<nav name = 'baseball-stat-gallery' class="stat-nav"  >
+		
+		
+		<div class="stat-search-n-nav">
+			
+				
+			<div name = 'baseball-stat-gallery' class="stat-nav"  >
 					<button name = 'hits' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits </button>
 					<button name = 'RBIs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> RBIs</button>
 					<button name = 'runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Runs </button>
@@ -123,12 +128,7 @@ export default function MLB(){
 					<button name = 'BBs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Walks </button>
 				
 				
-		</nav>
-		
-		<div class="stat-search-n-nav">
-			
-				
-				
+		</div>	
 				
 				
 				
@@ -152,7 +152,8 @@ export default function MLB(){
 			</div>
 		</div>	
 		
-		<hr/>
+		<br/>
+	
 		<div class = "flip-card-container">
 			{listOfUsers.filter((user)=> {
 				if(search != ''){

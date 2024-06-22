@@ -103,7 +103,12 @@ export default function MLB(){
 	return(<div >
 	
 
-		<nav name = 'hockey-stat-gallery' class="stat-nav"  >
+		
+		
+		
+		<div class="stat-search-n-nav">
+			
+			<div name = 'hockey-stat-gallery' class="stat-nav"  >
 					<button name = 'SOG' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Shots On Goal </button>
 					<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points</button>
 					<button name = 'assists' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists </button>
@@ -115,13 +120,7 @@ export default function MLB(){
 					<button name = 'saves' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Saves </button>
 					
 					
-		</nav>
-		
-		
-		
-		<div class="stat-search-n-nav">
-			
-				
+			</div>	
 			
 			
 			
@@ -140,7 +139,7 @@ export default function MLB(){
 			</div>
 		</div>	
 		
-		<hr/>
+		<br/>
 		<div class = "flip-card-container">
 			{listOfUsers.filter((user)=> {
 				if(search != ''){

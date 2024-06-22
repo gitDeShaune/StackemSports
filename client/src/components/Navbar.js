@@ -9,33 +9,69 @@ export default function Navbar() {
 		
 		
 		
+		<Link  to="/nba" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./nba-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">NBA</div></div> 	
+					
+					
+			</div>
+		</Link>
 		
-		<div class="league-card"> 
-					<div class = "league-icon-container">
-					<img  class="league-icon" src={require("./nba-sil.png")} />
-					</div>
+		<Link  to="/mlb" >
+			<div class="league-card"> 
 					
-					<div class="league-name"><Link class="card-link" to="/nba" ><div class ="inner-league-name">NBA</div> </Link></div> 					
-				
-		</div>
-		<div class="league-card"> 										
-					<div class = "league-icon-container">
-					<img  class="league-icon" src={require("./mlb-sil.png")} />
-					</div>
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./mlb-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">MLB</div></div> 	
 					
-					<div class="league-name"><Link  class="league-link" to="/mlb" ><div class ="inner-league-name">MLB</div></Link></div> 					
-				
-		</div>
-		<div class="league-card"> 										
-					<div class = "league-icon-container">
-					<img  class="league-icon" src={require("./nhl-sil.png")} />
-					</div>
 					
-					<div class="league-name"><Link class="league-link" to="/nhl" ><div class ="inner-league-name">NHL</div> </Link></div> 					
-				
-		</div>
+			</div>
+		</Link>
 		
-		<div class="league-card"> 										
+		<Link  to="/nhl" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./nhl-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">NHL</div></div> 	
+					
+					
+			</div>
+		</Link>
+		
+		<Link  to="/wnba" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./nba-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">WNBA</div></div> 	
+					
+					
+			</div>
+		</Link>
+		
+		
+		
+
+		</nav>
+}
+
+
+
+
+/*
+<div class="league-card"> 										
 					<div class = "league-icon-container">
 					<img  class="league-icon" src={require("./nba-sil.png")} />
 					</div>
@@ -43,12 +79,8 @@ export default function Navbar() {
 					<div class="league-name"><Link class="league-link" to="/wnba" ><div class ="inner-league-name">WNBA</div> </Link></div> 					
 				
 		</div>
-		
-		
 
-		</nav>
-}
-
+*/
 
 /*
 
