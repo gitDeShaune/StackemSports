@@ -27,6 +27,7 @@
 	padding: var(--padding);
 	border-radius: 10px;
 	background: white;
+	//background:red;
 }
 
 .search-icon{

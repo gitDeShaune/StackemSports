@@ -120,7 +120,8 @@ body .container {
   //background-image: url(/src/icons/pattern-stackedsports-bigger.png);
   //background-color:lightblue;
   //background-color:#F0FFFF;
-  background-color:white;/*white background*/
+  //background-color:white;/*white background*/
+  
   
   /*need to find a way to get the checkered just in card box, not full container, will probably need solution not in this class */
   /* TAKEN FROM PRIZEPICKS
