@@ -74,10 +74,13 @@ footer .form-control {
 }
 
 .logo-footer{
+	//display:grid;
+	display:flex;
 	margin:auto;
 	width:70%;
 	object-fit:contain;
 	height:40%;
+	justify-content:center;
 	
 	//height:40%;
 }
