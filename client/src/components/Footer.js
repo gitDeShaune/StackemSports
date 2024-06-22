@@ -60,21 +60,24 @@ export default function Footer() {
       
 
       <hr class="my-5" />
-	
+		
+		
       
       <section class="mb-5">
         <div class="row d-flex justify-content-center">
-          <div class="col-lg-8">
-			<div class="logo-footer">
-			<img src={logo_footer} alt="Logo-Footer" /> 
-			</div>
 			
+          <div class="col-lg-8">
+			
+			<div class="logo-footer">
+				<img src={logo_footer}  /> 
+			</div>
+			<div>
             <p>
 			Stack'em Sports is dedicated to giving our fellow sports enthusiasts the stats to go with their favorite players. 
 			We currently provide stats for several leagues from basketball to rugby to esports, including the NBA, MLS, NFL, MLB, League of Legends, and more. 
 
             </p>
-					
+			</div>	
           </div>
         </div>
       </section>

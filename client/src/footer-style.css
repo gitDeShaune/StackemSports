@@ -74,20 +74,26 @@ footer .form-control {
 }
 
 .logo-footer{
+	//position:absolute;
 	//display:grid;
 	display:flex;
 	margin:auto;
-	width:70%;
-	object-fit:contain;
-	height:40%;
+	
+	
+	//object-fit:contain;
+	//height:70%;
 	justify-content:center;
+	//background-image:url(/src/icons/stackem-with-text-mid-footer.png);
+	//background-size:cover;
 	
 	//height:40%;
 }
 
 .logo-footer img{
-	
-	object-fit:contain;
+	//width:100%;
+	height:100%;
+	max-width:100%;
+	//object-fit:cover;
 }
 
 

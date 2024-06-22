@@ -15,10 +15,11 @@ export default function ContactUs(){
 		
 	
 
+		<div class = "contact-us-container">
 		
+			<p> You can request to add a sports leauge, new players, and any other questions by emailing us at <strong>info@stackemsports.com</strong></p>
 		
-		<p> You can request to add a sports leauge, new players, and any other questions by emailing us at info@stackemsports.com </p>
-		
+		</div>
 	
 	</div>
 	

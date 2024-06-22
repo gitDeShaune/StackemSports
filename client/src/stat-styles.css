@@ -961,8 +961,8 @@ background-size: cover;
 
 .about-us-text-container{
 	font-size:.9rem;
-	
-	
+	width:80%;
+	margin:auto;
 }
 
 .about-us-header{
@@ -973,8 +973,9 @@ background-size: cover;
 	font-family:Shrikhand;
 }
 
-.page-image-container{
-	object-fit:cover;
+.page-image-container img{
+	//height:100%;
+	max-width:80%;
 
 }
 
