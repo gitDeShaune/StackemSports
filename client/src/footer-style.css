@@ -76,6 +76,7 @@ footer .form-control {
 .logo-footer{
 	margin:auto;
 	width:70%;
+	object-fit:cover;
 	
 	//height:40%;
 }
