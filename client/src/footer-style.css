@@ -69,10 +69,19 @@ footer .form-control {
 	
 	border-width:0px;
 	background-color:lightgreen;
+	justify-content:center;
 	
 }
 
 .logo-footer{
+	margin:auto;
+	width:70%;
+	
+	//height:40%;
+}
+
+.logo-footer img{
+	
 	object-fit:cover;
 }
 
