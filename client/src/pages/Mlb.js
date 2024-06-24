@@ -153,7 +153,8 @@ export default function MLB(){
 		</div>	
 		
 		<br/>
-	
+		
+		<div class = "cards-container">
 		<div class = "flip-card-container">
 			{listOfUsers.filter((user)=> {
 				if(search != ''){
@@ -182,7 +183,7 @@ export default function MLB(){
 				})
 			}
 		</div>
-		
+		</div>
 		
 		
 	</div>)

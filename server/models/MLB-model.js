@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const mlbSchema = new mongoose.Schema({
 	prop_title: { type:String,required: true,},
 	name: { type:String,required: true,},
-	team:{ type: Number, required: true}, 
+	team:{ type: String, required: true}, 
 	lfg_opps: {type: [String],required: true,},  
 	lfg_dates: {type: [String],required: true,},  
 	lfg_stats: {type: [Number],required: true,}, 

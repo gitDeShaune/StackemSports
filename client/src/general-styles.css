@@ -157,11 +157,11 @@ grid-template-columns: repeat(2, 1fr);
 .league-name{
 	
 	
-	bottom:-4%;
+	//bottom:-4%;
 }
 .inner-league-name{
 	justify-content:center;
-	//padding-top:7%;
+	padding-top:7%;
 	
 }
 

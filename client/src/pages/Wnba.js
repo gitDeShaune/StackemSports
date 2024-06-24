@@ -131,6 +131,8 @@ export default function NBA(){
 		</div>	
 		
 		<br/>
+		
+		<div class = "cards-container">
 		<div class = "flip-card-container">
 			{listOfUsers.filter((user)=> {
 				if(search != ''){
@@ -159,7 +161,7 @@ export default function NBA(){
 				})
 			}
 		</div>
-		
+		</div>
 		
 		
 	</div>)

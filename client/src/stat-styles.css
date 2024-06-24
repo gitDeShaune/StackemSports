@@ -603,6 +603,16 @@ table{
 	
 }
 
+.NBA-card{
+	background-image: url(/src/icons/jordan.jpg);
+	
+}
+
+.MLB-card{
+	background-image: url(/src/icons/shohei.jpg);
+	
+}
+
 .inner-card-frame{
 
 
@@ -616,8 +626,8 @@ margin-left:5%;
 
 
 //background-image: url(/src/icons/mantle.jpg);
-background-image: url(/src/icons/jordan.png);
-background-image: url(/src/icons/jordan.jpg);
+//background-image: url(/src/icons/jordan.png);
+
 //background-image: url(/src/icons/basketball-player-outline.jpg);
 
 	background-size: cover;/*keeps image in size when resizing; for all cases?*/
@@ -806,7 +816,10 @@ background-size: cover;
 	
 	min-width:300px;
 	//min-height:300px;
-	height:100%;
+	
+	height:100%; /*this gets rid of space between card rows?*/
+	
+	
 	//height:1450px; /*not sure how to stop the large spaces under the cards during/when searching single player name; height as 100% is better, so need to make the div directly outside have the static height*/
 	width:100%;
 	
