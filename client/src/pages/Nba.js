@@ -154,7 +154,7 @@ export default function NBA(){
 				  <PlayerCard
 						
 						userData={user}
-						crossUserData = {sample_nba_player}
+						
 						
 					  /></div>)
 				  
@@ -166,6 +166,7 @@ export default function NBA(){
 		
 		
 	</div>)
+	//in <PlayerCard> crossUserData = {sample_nba_player}
 	//listOfLeaguePlayers.find(({ player_name }) => player_name === user.name)
 	//listOfLeaguePlayers.find(({ player_name }) => player_name === user.name) === undefined? sample_nba_player:listOfLeaguePlayers.find(({ player_name }) => player_name === user.name) 
 	//^this should be the better option, but don't know if doing find twice 

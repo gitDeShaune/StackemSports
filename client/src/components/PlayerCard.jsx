@@ -226,7 +226,51 @@ function fill_GRAPHDATA(stats,dates,opps){//added dates to have xaxis with dates
 }
 
 
-
+function prop4Table(prop){
+	switch(prop){
+			case "points":
+				return "Points Per Game";break;
+			case "rebounds":
+				return "Rebounds Per Game";break;
+			case "assists":
+				return "Assists Per Game";break;
+			case "blocks":
+				return "Blocks Per Game";break;
+			case "steals":
+				return "Steals Per Game";break;
+			case "hits":
+				return "Hits Per Game";break;	
+			
+	}
+	
+	return "Stat Per Game";
+}
+function propIdx(prop,league){
+	let oidx = 0
+	//remember, season yr is first index
+	
+	if(league == "NBA"){
+		switch(prop){
+			case "points":
+				oidx = 1;break;
+			case "rebounds":
+				oidx = 2;break;
+			case "assists":
+				oidx = 3;break;
+			case "blocks":
+				oidx = 4;break;
+			case "steals":
+				oidx = 5;break;
+			
+		}
+		
+	}else if (league == "NHL"){
+		
+	}
+	
+	
+	return oidx;
+}
 
 
 function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_title to filter for stat in chart*/
@@ -282,8 +326,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		row_stats = (		
 			<tr>
 					<td>{last_ssn_stats[0]}</td>
-					<td>{last_ssn_stats[1]}</td>
-					<td>{last_ssn_stats[2]}</td>
+					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
 					
 					
 			</tr>				
@@ -295,8 +338,8 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		row_headers = (
 			<tr >
 					<th>YEAR</th>
-					<th>TEAM</th>
-					<th>PTS</th>
+					<th>{prop4Table(prop)}</th>
+					
 					
 			</tr>
 		
@@ -306,8 +349,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		row_stats = (		
 			<tr>
 					<td>{last_ssn_stats[0]}</td>
-					<td>{last_ssn_stats[1]}</td>
-					<td>{last_ssn_stats[2]}</td>
+					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
 									
 			</tr>				
 		)
@@ -388,10 +430,16 @@ function fullProp(stat_prop){
 	switch(stat_prop){
 			case 'hits': prop = 'Hits';
 			break;
-			case 'Ks': prop = 'Strikeouts(K)';
+			case 'rebounds': prop = 'Rebounds';
 			break;		
 			case 'points': prop = 'Points';
 			break;	
+			case 'steals': prop = 'Steals';
+			break;
+			case 'blocks': prop = 'Blocks';
+			break;
+			case 'assists': prop = 'Assists';
+			break;
 		
 	}
 	
@@ -431,7 +479,9 @@ function fullProp(stat_prop){
 	  
 	  
   }*/
-const PlayerCard = ( {userData, crossUserData}) => {
+  
+  /*, crossUserData*/
+const PlayerCard = ( {userData}) => {
 	/*took out {} from inside of parenthesis: eg. ({userdata,}) -> (userdata, )*/
   const {
     _id,
@@ -440,13 +490,16 @@ const PlayerCard = ( {userData, crossUserData}) => {
 	lfg_opps,
 	lfg_stats,
 	prop_title,
-	league
+	league,
+	last_season_stats,
+	position,
+	team
     
   } = userData; //the stuff has to be named exactly like in the json ; need better names maybe
   //console.log("Displaying userData")
   //console.log(userData)
   
-  
+  /*
   const {
 	 
 	 player_name,
@@ -456,11 +509,11 @@ const PlayerCard = ( {userData, crossUserData}) => {
 	 last_season_stats
 	  
 	  
-  } = crossUserData 
+  } = crossUserData */
   
   //console.log("Displaying crossUserData")
-  console.log(crossUserData)
-  console.log(player_name)
+  //console.log(crossUserData)
+  console.log(name)
   /*^cannot destructure error with 404 and crossUserData may be from not having matching and findable player name for each player in the search results yet*/
   const [isFlipped, setIsFlipped] = useState(false);
 	
@@ -570,7 +623,9 @@ const PlayerCard = ( {userData, crossUserData}) => {
             isHalf={true}
             edit={false}
             value={(Math.random() * 2) + 3}
-          /> */}
+          /> 
+		  
+		  also took out Year: {year}*/}
 		  
 		  
 		 
@@ -579,8 +634,8 @@ const PlayerCard = ( {userData, crossUserData}) => {
           
 		  <div className = "player-season-stats">{makeSeasonTable(last_season_stats,league,prop_title)}</div>
 		  
-		    <div class = "player-bio-element">Position: {position}     Year: {year}  </div>
-			<div class = "player-bio-element">Team: {team}  </div>
+		    <div class = "player-bio-element">Position: {position}  </div>
+			<div class = "player-bio-element">Team: {team}</div>
 		  
 		  
 		  <div className="cardLabel">{fullProp(prop_title)}</div>

@@ -1,0 +1,17 @@
+NBA & WNBA:
+
+Season(YR) FG	FGA	FG%	3P	3PA	3P%	2P	2PA	2P%	eFG%	FT	FTA	FT%	ORB	DRB	TRB	AST	STL	BLK	TOV	PF	PTS
+^array for last_ssn_stats
+
+NHL: 
+*NHL has the totals for the important stats, so will have to divide total by GP
+
+Goalie: Season(YR) GA	SV	SV%  GP(for math calculations)
+
+Non-Goalie: Season(YR) G A PTS HIT BLK SOG GP(math calculations)
+
+
+*MLB will be last
+
+
+OPEN jupyter: get pos, last_ssn_stats, add to json when adding to mngodb

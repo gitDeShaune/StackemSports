@@ -8,7 +8,9 @@ const nhlSchema = new mongoose.Schema({
 	team:{ type: Number, required: true}, 
 	lfg_opps: {type: [String],required: true,},  
 	lfg_dates: {type: [String],required: true,},  
-	lfg_stats: {type: [Number],required: true,}, 	 
+	lfg_stats: {type: [Number],required: true,}, 
+	position: {type: String,required: true,},    
+	last_season_stats: {type: [String],required: true,}, 
 	
 	});
 	
