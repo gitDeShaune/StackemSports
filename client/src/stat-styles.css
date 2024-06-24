@@ -323,15 +323,17 @@ th{
     //align-items: center;
     //font-family: 'IndustryDemi';
     letter-spacing: normal;
-    font-size: 0.89rem;/*rem keeps the font relative and stay in box!!*/
+    //font-size: 0.89rem;/*rem keeps the font relative and stay in box!!*/
+	
+	font-size:0.8rem;
     //line-height: 1.33;
 	color: white;
 	
 	//width:60%;
-	width:80%;
-	height:10%;
+	width:97%;
+	//height:10%;
 	
-	
+	//height:auto;
 	
 	
 	/*^imported from name pp*/
@@ -365,9 +367,10 @@ th{
 	 //width:1rem;
 	 //left:10;
 	 
+	 //font-size:0.8em;
 	 
 	 
-	 min-width:80%;
+	 //min-width:80%;
 	 
 	   align-items: center;
 	justify-content: center;
@@ -803,8 +806,8 @@ background-size: cover;
 	
 	min-width:300px;
 	//min-height:300px;
-	//height:100%;
-	height:1450px;
+	height:100%;
+	//height:1450px; /*not sure how to stop the large spaces under the cards during/when searching single player name; height as 100% is better, so need to make the div directly outside have the static height*/
 	width:100%;
 	
 	//overflow:auto;
@@ -812,10 +815,11 @@ background-size: cover;
 	overflow:clip;
 	
 	
+	
 	//border-style:solid;	
 	//border-width:2px;
 	
-	justify-content: center;
+	//justify-content: center;
 	//display:contents;/*display flex makes rotate in place, but now there is overflow horizontally*/
 	//display:table-row-group;
 	
@@ -1186,7 +1190,7 @@ a{
 	
 	height:100%;
 	
-	background-color:lightgreen;
+	background-color:#aeb5fe; /*purple, formerly lightgreen*/
 }
 
 

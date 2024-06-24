@@ -102,7 +102,7 @@ export default function NBA(){
 	
 	}
 					
-	return(<div >
+	return(<div>
 	
 		
 		
@@ -133,36 +133,38 @@ export default function NBA(){
 			</div>
 		</div>	
 		
-		<br/>
-		<div class = "flip-card-container">
-			{listOfUsers.filter((user)=> {
-				if(search != ''){
-					return search.toLowerCase() === '' ? user : user.name.toLowerCase().includes(search.toLowerCase())
-					/*^changed from includes(search) to includes (search.toLowerCase()) to work for capital letters in search*/
-				}else{
-					return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
-				}
-			}).map((user) => {
-					
-					//keep as listOfusrr
-					
-					/*there  better be a matching name in players/league an stats/league
-					  ^i should make a case or error statement/condition for this, but i wont for now and hope it doesn't cause a problem
-					  not even doing toLowercase for the user.name stuff under here in the crossUserData*/
-				  
-				  return (<div>
-				  <PlayerCard
-						
-						userData={user}
-						
-						
-					  /></div>)
-				  
-				  
-				})
-			}
-		</div>
 		
+		<br/>
+		<div class = "cards-container">
+			<div class = "flip-card-container">
+				{listOfUsers.filter((user)=> {
+					if(search != ''){
+						return search.toLowerCase() === '' ? user : user.name.toLowerCase().includes(search.toLowerCase())
+						/*^changed from includes(search) to includes (search.toLowerCase()) to work for capital letters in search*/
+					}else{
+						return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
+					}
+				}).map((user) => {
+						
+						//keep as listOfusrr
+						
+						/*there  better be a matching name in players/league an stats/league
+						  ^i should make a case or error statement/condition for this, but i wont for now and hope it doesn't cause a problem
+						  not even doing toLowercase for the user.name stuff under here in the crossUserData*/
+					  
+					  return (<div>
+					  <PlayerCard
+							
+							userData={user}
+							
+							
+						  /></div>)
+					  
+					  
+					})
+				}
+			</div>
+		</div>
 		
 		
 	</div>)

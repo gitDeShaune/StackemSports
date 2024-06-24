@@ -13,6 +13,8 @@ import './footer-style.css'
 
 import './stackem-grid.css'
 
+import './league-search.css'
+
 import {useState, useEffect} from 'react'
 import Axios from 'axios'
 //import BarChart from "./components/BarChart"

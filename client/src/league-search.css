@@ -1,0 +1,27 @@
+
+.nba-team-gallery{
+
+display:flex;
+gap:0.6em;
+//display:grid;/*might be same/better/simpler to do flex*/
+grid-template-columns: repeat(auto-fit, 1fr);/*minmax(240px,1fr));*/
+width:98%;
+
+flex-wrap:wrap;
+//grid-template-areas:"team team team";
+
+
+justify-content:center;/*justified;*/
+margin:auto;
+height:auto;
+background-color:#aeb5fe; /*purple, formerly lightgreen*/
+object-fit:contain;
+
+}
+
+.nba-team{
+	//max-width: 32px;
+	//max-height:32px;
+	object-fit:cover;
+	grid-area:team;
+}

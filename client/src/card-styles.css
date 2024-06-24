@@ -10,3 +10,14 @@
 }
 
 /*<div className = "card-footer"> * This data is based off the last 5 games played </div> */
+
+.cardTitle{
+	
+	height:10%;
+	padding:3%;
+	justify-content:center;
+	//width:80%;
+	font-size:0.7em;
+	
+	
+}
