@@ -69,13 +69,13 @@ export default function NBA(){
 	}
 	
 	useEffect(()=>{
-		Axios.get("https://stackemsports.onrender.com/api/stats/nba").then((response) => {
+		Axios.get("https://stackemsports.onrender.com/api/stats/wnba").then((response) => {
 			setListOfUsers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
 	
 	useEffect(()=>{
-		Axios.get("https://stackemsports.onrender.com/api/players/nba").then((response) => {
+		Axios.get("https://stackemsports.onrender.com/api/players/wnba").then((response) => {
 			setListOfLeaguePlayers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
@@ -153,7 +153,7 @@ export default function NBA(){
 				  <PlayerCard
 						
 						userData={user}
-						crossUserData = {sample_nba_player}
+						
 						
 					  /></div>)
 				  
