@@ -120,6 +120,7 @@ th{
 	//font-family: Impact, fantasy;/*gets everytthing in statbox(except table),might be only one needed*/
 	font-family: Shrikhand;
 	
+	
 	position:relative;
 	
 	
@@ -375,7 +376,10 @@ th{
 	   align-items: center;
 	justify-content: center;
 	 
-	 font-family:Shrikhand;
+	 //font-family:Shrikhand;
+	 
+	 font-family:Trebuchet MS;/*rying to replace Shrikhand with a cleaner, simpler font*/
+	 
 	 letter-spacing: 1px;/*space between letters for certain spots*/
 	 
 	 background-color:blue;
@@ -601,6 +605,10 @@ table{
 	margin:auto;
 	
 	
+}
+
+.WNBA-card{
+	background-image: url(/src/icons/caitlin-clark.jpg);
 }
 
 .NBA-card{

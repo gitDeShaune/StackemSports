@@ -75,15 +75,15 @@ export default function NBA(){
 	}, [])
 	
 	useEffect(()=>{
-		Axios.get("https://stackemsports.onrender.com/api/players/wnba").then((response) => {
+		Axios.get("https://stackemsports.onrender.com/api/players/nba").then((response) => {
 			setListOfLeaguePlayers(response.data)
-		})//api endpoint rmemeebrr
+		})//api endpoint rmemeebrr  // '/players/wnba was ntt working 502 error
 	}, [])
 	
 	/*setUsersByCategory(e.target.name)*/
 	
 	useEffect(() => {
-		document.title = "NBA - Stack'em Sports";
+		document.title = "WNBA - Stack'em Sports";
 	}, []);/*to change tab title for different pages */
 	
 	/*buttoner and sample_flippers was here*/

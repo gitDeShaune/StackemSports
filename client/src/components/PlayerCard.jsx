@@ -249,7 +249,7 @@ function propIdx(prop,league){
 	let oidx = 0
 	//remember, season yr is first index
 	
-	if(league == "NBA"){
+	if(league == "NBA" || league == "WNBA"){
 		switch(prop){
 			case "points":
 				oidx = 1;break;
@@ -354,6 +354,27 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 			</tr>				
 		)
 		break;
+	   case "WNBA":
+		size_array = [0,1,2,3,4,5,6];
+		row_headers = (
+			<tr >
+					<th>YEAR</th>
+					<th>{prop4Table(prop)}</th>
+					
+					
+			</tr>
+		
+		
+		)
+		
+		row_stats = (		
+			<tr>
+					<td>{last_ssn_stats[0]}</td>
+					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
+									
+			</tr>				
+		)
+		break;	
 		default:
 		row_stats = (		
 			<tr>
