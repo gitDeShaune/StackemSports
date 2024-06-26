@@ -25,7 +25,10 @@ import {Charter} from './components/Charter'
 import Navbar from './components/Navbar' //take away {} when it is default export
 import Footer from './components/Footer' 
 import Header from './components/Header' 
-import React from 'react'
+
+
+import React, {lazy,Suspense} from 'react';
+
 import { PieChart,
   Pie,
   Tooltip,
@@ -39,15 +42,10 @@ import { PieChart,
 
 import {Route,Routes} from 'react-router-dom'
 //.import Home from './pages/Home'
-import About from './components/About'
-import PrivacyPolicy from './components/PrivacyPolicy' /*need to move About and priv and etc to pages and make it work*/
-import SportsAvailable from './components/Sports-Available' /*need to move About and priv and etc to pages and make it work*/
-import ContactUs from './components/ContactUs'
 
-import WNBA from './pages/Wnba'
-import NBA from './pages/Nba'
-import MLB from './pages/Mlb'
-import NHL from './pages/Nhl'
+
+
+
 
 
 //table attempt
@@ -59,8 +57,88 @@ import NHL from './pages/Nhl'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import InputGroup from 'react-bootstrap/InputGroup'
 
+//import PrivacyPolicy from './components/PrivacyPolicy' /*need to move About and priv and etc to pages and make it work*/
+//import SportsAvailable from './components/Sports-Available' /*need to move About and priv and etc to pages and make it work*/
+//import ContactUs from './components/ContactUs'
+//import About from './components/About'
+const About = lazy(() => import('./components/About'))
+const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'))
+const SportsAvailable = lazy(() => import('./components/Sports-Available'))
+const ContactUs = lazy(() => import('./components/ContactUs'))
 
-function makeTable(jarray){//(jarray){
+
+//import WNBA from './pages/Wnba'
+//import NBA from './pages/Nba'
+//import MLB from './pages/Mlb'
+//import NHL from './pages/Nhl'
+
+const WNBA = lazy(() => import('./pages/Wnba'))
+const NBA = lazy(() => import('./pages/Nba'))
+const MLB = lazy(() => import('./pages/Mlb'))
+const NHL = lazy(() => import('./pages/Nhl'))
+
+
+
+
+function App() {
+	
+	const [listOfUsers, setListOfUsers] = useState([ ])
+	
+
+	return (
+		<>
+		<Header/>
+		
+		<div className = 'stackem-grid'>
+			
+			
+			
+			
+			<div className = "container">
+			
+				<Navbar/>
+			    
+				<Routes>
+				<Route path ="/" element = {<WNBA />} />
+				</Routes>
+				<Routes>
+					
+					
+					<Route path ="/nba" element = {<NBA />} />
+					<Route path ="/mlb" element = {<MLB />} />
+					<Route path ="/nhl" element = {<NHL />} />
+					<Route path ="/wnba" element = {<WNBA />} />
+					<Route path ="/about" element = {<About />} />
+					<Route path ="/privacy-policy" element = {<PrivacyPolicy />} />
+					<Route path ="/sports-available" element = {<SportsAvailable />} />
+					<Route path ="/contact-us" element = {<ContactUs />} />
+					
+					
+				</Routes>
+				
+				<Footer/>
+			</div>
+			
+				
+			
+		</div>
+		</>
+	);
+
+
+
+
+}
+
+
+export default App;
+
+
+
+
+
+
+/*function makeTable(jarray){//(jarray){
 	
 	
 	/*const table = document.createElement("table");
@@ -79,7 +157,7 @@ function makeTable(jarray){//(jarray){
 	
 	//console.log(traw.rows.length)
 	return traw
-	*/
+	
 	
 	{jarray.map((user) => {
 		  return (
@@ -92,7 +170,9 @@ function makeTable(jarray){//(jarray){
 		})}
 	
 }
+*/
 
+/*
 function chartJSON2(user){
 		const data = {
 			datasets: [{
@@ -120,7 +200,7 @@ function chartJSON2(user){
         borderWidth: 2,
       },
     ],
-  });*/
+  });
 	//<BarChart chartData={data}/>
 	return (
 		<div>
@@ -130,8 +210,12 @@ function chartJSON2(user){
 	
 	)
 	
-}
+}*/
 
+
+
+
+/*
 function chartJSON(user){
 	//get size of user.lf_opps
 	let size_array = []
@@ -185,17 +269,18 @@ function chartJSON(user){
     </div>
   )]
 	
-}
+}*/
 
 
 
+/*
 function tableJSON(user){
-	/*let chart_n_stuff = chartJSON(user)
+	/let chart_n_stuff = chartJSON(user)
 	
 	let max = chart_n_stuff[1]
 	console.log(max)
 	
-	let size_array = chart_n_stuff[0]*/
+	let size_array = chart_n_stuff[0]/
 	
 	let size_array = []
 	var max = 0
@@ -289,188 +374,17 @@ function tableJSON(user){
 		</div>
 	)
 	
-}
+}*/
 
 
-function App() {
-	
-	const [listOfUsers, setListOfUsers] = useState([ ])
-	
-	
-	//const data = [300,200,500,300,600];
-	/*const data = [
-    { name: "Facebook", users: 4 },
-    { name: "Instagram", users: 5 },
-    { name: "Twiter", users: 6 },
-    { name: "Telegram", users: 7 },
-  ];*/
-  
-	/*const data = [
-	{stats: 1 },
-	{stats: 2 },
-	{stats: 3 },
-	{stats: 4 },
-	{stats: 8 },
-		];
-		
-		*/
-		//dataKey has to match the label(ie. stats, names, etc.
-  
-	/*const [userData, setUserData] = useState({
-    labels: [2019,2020,2021,2022,2023],
-    datasets: [
-      {
-        label: "Users Gained",
-        data: [2,3,5,5,6],
-        borderColor: "black",
-        borderWidth: 2,
-      },
-    ],
-	});*/
-	
-	
-	const data1 = {
-					labels: [2019,2020,2021,2022,2023],
-					datasets: [
-					  {
-						label: "Users Gained",
-						data: [2,3,5,5,6],
-						borderColor: "black",
-						borderWidth: 2,
-					  },
-					],
-				};
-				
-				
-	
-	//setUserData(data)
-	/*
-	useEffect(()=>{
-		Axios.get("http://localhost:3001/api/stats/nba").then((response) => {
-			setListOfUsers(response.data)
-		})//api endpoint rmemeebrr
-	}, [])
-	
-	*/
-	
-	/*
-	var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-	var yValues = [55, 49, 44, 24, 15];
-	var barColors = ["red", "green","blue","orange","brown"];
-	
-	new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "World Wine Production 2018"
-    }
-  }
-});
-*/
 
-	//<button onClick = {createImage()}> CLICK</button>
-	//<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-	
-	/*
-	return (
-		<div className="App">
-			<div className="usersDisplay" style={{width:400}}>
-					
-					
-					<h1> Hello Hello </h1>
-					
-				
-			</div>
-	
-		</div>
-	)
-	*///UNCOMMENT THS AT SOME POINT
-	
-	//<BarChart chartData={data}/>
-	//<> </> empty tag des the trick for encolsing leements
-	
-	/*
-	
-	temporarily took <Header/> out of colored-div*/
-	/*temporarily took id="colored-div" out of div immediately after <> */
-	return (
-		<>
-		<Header/>
-		
-		<div className = 'stackem-grid'>
-			
-			
-			
-			
-			<div className = "container">
-			
-				<Navbar/>
-			    
-				<Routes>
-				<Route path ="/" element = {<NBA />} />
-				</Routes>
-				<Routes>
-					
-					
-					<Route path ="/nba" element = {<NBA />} />
-					<Route path ="/mlb" element = {<MLB />} />
-					<Route path ="/nhl" element = {<NHL />} />
-					<Route path ="/wnba" element = {<WNBA />} />
-					<Route path ="/about" element = {<About />} />
-					<Route path ="/privacy-policy" element = {<PrivacyPolicy />} />
-					<Route path ="/sports-available" element = {<SportsAvailable />} />
-					<Route path ="/contact-us" element = {<ContactUs />} />
-					
-					
-				</Routes>
-				
-				<Footer/>
-			</div>
-			
-				
-			
-		</div>
-		</>
-	);
-	
-	/*
-	
-		<div>
-		{listOfUsers.map((user) => {
-				
-			
-			  
-			  return (tableJSON(user))
-			  
-			})
-		}
-		</div>
-	
-	
-	
-	
-	
-	
-	*/
-    //<Bar dataKey="users" fill="#8884d8" background={{ fill: "#eee" }} />
-	//<Tooltip cursor={false}/> //scroll over
-	//
-}
-//put all of this in a Component
-//give chart a border
-////<Legend />
-////<Bar data={data}></Bar>
 
-export default App;
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {lazy,Suspense} from 'react';
+//lazy/suspense is to help split code execution by not loading everything all at once
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
@@ -8,11 +9,18 @@ import reportWebVitals from './reportWebVitals';
 
 import {BrowserRouter} from 'react-router-dom'
 
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+	
 	<BrowserRouter>
-    <App />
+	<Suspense fallback = {<h1> Loading...</h1>}>
+		<App />
+	</Suspense>
 	</BrowserRouter>
   </React.StrictMode>
 );
