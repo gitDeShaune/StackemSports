@@ -65,6 +65,230 @@
 }
 
 
+
+
+
+/*DATA ON PlayerCARD*/
+.player-info{
+	background-color:purple;
+	
+}
+
+.team-name{
+	width: 100%;
+	display:flex;
+	//margin:0;
+}
+
+.team-pos{
+	width: 100%;
+	display:flex;
+	
+}
+/*DATA ON PlayerCARD*/
+
+/*div card class*/
+
+.quick-stats{
+	position:relative;
+	
+	//width:50px;
+	//height:30px;
+	//background-image: url(/src/icons/baseball-card.jpg);
+	//background-size: contain;
+	background-size: cover;
+	z-index : 0;
+	
+	margin:10px;
+	//margin-bottom:15px;/*could be a solution but need to make cards stay same size*/
+	/*margin is for spae between cards*/
+
+}
+
+/*card frames/containers */
+
+.card-container{
+	position:relative;
+	background-color:blue;
+	width:150px;
+	height:170px;
+	min-width:15em;
+	min-height:20em;
+	
+}
+
+.card-inner{
+  position: relative;
+  //width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+	
+}
+
+.inner-card-frame{
+
+
+font-family: Shrikhand;
+
+z-index:-1;	
+//margin:5px;
+margin-top:5%;
+//margin-left:14%;
+margin-left:5%;
+
+
+//background-image: url(/src/icons/mantle.jpg);
+//background-image: url(/src/icons/jordan.png);
+
+//background-image: url(/src/icons/basketball-player-outline.jpg);
+
+	background-size: cover;/*keeps image in size when resizing; for all cases?*/
+
+position:absolute;
+//top:5px;
+overflow:visible;
+//height:77%;
+height:73%;
+ 
+ width:90%;
+ 
+ //border-color:green;
+//border-style:solid;
+//border-width:5px;
+
+border-bottom-right-radius:15px;/*round corner of box*/
+border-bottom-left-radius:15px;
+
+
+//box-shadow: 0 0 0 12px #333;
+//border-radius: 3px;
+	/*probably put inside card frame; nmot currently being used, just put the stuff in card=frame*/
+	
+}
+
+
+.card-frame{
+	
+	font-family: Shrikhand;
+position:absolute;
+top:0;
+overflow:visible;
+ height:100%;
+ 
+ width:100%;
+ background-color:red;
+ //background-color:black;
+ 
+ 
+ 
+ //background-image: url(/src/icons/purple-blue-gradient.jpg);
+ //background-image: url(/src/icons/orange-gradient.JPG);
+ background-image: url(/src/icons/blue-white-gradient.jpg);
+ /*will have to make my own gradient diaogna lpattern since I cant find any*/
+
+ //border-color:green;
+//border-style:solid;
+//border-width:25px;
+z-index:-1;
+
+
+//border-width:15px;
+/*makes inner part and outer of card round*/
+
+
+//background-image: url(/src/icons/mickey-mantle.jpg);
+//background-image: url(/src/icons/jordan.jpg);
+//background-image: url(/src/icons/mantle.jpg);
+
+	
+background-size: cover;
+//border-left:-25px;
+//border-right:-20px;
+//border-left: 30px solid green;
+//border-top:-5px;
+//border-bottom:-1px;
+/*negative values work to make it show up*/
+	
+	box-shadow: 0 0 0 10px grey;
+	border-radius: 2px;
+	//border-style:triple;
+	/*rounded outer, to look more like a card*/
+	
+}
+
+
+
+/*CARD FRONT */
+
+.ss-stat-div{
+	//margin-top:140%;/*this percentage needs to be good with % on height of inner-card-frame*/
+	//margin-bottom:10px;
+	
+	margin-top:115%;
+	
+	z-index:-1;/*used to be 2, but changed to -1 to match inenr card frame and automatically be put under*/
+	
+	
+	margin-left:23px;
+	display:flex;/*display flex lets the circles horizontal*/
+	
+	//margin:auto;
+	
+}
+
+.stat-square{/*actually a circle, but wont rename yet*/
+	//position:relative;
+	z-index:2;
+	//height:1.5em;
+	
+	
+	//height:3em;
+	//width:30%;
+	
+	
+	height:20%;
+	width:22%;
+	border-radius: 45%;/*the value is subject to change when resizing other parts of the card*/
+	/*^ was 35% bf grouping the circle elements*/
+	
+	
+	/*i want this to look like a ball/circle consistently. The size keeps changing*/
+	overflow:hidden;
+	
+	/*^circle effecting elements*/
+	
+	//font-size:0.80em;
+	font-size:0.50em;
+	
+	
+	
+	
+	//height:25px;
+	//width:35px;
+	//padding-bottom:20%;
+	
+	//background-color:green;
+	
+	//margin:auto;
+	//display:inline-block;
+	display:table;
+	
+	//display:table-row;
+	//margin:auto;
+	margin-bottom:5%;
+	//border-radius: 25px;
+	
+	/*circle effecting elements*/
+	//box-shadow: 0px 0px 0px 2px rgba(0,0,255,0.6); 
+	//border-style:solid;
+	//border-width:2px;
+	//border-color:blue;
+	
+	
+}
+
 /*STAT (ss) elements; avg, hi, lo -- circles */
 .circle {
         height: 75px;
@@ -103,23 +327,81 @@
 
 /*STAT (ss) elements; avg, hi, lo -- circles */
 
-
-/*DATA ON PlayerCARD*/
-.player-info{
-	background-color:purple;
+.stat-player-name-box{
+	
+	//display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //font-family: 'IndustryDemi';
+    letter-spacing: normal;
+    //font-size: 0.89rem;/*rem keeps the font relative and stay in box!!*/
+	
+	font-size:0.8rem;
+    //line-height: 1.33;
+	color: white;
+	
+	//width:60%;
+	width:97%;
+	//height:10%;
+	
+	//height:auto;
+	
+	
+	/*^imported from name pp*/
+	//object-fit:cover;
+	
+	
+	z-index:2;
+	//font-size:1.3em;
+	//margin:auto;
+	
+	//border-width:2px;
+	
+	//background-color:grey;
+	//width:60%;
+	//margin-left:10%;
+	//height: 40px;
+	//border-color:#EC70EC;/*used to be orange at start*/
+	//border-style:solid;
+	//border-width:3px;
+	//border-color:black;
+	
+	border-bottom-right-radius:15px;/*round corner of box*/
+	border-bottom-left-radius:15px;
 	
 }
-
-.team-name{
-	width: 100%;
-	display:flex;
+.player-name{
+	//font-size:1.3em;
+	 display:flex;
+	 height:100%;
+	 //width: 100%;/*the width of this determines how much of background statbox color is shown*/
+	 //width:1rem;
+	 //left:10;
+	 
+	 //font-size:0.8em;
+	 
+	 
+	 //min-width:80%;
+	 
+	   align-items: center;
+	justify-content: center;
+	 
+	 //font-family:Shrikhand;
+	 
+	 font-family:Trebuchet MS;/*rying to replace Shrikhand with a cleaner, simpler font*/
+	 
+	 letter-spacing: 1px;/*space between letters for certain spots*/
+	 
+	 background-color:blue;
+	 //width:10px;
+	 //min-width:5px;
+	 //font-size: 1.8rem;
+	 //font-size:14px;
 	//margin:0;
-}
-
-.team-pos{
-	width: 100%;
-	display:flex;
+	//margin:auto;
+	//float:left;
 	
+	border-bottom-right-radius:15px;/*round corner of box*/
+	//border-bottom-left-radius:15px;
+	//text-align:right;
 }
-/*DATA ON PlayerCARD*/
-

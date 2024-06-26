@@ -17,7 +17,8 @@ export default function Footer() {
 	//<Link to = "/" className = "site-title">PICKS.COM</Link>
 	//changed from container to footer-container
 	return <div class="footer-container ">
-  
+	
+	
   <footer class = "text-black" >
    
     <div class = "footer-container">
@@ -31,26 +32,26 @@ export default function Footer() {
           <div class="col-md-2">
             <h6 class="text-uppercase ">
 			  
-			  <Link to="/about" class = "text-black">About us</Link>
+			  <Link to="/about" class = "footer-menu-text">About us</Link>
             </h6>
           </div>
         
           <div class="col-md-2">
             <h6 class="text-uppercase ">
-              <Link to="/privacy-policy" class = "text-black">Privacy Policy</Link>
+              <Link to="/privacy-policy" class = "footer-menu-text">Privacy Policy</Link>
             </h6>
           </div>
          
           <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
-              <Link to="/sports-available" class = "text-black">Sports Available</Link>
+            <h6 class="text-uppercase">
+              <Link to="/sports-available" class = "footer-menu-text">Sports Available</Link>
             </h6>
           </div>
          
          
           <div class="col-md-2">
             <h6 class="text-uppercase ">
-              <Link to="/contact-us" class="text-black">Contact Us/ Request A Player</Link>
+              <Link to="/contact-us" class="footer-menu-text">Contact Us/ Request A Player</Link>
             </h6>
           </div>
         
@@ -75,26 +76,18 @@ export default function Footer() {
             <p>
 			Stack'em Sports is dedicated to giving our fellow sports enthusiasts the stats to go with their favorite players. 
 			We currently provide stats for several leagues from basketball to rugby to esports, including the NBA, MLS, NFL, MLB, League of Legends, and more. 
-
+	
             </p>
 			</div>	
           </div>
         </div>
       </section>
 
-      <section class="text-center mb-5">
-        <a href="" class="text-black me-4">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="text-black me-4">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="text-black me-4">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="text-black me-4">
-          <i class="fab fa-instagram"></i>
-        </a>
+      <section class="text-center footer-links mb-5">
+		
+		<a href="https://buymeacoffee.com/stackemsports" target="_blank" class="bmc" ></a>
+		<a href="https://www.reddit.com/r/StackemSports/" target="_blank" class="fa fa-reddit" ></a>
+        <a href="https://x.com/STACKEMSPORTS" target="_blank" class="fa fa-twitter"></a>
         
       </section>
 	  

@@ -1,8 +1,11 @@
 //remember, App.js is a function itself so it's okay to use functions for the pages and whatnot functionality
 import './App.css';
 import './stat-styles.css';
+
 import './general-styles.css'
+
 import './table-chart.css'
+
 import './card-styles.css'
 
 import './page-styles.css'
@@ -14,6 +17,11 @@ import './footer-style.css'
 import './stackem-grid.css'
 
 import './league-search.css'
+
+import './navbar-style.css'
+
+import './search-styles.css'
+
 
 import {useState, useEffect} from 'react'
 import Axios from 'axios'

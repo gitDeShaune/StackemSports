@@ -142,28 +142,14 @@ grid-template-columns: repeat(2, 1fr);
 */
 
 
-.league-card{
-	
-	height:100%;
-	
-	
-}
+
 
 .sports-available-content{
 	//justify-content:center;
 	//margin:auto;
 }
 
-.league-name{
-	
-	
-	//bottom:-4%;
-}
-.inner-league-name{
-	justify-content:center;
-	padding-top:7%;
-	
-}
+
 
 .nav {
 	

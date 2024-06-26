@@ -1,23 +1,5 @@
 
-.card-container{
-	position:relative;
-	background-color:blue;
-	width:150px;
-	height:170px;
-	min-width:15em;
-	min-height:20em;
-	
-}
 
-.card-inner{
-  position: relative;
-  //width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-	
-}
 .graph-container{
 	
 	display:flex;
@@ -25,31 +7,6 @@
 	justify-content:space-between;
 	
 }
-
-.stat-box .card-front,.card-back{
-	//position:absolute;
-	//width:100%;
-	//height:100%;
-	
-	
-}
-
-.quick-stats{
-	position:relative;
-	
-	//width:50px;
-	//height:30px;
-	//background-image: url(/src/icons/baseball-card.jpg);
-	//background-size: contain;
-	background-size: cover;
-	z-index : 0;
-	
-	margin:10px;
-	//margin-bottom:15px;/*could be a solution but need to make cards stay same size*/
-	/*margin is for spae between cards*/
-
-}
-
 
 
 
@@ -66,57 +23,134 @@ legend {
 }
 
 
-.color-background{
+
+.table-and-graph{/*border of recharts graph*/
+	//border-style:solid;
+	//width:80%;
+	object-fit:cover;
 	
-	background:blue;
 	
+}
+
+
+table{
+	border-collapse: collapse;
+	//border:solid black 1px;
+    //border-radius:10px;
+}
+
+
+.table-containers{
+	
+	
+	/*rounded corner*/
+	border-style:solid;
+	//background-color:grey;
+	//width:62.5%;/*kepth the color of thead aligned with chart*/
+	max-width:100%;
+	//margin:auto;
+	z-index:3;
+	
+	bottom:0;
+	//font-family: Impact, fantasy;/*only effects before table break*/
+	font-family: Shrikhand;
+	//position:absolute;
+}
+
+.table-break{
+	
+	background-color:blue;
+	width:565%;
+	height:10px;
+	margin-right:auto;
+	
+	
+}
+
+
+.stat-table th{ 
+	border-right:solid;
+	border-style:solid;
+	border-color:blue;
+	
+	border-right: solid 1px black; 
+  border-left: solid 1px black;
+	//justify-content:center;
+	
+}
+
+.stat-table th{
+	border-right:solid;
+	border-style:solid;
+	border-color:blue;
+	color:white;
+	background-color:blue;
+	
+	border-right: solid 1px black; 
+  border-left: solid 1px black;
+	//justify-content:center;
+	
+}
+
+.stat-table{
+	font-size:.6rem;
+	background-color:lightgrey;
+	//border-collapse:collapse;
+}
+.graph{
+	
+	//position:absolute;
+	
+	
+	position:relative;
+	//margin:0;
+	//width:300px;
+	//margin:20px;
+	//object-fit:contain;
+	//display:flex-box;
+	
+	//background-color:white;
+	
+	
+	
+	//min-height:12em;
+	min-width:8em;
+	
+	
+	//margin:auto;
+	//margin:9px;
+	
+	//width:80%;
+	//margin:auto;
+	
+    //border-style:solid;
+    //border-width:1px;
+	//width:50%;
+	/*height:250px;
+	width:250px;
+	object-fit:contain;
+    
+    /*height:10em;
+    padding:10px 10px;*/
+	//padding:1px;
+	//overflow:hidden;
+	//position:relative;
+	//float:left;
+	//flex-wrap:nowrap;
+	/*
+	margin-left:auto;
+	margin-bottom:auto;
+	margin-right:auto;
+	margin-top:auto;*/
+	
+    //flex-direction:left;
+    
+	z-index: 3;/*as high as possible to prevent being hidden*/
 }
 
 
 
 
-
-
-
-
-
-
-
-
-/*.stat-box .stat-table tbody tr {
-    font-size: 1rem;
-    font-family: "IndustryBook";
-    height: 30px;
-	
-}
-@media (max-width: 576px)
-.stat-box .stat-table tr {
-    height: 30px;
-    font-size: 1rem;
-}
-@media (max-width: 576px)
-.stat-box .stat-table tr {
-    height: 30px;
-    font-size: 1rem;
-	margin-right:30%;
-	
-}
-.stat-box .stat-table {
-    margin-top: 30px;
-    border-collapse: collapse;
-    color: black;
-	text-align:center;
-	width:80%;
-}*/
-
-
-
-
-
-
-/*put this in a separate css file, dedicated to the card table*/
-
-/*   * {box-sizing: border-box;}*/
 
 
 

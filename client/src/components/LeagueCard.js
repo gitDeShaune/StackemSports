@@ -30,7 +30,7 @@ const LeagueCard = ({league) => {
       <div
        
         onClick={() => setIsFlipped((prev) => !prev)}
-        className="CardFront quick-stats stat-box"
+        className="CardFront quick-stats"
       >
 	  
 	    
@@ -45,7 +45,7 @@ const LeagueCard = ({league) => {
 		
 		
 		
-		<div class = "stat-square-div">
+		<div class = "ss-stat-div">
 			<div class = "stat-square ss-hi" >
 						<div class = "ss-stat">{find_MAX(lfg_stats)}</div>
 						<div class="ss-title">HI </div>
@@ -82,7 +82,7 @@ const LeagueCard = ({league) => {
             flexDirection: "column",
             alignContent: "space-between"
           }}
-		  class = "stat-box quick-stats"
+		  class = "quick-stats"
         >
 		
 		<div class="card-frame"></div>

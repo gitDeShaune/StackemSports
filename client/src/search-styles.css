@@ -74,20 +74,29 @@
 	
 }
 
-/*search-input::ms-clear{display:none}
-clears custom default 'X'/cancel for searchbar for Edge/IE */
+
+/*ABOVE IS ALL SEARCH ICON FUNCTION, BELOW IS REST OF SEARCH BOX ABOVE CARDS */
 
 
-/*.search-input::-ms-clear{
-   margin-right:20px;
-   position:relative;
-   
-   
-   right:20px;
-   height: 20px;
-   width: 20px;
-   border-radius:10px;
-   background:red;
+.stat-nav{
+	//margin:auto;
+	height:40px;
+	//background:red;
+	position:relative;/*keep relative!!!*/
+	margin:0;
+	width:100%;
 }
-we'll work on this later */
 
+.stat-searchbar{
+	
+	width:40%;
+	min-width:50px;
+	min-height:100px;
+}
+
+.search-icon{
+	//background-image: url(/src/icons/basketball-player-outline.jpg);
+	width:20%;
+	height:20px;
+	background-size: cover;/*keeps image in size when resizing; for all cases?*/
+}

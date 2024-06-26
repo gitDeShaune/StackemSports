@@ -107,7 +107,7 @@ export default function NBA(){
 		<div class="stat-search-n-nav">
 			<div name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points </button>
-				<button name = 'rebs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Rebounds </button>
+				<button name = 'rebounds' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Rebounds </button>
 				<button name = 'assists' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists </button>
 				<button name = 'blocks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Blocks </button>
 				<button name = 'steals' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Steals </button>

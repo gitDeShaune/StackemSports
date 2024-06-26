@@ -577,7 +577,7 @@ const PlayerCard = ( {userData}) => {
 		
 		
 		
-		<div class = "stat-square-div">
+		<div class = "ss-stat-div">
 			<div className="cardLabel front-stat-title">{fullProp(prop_title)}</div>
 			
 			<>
