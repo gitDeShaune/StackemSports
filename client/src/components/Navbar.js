@@ -22,7 +22,33 @@ export default function Navbar() {
 			</div>
 		</Link>
 		
-		<Link  to="/mlb" >
+		
+		
+		<Link  to="/wnba" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./nba-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">WNBA</div></div> 	
+					
+					
+			</div>
+		</Link>
+		
+		
+		
+
+		</nav>
+}
+
+//Don't include MLB and whatnot til the data is available
+
+/*
+
+
+<Link  to="/mlb" >
 			<div class="league-card"> 
 					
 						<div class = "league-icon-container">
@@ -47,27 +73,13 @@ export default function Navbar() {
 					
 			</div>
 		</Link>
-		
-		<Link  to="/wnba" >
-			<div class="league-card"> 
-					
-						<div class = "league-icon-container">
-						<img  class="league-icon" src={require("./nba-sil.png")} />
-						</div>
-						
-						<div class="league-name"><div class ="inner-league-name">WNBA</div></div> 	
-					
-					
-			</div>
-		</Link>
-		
-		
-		
-
-		</nav>
-}
 
 
+
+
+
+
+*/
 
 
 /*

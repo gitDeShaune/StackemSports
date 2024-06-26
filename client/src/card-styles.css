@@ -21,3 +21,105 @@
 	
 	
 }
+
+
+.cardLabel{
+	
+	letter-spacing:1px;
+	
+}
+
+.ss-title{
+	//background-color:#66FF99;
+	background-color:#ADD8E6;
+	height:10%;
+	width:100%;
+	position:relative;
+	//border-style:solid;
+	//border-width:3px;
+	//border-color:black;
+	display:table-row;
+	
+}
+.ss-stat{
+	//background-color:grey;
+	//color:dark-grey;
+	background-color:white;
+	//height:25%;
+	//width:100%;
+	position:relative;
+	//border-style:solid;
+	//border-width:3px;
+	//border-color:black;
+	display:table-row;
+	//font-size:1.6em;
+	//font-size:1.15rem;
+	
+	font-size:0.75rem;
+	margin-top:20%;
+	margin:auto;
+	bottom:-3px;/*half cup appearance*/
+	
+	
+	
+}
+
+
+/*STAT (ss) elements; avg, hi, lo -- circles */
+.circle {
+        height: 75px;
+        width: 75px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+}
+
+.ss-hi{
+	/*assuming orientation(from left to right) is Hi-AVG-lo*/
+	//margin-left:2%;
+	//margin-top:10%;/*for vertical stack; before the stat-square-div ws moved to under playername box*/
+	//z-index:2;
+	margin-right:15px;
+}
+.ss-avg{
+	
+	
+	//margin-left:30%;
+	//margin-left:2%;/*for vertical stack*/
+	//z-index:2;
+	//margin-left:10%;
+	
+	margin-right:15px;
+	
+
+}
+
+.ss-lo{
+	//margin-left:50%;
+	//margin-left:2%;/*for vertical stack*/
+	//z-index:2;
+	
+}
+
+/*STAT (ss) elements; avg, hi, lo -- circles */
+
+
+/*DATA ON PlayerCARD*/
+.player-info{
+	background-color:purple;
+	
+}
+
+.team-name{
+	width: 100%;
+	display:flex;
+	//margin:0;
+}
+
+.team-pos{
+	width: 100%;
+	display:flex;
+	
+}
+/*DATA ON PlayerCARD*/
+
