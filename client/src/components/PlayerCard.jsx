@@ -240,6 +240,8 @@ function prop4Table(prop){
 				return "Steals Per Game";break;
 			case "hits":
 				return "Hits Per Game";break;	
+			case "Earned Runs Allowed":
+				return "ER Allowed";break;
 			default:
 				return (prop + " Per Game");break;
 	}
@@ -484,10 +486,14 @@ function propABRV(prop_title,league){/*abbreviate prop*/
 
 function fullProp(stat_prop){
 	
-	let prop = '';
+	let prop = stat_prop;
 	
 	switch(stat_prop){
 			case 'hits': prop = 'Hits';
+			break;
+			case 'Earned Runs Allowed': prop = "ER Allowed";
+			break;
+			case 'Home Runs': prop = 'Home Runs';
 			break;
 			case 'rebounds': prop = 'Rebounds';
 			break;		

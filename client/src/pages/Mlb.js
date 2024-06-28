@@ -52,13 +52,13 @@ export default function MLB(){
 	const [listOfUsers, setListOfUsers] = useState([ ])
 	
 	
-	const [listOfLeaguePlayers, setListOfLeaguePlayers] = useState([ ]) /*players in league, list is cross searched by player name, for player bio, season data, and others*/
+	//const [listOfLeaguePlayers, setListOfLeaguePlayers] = useState([ ]) /*players in league, list is cross searched by player name, for player bio, season data, and others*/
 	
 	const [search, setSearch] = useState('')
 	//console.log(search)
 	
 	//var category = ''
-	const [category,setCategory] = useState('Hits')
+	const [category,setCategory] = useState('hits')
 	const [usersByCategory, setUsersByCategory] = useState([])
 	
 	
@@ -83,14 +83,8 @@ export default function MLB(){
 	*/
 	
 	useEffect(()=>{
-		Axios.get("https://stackemsports.onrender.com/api/stats/nba").then((response) => {
+		Axios.get("https://stackemsports.onrender.com/api/stats/mlb").then((response) => {
 			setListOfUsers(response.data)
-		})//api endpoint rmemeebrr
-	}, [])
-	
-	useEffect(()=>{
-		Axios.get("https://stackemsports.onrender.com/api/players/nba").then((response) => {
-			setListOfLeaguePlayers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
 	
@@ -124,6 +118,13 @@ export default function MLB(){
 	last_season_stats: ["33.3","18.2","51.3%","43.0%","4.4","5.0"] , 
 	
 	}
+	
+	let user_limit_mlb = 50;//5 * 5 //user_limit should be # of players x max available stats by a player
+	
+	
+	const containerSize = {
+	  height:"auto",
+	}
 					
 	return(<div >
 	
@@ -133,19 +134,19 @@ export default function MLB(){
 		<div class="stat-search-n-nav">
 			
 				
-			<nav name = 'baseball-stat-gallery' class="stat-nav"  >
-					<button name = 'Hits' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits </button>
-					<button name = 'RBIs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> RBIs</button>
-					<button name = 'Runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Runs </button>
-					<button name = 'Walks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Walks </button>
-					<button name = 'Singles' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Singles </button>
-					<button name = 'Doubles' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Doubles </button>
-					<button name = 'Triples' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Triples </button>
-					<button name = 'Home Runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Home Runs </button>
-					<button name = 'SOs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts </button>
+			<div name = 'baseball-stat-gallery' class="stat-nav"  >
+					<button name = 'hits' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits </button>
+					<button name = 'rbis' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> RBIs</button>
+					<button name = 'runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Runs </button>
+					<button name = 'walks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Walks </button>
+					<button name = 'singles' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Singles </button>
+					<button name = 'doubles' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Doubles </button>
+					<button name = 'triples' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Triples </button>
+					<button name = 'home runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Home Runs </button>
+					<button name = 'strikeouts(so)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts(SO) </button>
 								
 				
-			</nav>	
+			</div>	
 				
 
 			
@@ -167,7 +168,7 @@ export default function MLB(){
 		
 		<br/>
 		
-		<div class = "cards-container">
+		<div class = "cards-container " style = {containerSize} >
 			<div class = "flip-card-container">
 				{listOfUsers.filter((user)=> {
 					if(search != ''){
@@ -176,13 +177,18 @@ export default function MLB(){
 					}else{
 						return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
 					}
-				}).map((user) => {
+				}).map((user, index) => {
 						
 						//keep as listOfusrr
 						
 						/*there  better be a matching name in players/league an stats/league
 						  ^i should make a case or error statement/condition for this, but i wont for now and hope it doesn't cause a problem
 						  not even doing toLowercase for the user.name stuff under here in the crossUserData*/
+					  
+					  
+					  if(index  >=  user_limit_mlb){/*easier than putting if statement around player card return statement*/
+						  return;
+					  }
 					  
 					  return (<div>
 					  <PlayerCard

@@ -53,7 +53,7 @@ export default function NBA(){
 	const [listOfUsers, setListOfUsers] = useState([ ])
 	
 	
-	const [listOfLeaguePlayers, setListOfLeaguePlayers] = useState([ ]) /*players in league, list is cross searched by player name, for player bio, season data, and others*/
+	//const [listOfLeaguePlayers, setListOfLeaguePlayers] = useState([ ]) /*players in league, list is cross searched by player name, for player bio, season data, and others*/
 	
 	const [search, setSearch] = useState('')
 	//console.log(search)
@@ -76,11 +76,12 @@ export default function NBA(){
 		})//api endpoint rmemeebrr
 	}, [])
 	
-	useEffect(()=>{
+	/*useEffect(()=>{
 		Axios.get("https://stackemsports.onrender.com/api/players/nba").then((response) => {
 			setListOfLeaguePlayers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
+	*/
 	
 	/*setUsersByCategory(e.target.name)*/
 	
@@ -101,6 +102,32 @@ export default function NBA(){
 	last_season_stats: ["33.3","18.2","51.3%","43.0%","4.4","5.0"] , 
 	
 	}
+	
+	
+	/*
+	
+		filter((user)=> {
+					if(search != ''){
+						return search.toLowerCase() === '' ? user : user.name.toLowerCase().includes(search.toLowerCase())
+						//^changed from includes(search) to includes (search.toLowerCase()) to work for capital letters in search
+					}else{
+						return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
+					}
+				})
+	
+	
+	
+	*/
+	
+	let user_limit_nba = 25;//5 * 5 //user_limit should be # of players x max available stats by a player
+	
+	/*   filter((item, idx) => idx < 5)
+	
+	*/
+	
+	const containerSize = {
+	  height: "auto"
+	}
 					
 	return(<div>
 	
@@ -108,13 +135,13 @@ export default function NBA(){
 		
 		<nav class="stat-search-n-nav">
 			
-			<nav name = 'basketball-stat-gallery' class="stat-nav"  >
+			<div name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points </button>
 				<button name = 'rebounds' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Rebounds </button>
 				<button name = 'assists' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists </button>
 				<button name = 'blocks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Blocks </button>
 				<button name = 'steals' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Steals </button>
-			</nav>
+			</div>
 			
 			
 			
@@ -135,7 +162,11 @@ export default function NBA(){
 		
 		
 		<br/>
-		<div class = "cards-container">
+		
+		
+		
+		
+		<div class = "cards-container" style={containerSize}>
 			<div class = "flip-card-container">
 				{listOfUsers.filter((user)=> {
 					if(search != ''){
@@ -144,13 +175,17 @@ export default function NBA(){
 					}else{
 						return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
 					}
-				}).map((user) => {
+				}).map((user, index) => {
 						
 						//keep as listOfusrr
 						
 						/*there  better be a matching name in players/league an stats/league
 						  ^i should make a case or error statement/condition for this, but i wont for now and hope it doesn't cause a problem
 						  not even doing toLowercase for the user.name stuff under here in the crossUserData*/
+					  if(index  >=  user_limit_nba){/*easier than putting if statement around player card return statement*/
+						  return;
+					  }
+					  
 					  
 					  return (<div>
 					  <PlayerCard
@@ -162,6 +197,7 @@ export default function NBA(){
 					  
 					  
 					})
+					
 				}
 			</div>
 		</div>

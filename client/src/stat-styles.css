@@ -312,7 +312,7 @@ th{
 	min-width:300px;
 	//min-height:300px;
 	
-	height:100%; /*this gets rid of space between card rows?*/
+	//height:100%; /*this gets rid of space between card rows?*/ /*change height of parent div so the height dimensions don't have to be defined*/
 	
 	
 	//height:1450px; /*not sure how to stop the large spaces under the cards during/when searching single player name; height as 100% is better, so need to make the div directly outside have the static height*/

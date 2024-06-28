@@ -52,7 +52,7 @@ export default function NBA(){
 	const [listOfUsers, setListOfUsers] = useState([ ])
 	
 	
-	const [listOfLeaguePlayers, setListOfLeaguePlayers] = useState([ ]) /*players in league, list is cross searched by player name, for player bio, season data, and others*/
+	//const [listOfLeaguePlayers, setListOfLeaguePlayers] = useState([ ]) /*players in league, list is cross searched by player name, for player bio, season data, and others*/
 	
 	const [search, setSearch] = useState('')
 	//console.log(search)
@@ -74,11 +74,6 @@ export default function NBA(){
 		})//api endpoint rmemeebrr
 	}, [])
 	
-	useEffect(()=>{
-		Axios.get("https://stackemsports.onrender.com/api/players/nba").then((response) => {
-			setListOfLeaguePlayers(response.data)
-		})//api endpoint rmemeebrr  // '/players/wnba was ntt working 502 error
-	}, [])
 	
 	/*setUsersByCategory(e.target.name)*/
 	
@@ -98,6 +93,13 @@ export default function NBA(){
 	position: "Frontrunner",    
 	last_season_stats: ["33.3","18.2","51.3%","43.0%","4.4","5.0"] , 
 	
+	}
+	
+	
+	let user_limit_wnba = 25;//5 * 5 //user_limit should be # of players x max available stats by a player
+	
+	const containerSize = {
+	  height: "auto"
 	}
 					
 	return(<div >
@@ -132,7 +134,8 @@ export default function NBA(){
 		
 		<br/>
 		
-		<div class = "cards-container">
+		<div class = "cards-container" style = {containerSize}>
+		
 		<div class = "flip-card-container">
 			{listOfUsers.filter((user)=> {
 				if(search != ''){
@@ -141,7 +144,7 @@ export default function NBA(){
 				}else{
 					return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
 				}
-			}).map((user) => {
+			}).map((user, index) => {
 					
 					//keep as listOfusrr
 					
@@ -149,6 +152,11 @@ export default function NBA(){
 					  ^i should make a case or error statement/condition for this, but i wont for now and hope it doesn't cause a problem
 					  not even doing toLowercase for the user.name stuff under here in the crossUserData*/
 				  
+				  
+				  if(index  >=  user_limit_wnba){/*easier than putting if statement around player card return statement*/
+						  return;
+				  }
+					  
 				  return (<div>
 				  <PlayerCard
 						

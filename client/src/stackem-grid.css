@@ -43,6 +43,22 @@ r-sidebar{
 
 .cards-container{
 	
+	//height:250 px; /*with current card size, 250 is the start of second row of cards; so 250px + 250* players*/
+	//height:1450px;/* ~50 + 1400*//*row holds 5*/
+	//height:1000px;
+	//max-height:auto;
+	min-height:1450px;
+}
+
+.cards-nba-sizer{
 	height:1450px;
 	
 }
+
+
+.cards-mlb-sizer{
+	height:2650px;
+	
+}
+
+

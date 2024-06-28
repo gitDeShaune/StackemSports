@@ -1,5 +1,6 @@
 //remember, App.js is a function itself so it's okay to use functions for the pages and whatnot functionality
 import './App.css';
+
 import './stat-styles.css';
 
 import './general-styles.css'
