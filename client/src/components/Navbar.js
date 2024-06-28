@@ -37,6 +37,19 @@ export default function Navbar() {
 			</div>
 		</Link>
 		
+		<Link  to="/mlb" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./mlb-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">MLB</div></div> 	
+					
+					
+			</div>
+		</Link>
+		
 		
 		
 

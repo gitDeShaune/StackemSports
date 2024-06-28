@@ -13,5 +13,11 @@ Non-Goalie: Season(YR) G A PTS HIT BLK SOG GP(math calculations)
 
 *MLB will be last
 
+Hits,Single,Doubles,Triples,Runs, RBI, Bases on Balls, Total Bases, Strikeouts
+
+Pitcher: Hits Allowed, Runs Allowed(R/G), Earned Runs Allowed (ER/G),Walks, Ks
+
+
 
 OPEN jupyter: get pos, last_ssn_stats, add to json when adding to mngodb
+

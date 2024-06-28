@@ -240,12 +240,13 @@ function prop4Table(prop){
 				return "Steals Per Game";break;
 			case "hits":
 				return "Hits Per Game";break;	
-			
+			default:
+				return (prop + " Per Game");break;
 	}
 	
 	return "Stat Per Game";
 }
-function propIdx(prop,league){
+function propIdx(prop,league){/*odnt need posiion if ever stat is named uniqeuly*/
 	let oidx = 0
 	//remember, season yr is first index
 	
@@ -266,6 +267,42 @@ function propIdx(prop,league){
 		
 	}else if (league == "NHL"){
 		
+	}else if (league == "MLB"){
+		
+		
+		switch(prop){
+			case "Strikeouts(SO)":
+				oidx = 9;break;
+			case "Walks":
+				oidx = 8;break;
+			case "RBIs":
+				oidx = 7;break;
+			case "Runs":
+				oidx = 6;break;
+			case "Home Runs":
+				oidx = 5;break;
+			case "Triples":
+				oidx = 4;break;
+			case "Doubles":
+				oidx = 3;break;
+			case "Singles":
+				oidx = 2;break;
+			case "Hits":
+				oidx = 1;break;			
+			case "Strikeouts(K)":
+				oidx = 5;break;
+			case "Walks Allowed":
+				oidx = 4;break;
+			case "Earned Runs Allowed":
+				oidx = 3;break;
+			case "Runs Allowed":
+				oidx = 2;break;
+			case "Hits Allowed":
+				oidx = 1;break;
+			
+		}	
+			
+	
 	}
 	
 	
@@ -312,23 +349,23 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 	
 	switch (league) {
 	  case "MLB":
-		size_array = [0,1,2];//keep it same for now
+		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
 			<tr >
-					<th>MLB</th>
-					<th>MLB</th>
-					<th>MLB</th>
+					<th>YEAR</th>
+					<th>{prop4Table(prop)}</th>
+					
 					
 			</tr>
 		
 		
 		)
+		
 		row_stats = (		
 			<tr>
 					<td>{last_ssn_stats[0]}</td>
 					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
-					
-					
+									
 			</tr>				
 		)
 		
@@ -434,6 +471,7 @@ function propABRV(prop_title,league){/*abbreviate prop*/
 				
 				
 			//}
+	  break;
 	  
 	  
 	}
@@ -681,6 +719,7 @@ const PlayerCard = ( {userData}) => {
 /* removed <div>{makeTable(lfg_opps,lfg_stats,lfg_dates)}</div> from inside table-and-graph*/
 
 export default PlayerCard;
+
 //https://codesandbox.io/s/react-new --work on online/remotely
 ////float:left/right changed the game and made me able to put divs side by side
 
