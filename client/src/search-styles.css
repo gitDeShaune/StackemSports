@@ -77,14 +77,28 @@
 
 /*ABOVE IS ALL SEARCH ICON FUNCTION, BELOW IS REST OF SEARCH BOX ABOVE CARDS */
 
+.stat-search-n-nav{
+	
+	height:100%;
+	
+	background-color:#aeb5fe; /*purple, formerly lightgreen*/
+}
+
 
 .stat-nav{
 	//margin:auto;
-	height:40px;
+	min-height:40px; /* for mobile, changing this from height to min-height is helps when resizing shrinking*/
 	//background:red;
 	position:relative;/*keep relative!!!*/
-	margin:0;
+	
+	//position:absolute;
+	//margin:0;
 	width:100%;
+	//display:grid;
+	
+	display:flex;
+	align-items:center;
+	//justify-content:center;
 }
 
 .stat-searchbar{

@@ -185,16 +185,16 @@ th{
 }
 
 .WNBA-card{
-	background-image: url(/src/icons/caitlin-clark.jpg);
+	//background-image: url(/src/icons/caitlin-clark.jpg);
 }
 
 .NBA-card{
-	background-image: url(/src/icons/jordan.jpg);
+	//background-image: url(/src/icons/jordan.jpg);
 	
 }
 
 .MLB-card{
-	background-image: url(/src/icons/shohei.jpg);
+	//background-image: url(/src/icons/shohei.jpg);
 	
 }
 
@@ -694,12 +694,7 @@ a{
 }*/
 
 
-.stat-search-n-nav{
-	
-	height:100%;
-	
-	background-color:#aeb5fe; /*purple, formerly lightgreen*/
-}
+
 
 
 .stat-button{
@@ -716,6 +711,8 @@ a{
 	
 	
 }
+
+
 
 .stat-nav{/*contains stat gallery*/
 

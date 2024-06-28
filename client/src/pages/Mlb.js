@@ -68,6 +68,7 @@ export default function MLB(){
 		setIsFlipped(!isFlipped);
 	}
 	
+	/*
 	useEffect(()=>{
 		Axios.get("https://stackemsports.onrender.com/api/stats/mlb").then((response) => {
 			setListOfUsers(response.data)
@@ -76,6 +77,19 @@ export default function MLB(){
 	
 	useEffect(()=>{
 		Axios.get("https://stackemsports.onrender.com/api/players/mlb").then((response) => {
+			setListOfLeaguePlayers(response.data)
+		})//api endpoint rmemeebrr
+	}, [])
+	*/
+	
+	useEffect(()=>{
+		Axios.get("https://stackemsports.onrender.com/api/stats/nba").then((response) => {
+			setListOfUsers(response.data)
+		})//api endpoint rmemeebrr
+	}, [])
+	
+	useEffect(()=>{
+		Axios.get("https://stackemsports.onrender.com/api/players/nba").then((response) => {
 			setListOfLeaguePlayers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
@@ -119,7 +133,7 @@ export default function MLB(){
 		<div class="stat-search-n-nav">
 			
 				
-			<div name = 'baseball-stat-gallery' class="stat-nav"  >
+			<nav name = 'baseball-stat-gallery' class="stat-nav"  >
 					<button name = 'Hits' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits </button>
 					<button name = 'RBIs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> RBIs</button>
 					<button name = 'Runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Runs </button>
@@ -129,18 +143,11 @@ export default function MLB(){
 					<button name = 'Triples' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Triples </button>
 					<button name = 'Home Runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Home Runs </button>
 					<button name = 'SOs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts </button>
+								
 				
+			</nav>	
 				
-					
-				
-		</div>	
-				
-				
-				
-					
-					
-			
-			
+
 			
 			<div class="search-container">
 			
@@ -155,6 +162,7 @@ export default function MLB(){
 			</form>
 			
 			</div>
+			
 		</div>	
 		
 		<br/>

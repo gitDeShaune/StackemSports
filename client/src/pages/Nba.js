@@ -106,7 +106,7 @@ export default function NBA(){
 	
 		
 		
-		<div class="stat-search-n-nav">
+		<nav class="stat-search-n-nav">
 			
 			<nav name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points </button>
@@ -131,7 +131,7 @@ export default function NBA(){
 			</form>
 			
 			</div>
-		</div>	
+		</nav>	
 		
 		
 		<br/>

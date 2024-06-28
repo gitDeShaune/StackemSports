@@ -37,6 +37,7 @@ export default function Navbar() {
 			</div>
 		</Link>
 		
+		
 		<Link  to="/mlb" >
 			<div class="league-card"> 
 					
@@ -51,10 +52,32 @@ export default function Navbar() {
 		</Link>
 		
 		
-		
 
 		</nav>
 }
+
+
+
+/*
+
+<Link  to="/mlb" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./mlb-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">MLB</div></div> 	
+					
+					
+			</div>
+		</Link>
+
+
+
+
+
+*/
 
 //Don't include MLB and whatnot til the data is available
 
