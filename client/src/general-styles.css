@@ -68,11 +68,7 @@ body {
   height:100%;
   
   //background-color:grey;
-  //background-image: url(/src/icons/baseball-card.jpg);
-  //background-image: url(/src/icons/pokemon-checkered.jpg);
-  //background-image: url(/src/icons/stacked-sports-logo-outline-with-words.svg);
-  //background-image: url(/src/icons/stacked-sports-logo-outline-with-words-blue-background.jpg);
-  //background-image: url(/src/icons/pattern-stackedsports-bigger.png);
+ 
   //background-color: green;
   
   background-image: url(/src/icons/stackem-logo-pattern.jpg);
@@ -122,7 +118,7 @@ body .container {
   //min-height:600px;
   
   //background-image: url(/src/icons/pokemon-checkered.jpg);
-  //background-image: url(/src/icons/pattern-stackedsports-bigger.png);
+
   //background-color:lightblue;
   //background-color:#F0FFFF;
   background-color:white;/*white background*//*the background behind react-flip-container and above*/

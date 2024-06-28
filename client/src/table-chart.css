@@ -68,7 +68,9 @@ table{
 }
 
 
-.stat-table th{ 
+
+
+/*.stat-table th{ /*first child css for width might be better, but more costly so doing a class instead
 	border-right:solid;
 	border-style:solid;
 	border-color:blue;
@@ -77,6 +79,23 @@ table{
   border-left: solid 1px black;
 	//justify-content:center;
 	
+}*/
+
+.stat-table td{
+	
+	color:black;
+	
+	
+}
+
+.stat-table td:first-child {
+  width: 8em;
+  min-width: 6em;
+  max-width: 8em;
+  //word-break: break-all;/*idk what this does, but keep it*/
+  border-right:dotted 1px black;
+  //text-align: left;
+  left:2px;
 }
 
 .stat-table th{
@@ -95,6 +114,7 @@ table{
 .stat-table{
 	font-size:.6rem;
 	background-color:lightgrey;
+	//width:100%;
 	//border-collapse:collapse;
 }
 .graph{

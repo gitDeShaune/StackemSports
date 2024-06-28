@@ -307,9 +307,6 @@ th{
 .flip-card-container{
 	font-family: LegionFont; /*Shrikhand*/
 	
-	//background-image: url(/src/icons/pattern-stackedsports-bigger.png);
-	//background-image: url(/src/icons/stacked-sports-logo-outline-with-words-blue-background.jpg);
-	
 	//background-color:lightblue;
 	
 	min-width:300px;
@@ -681,20 +678,6 @@ a{
 
 
 
-
-/*.logo-stacked{
-	background-image: url(/src/icons/STACKED.png);/*background image works at least, so dont worry about svg specific parent div or whatever	
-	background-size: cover;
-	//border-style:solid; 
-	//border-width:6px;
-	width:100px;
-	height:100%;
-}
-.logo-sports{
-	background-image: url(/src/icons/SPORTS.png);/*background image works at least, so dont worry about svg specific parent div or whatever	
-	background-size: cover;
-	
-}*/
 
 
 

@@ -3,6 +3,11 @@ import {Link} from 'react-router-dom'
 //import logo_footer from '../icons/stacked-sports-logo-outline-with-words.svg';
 
 import logo_footer from '../icons/stackem-with-text-mid-footer.png';
+import twt from '../icons/twitter-logo.svg';
+import reddit from '../icons/reddit-logo.svg';
+import bmc from '../icons/bmc-button.png';
+
+
 
 
 //probably have this include the help links and about and contact at bottom of page
@@ -85,9 +90,9 @@ export default function Footer() {
 
       <section class="text-center footer-links mb-5">
 		
-		<a href="https://buymeacoffee.com/stackemsports" target="_blank" class="bmc" ></a>
-		<a href="https://www.reddit.com/r/StackemSports/" target="_blank" class="fa fa-reddit" ></a>
-        <a href="https://x.com/STACKEMSPORTS" target="_blank" class="fa fa-twitter"></a>
+		<a href="https://buymeacoffee.com/stackemsports" target="_blank" ><img src={bmc} width="400" height="80" /></a>
+		<a href="https://www.reddit.com/r/StackemSports/" target="_blank" class="fa fa-reddit" ><img src={reddit} width="40" height="40" /></a>
+        <a href="https://x.com/STACKEMSPORTS" target="_blank" class="fa fa-twitter"><img src={twt} width="40" height="40" /></a>
         
       </section>
 	  

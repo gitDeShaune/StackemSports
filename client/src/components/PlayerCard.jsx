@@ -24,10 +24,14 @@ const CardStyle = {
   
   margin: "20px",
   width: "180px",
-  height: "250px"
+  height: "270px"
 }; //might not really want this, it may overwrite some styles but that just means I need to make to stlyes mroe organized and  undesrtandable/accessible
 //there is some small square that is still the size of previous behind/still existing with the back card
 //..maybe something to do with backface visibility
+
+
+
+const barColor = "yellow";
 
 function makeTable(opps,stats,dates){
 	let size_array = [] //is made flex so to get data in case of non-five previous games(ie. only 3,or just 7 when looking for 10)
@@ -119,7 +123,7 @@ function makeGraph(graph_data,max,stats){
 						
 					  </XAxis >
 					  
-					  <Bar isAnimationActive={false} dataKey="stats" fill="blue">
+					  <Bar isAnimationActive={false} dataKey="stats" fill={barColor}>
 						<LabelList dataKey="stats"  position="top" fill = 'black'/>
 					  </Bar>
 					</BarChart>
@@ -354,8 +358,8 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
 			<tr >
-					<th>yEAR</th>
-					<th>{prop4Table(prop)}</th>
+					<th width = "30px">yEAR</th>
+					<th >{prop4Table(prop)}</th>
 					
 					
 			</tr>
@@ -365,7 +369,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		
 		row_stats = (		
 			<tr>
-					<td>{last_ssn_stats[0]}</td>
+					<td width = "30px">{last_ssn_stats[0]}</td>
 					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
 									
 			</tr>				

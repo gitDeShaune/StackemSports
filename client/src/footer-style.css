@@ -118,41 +118,37 @@ footer .form-control {
 	//width:60%;
 	justify-content:center;
 	
+	height:auto;
+	
 }
 
 
-.bmc{
-	background-image:url(/src/icons/bmc-button.png);
-	background-size:cover;
-	width: 260px;
-	
-	//padding:20px;
-	//height:auto;
-	
-}
+
 
 .fa {/*square*/
   padding: 20px;
   font-size: 30px;
-  width: 80px;
+  //width: 80px;
   text-align: center;
   text-decoration: none;
   
 }
 
 .fa-facebook {
-  background: #3B5998;
+  //background: #3B5998;
   color: white;
 }
 
 .fa-reddit{
-	background:white;
+	//background:white;
 	color:red;
 
 }
 
 /* Twitter */
 .fa-twitter {
-  background: #55ACEE;
+  //background: #55ACEE;
   color: white;
+  //object-fit:contain;
 }
+
