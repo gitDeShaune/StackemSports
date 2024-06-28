@@ -18,6 +18,11 @@
     overflow: hidden; 
 }*/
 
+@font-face {
+    font-family: 'LegionFont'; /*a name to be used later*/
+    src: url('BaryaLangPoSaUmagaExtraBoldItalic-p7GJy.ttf') /*URL to font*/
+}
+
 
 hr{
 	
@@ -225,7 +230,7 @@ Link{
 	display: flex;/*also seems to cntribute to no space between divs*/
 	
 	
-	font-family:Shrikhand;
+	font-family:LegionFont; /*Shrikhand*/
 	
 	
 	width:100%;

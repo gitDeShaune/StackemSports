@@ -1,9 +1,9 @@
 /*page styles css */
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 
 .sports-available-page{
 	
-	font-family:Shrikhand;
+	font-family:LegionFont; /*Shrikhand*/
 	
 }
 

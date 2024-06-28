@@ -8,7 +8,7 @@
 	min-height:100vh;
 }*/
 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 
 
 
@@ -162,7 +162,7 @@ th{
 	//overflow:visible;
 	//overflow:hidden;
 
-	font-family: Shrikhand;
+	font-family: LegionFont; //Shrikhand
 	border-style:solid;
 	border-color:green;
 	
@@ -240,13 +240,14 @@ th{
 	bottom:0;
 	
 }
-.ss-logo-letters{
+
+/*.ss-logo-letters{
 	//margin:0;
 	//margin-bottom:20px;
 	//display:flex;
 	//justify-content:center;
 	
-	font-family:Shrikhand;
+	font-family:LegionFont; /*Shrikhand
 	bottom:0;
 	border-style:solid; 
 	border-width:6px;
@@ -255,6 +256,7 @@ th{
 	margin:auto;
 	
 }
+*/
 
 
 
@@ -275,7 +277,8 @@ th{
 /*ignore this stuff, at least for now*/
 .back-face{
 	
-	font-family: Shrikhand;
+	//font-family: LegionFont; /*Shrikhand*/
+	
 }
 
 .front-face{
@@ -302,7 +305,7 @@ th{
 }
 
 .flip-card-container{
-	font-family: Shrikhand;
+	font-family: LegionFont; /*Shrikhand*/
 	
 	//background-image: url(/src/icons/pattern-stackedsports-bigger.png);
 	//background-image: url(/src/icons/stacked-sports-logo-outline-with-words-blue-background.jpg);
@@ -363,7 +366,7 @@ th{
 	//display: flex;
   flex-direction: column;
   align-content: stretch;
-  //font-family: Shrikhand;
+  //font-family: LegionFont; /*Shrikhand*/
 	//height:100px;
 	//animation:none;
 }
@@ -394,7 +397,7 @@ th{
 	width:100%;
 	
 	
-	font-family: Shrikhand;
+	font-family: LegionFont; /*Shrikhand*/
 	
 }
 
@@ -404,7 +407,7 @@ th{
 	display:flex;
 	//margin: 2px;
 	margin:auto;
-	font-family:Shrikhand;
+	font-family:LegionFont; /*Shrikhand*/
 	letter-spacing: .2rem;
 	font-size: 0.58em;
 	
@@ -467,7 +470,7 @@ th{
 	margin:auto;
 	padding:10px;
 	padding-top:20px;
-	//font-family: Shrikhand;
+	//font-family: LegionFont; /*Shrikhand*/
 	
 }
 
@@ -478,11 +481,11 @@ th{
 }
 
 .about-us-header{
-	font-family:Shrikhand;
+	font-family:LegionFont; /*Shrikhand*/
 }
 
 .contact-header{
-	font-family:Shrikhand;
+	font-family:LegionFont; /*Shrikhand*/
 }
 
 .page-image-container img{
@@ -515,7 +518,7 @@ th{
 	max-width:90%;
 	//height:40px;
 	min-height:30%;
-	//font-family: Shrikhand;
+	//font-family: LegionFont; /*Shrikhand*/
 	
 	
 	
@@ -601,7 +604,7 @@ a{
 	//align-items:center;
 	
 	
-	font-family: Shrikhand;
+	font-family: LegionFont; /*Shrikhand*/
 	font-size:0.95rem;
 	//font-size:1em;
 	
@@ -702,7 +705,7 @@ a{
 	border-radius:6px;
 	//min-width:70px;
 	//min-width:12%;
-	font-family: Shrikhand;
+	font-family: LegionFont; /*Shrikhand*/
 	font-size:0.74rem;
 	color:white;
 	background-color:blue;

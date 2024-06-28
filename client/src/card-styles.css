@@ -26,6 +26,14 @@
 .cardLabel{
 	
 	letter-spacing:1px;
+	font-size:0.8rem;
+	
+	
+}
+
+.front-stat-title{
+	left:20px;/*stat titles are centered, except fr strikeouts*/
+	
 	
 }
 
@@ -130,7 +138,7 @@
 .inner-card-frame{
 
 
-font-family: Shrikhand;
+font-family: LegionFont; /*Shrikhand*/
 
 z-index:-1;	
 //margin:5px;
@@ -171,7 +179,7 @@ border-bottom-left-radius:15px;
 
 .card-frame{
 	
-	font-family: Shrikhand;
+	font-family: LegionFont; /*Shrikhand*/
 position:absolute;
 top:0;
 overflow:visible;
@@ -386,9 +394,9 @@ background-size: cover;
 	   align-items: center;
 	justify-content: center;
 	 
-	 //font-family:Shrikhand;
+	 font-family:LegionFont; /*Shrikhand*/
 	 
-	 font-family:Trebuchet MS;/*rying to replace Shrikhand with a cleaner, simpler font*/
+	 //font-family:Trebuchet MS;/*rying to replace Shrikhand with a cleaner, simpler font*/
 	 
 	 letter-spacing: 1px;/*space between letters for certain spots*/
 	 

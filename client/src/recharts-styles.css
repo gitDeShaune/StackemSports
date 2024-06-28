@@ -4,9 +4,10 @@
 	/*cant do viewbox in here, but find appropirate dimensions to do it viewbox = 5;*/
 	/*add y-axis line to recharts */
 	
-	width:70%;/*resize graph / recharts */
+	//width:70%;/*resize graph / recharts */
+	width:60%;
 	margin:auto;
-	height:68%;
+	height:58%;
 	
 	//margin-right:61px;/*bad practice to hardcode these values, especially when resizing/mobile*/
 	
@@ -15,6 +16,8 @@
 	//min-height:8em;
 	//min-width:8em;
 	z-index:3;
+	
+	
 }
 
 .recharts-wrapper{

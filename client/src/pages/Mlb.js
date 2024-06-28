@@ -101,11 +101,9 @@ export default function MLB(){
 	
 	
 	/*<button name = 'HAs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits Allowed</button>
-					<button name = 'Ks' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts(K)</button>
-					<button name = 'RAs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Runs Allowed </button>
-					<button name = 'ERs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Earned Runs </button>
-					<button name = 'POs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Pitching Outs </button>
-					<button name = 'BBs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Walks </button>
+					<button name = 'strikeouts(k)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts(K)</button>
+					<button name = 'hits allowed' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits Allowed </button>
+					<button name = 'walks allowed' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Walks Allowed </button>
 				
 	*/
 	
@@ -144,7 +142,10 @@ export default function MLB(){
 					<button name = 'triples' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Triples </button>
 					<button name = 'home runs' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Home Runs </button>
 					<button name = 'strikeouts(so)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts(SO) </button>
-								
+					<button name = 'strikeouts(k)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Strikeouts(K)</button>
+					<button name = 'hits allowed' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits Allowed </button>
+					<button name = 'walks allowed' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Walks Allowed </button>
+						
 				
 			</div>	
 				

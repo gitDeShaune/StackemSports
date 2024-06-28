@@ -354,7 +354,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
 			<tr >
-					<th>YEAR</th>
+					<th>yEAR</th>
 					<th>{prop4Table(prop)}</th>
 					
 					
@@ -376,7 +376,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
 			<tr >
-					<th>YEAR</th>
+					<th>yEAR</th>
 					<th>{prop4Table(prop)}</th>
 					
 					
@@ -397,7 +397,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
 			<tr >
-					<th>YEAR</th>
+					<th>yEAR</th>
 					<th>{prop4Table(prop)}</th>
 					
 					

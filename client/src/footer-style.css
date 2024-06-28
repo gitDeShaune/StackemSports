@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 
 /* Sticky footer position and size
@@ -12,7 +11,7 @@ body {
   margin-bottom: 300px;
 }
 .footer {
-  font-family: Shrikhand;
+  font-family: LegionFont; /*Shrikhand*/
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -59,7 +58,7 @@ footer .form-control {
 }
 
 .mt-5{
-	font-family: Shrikhand;
+	font-family: LegionFont; /*Shrikhand*/
 	
 }
 
