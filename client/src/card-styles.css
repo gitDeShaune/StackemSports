@@ -11,6 +11,13 @@
 
 /*<div className = "card-footer"> * This data is based off the last 5 games played </div> */
 
+.stat-disclaimer{
+	font-size:0.4rem;
+	color:#454545;
+	margin:0;
+	padding:0;
+}
+
 .cardTitle{
 	
 	//height:10%;
@@ -387,7 +394,7 @@ background-size: cover;
 	 //width: 100%;/*the width of this determines how much of background statbox color is shown*/
 	 //width:1rem;
 	 //left:10;
-	 
+	color:yellow;
 	 //font-size:0.8em;
 	 
 	 
@@ -403,13 +410,7 @@ background-size: cover;
 	 letter-spacing: 1px;/*space between letters for certain spots*/
 	 
 	 background-color:blue;
-	 //width:10px;
-	 //min-width:5px;
-	 //font-size: 1.8rem;
-	 //font-size:14px;
-	//margin:0;
-	//margin:auto;
-	//float:left;
+	 
 	
 	border-bottom-right-radius:15px;/*round corner of box*/
 	//border-bottom-left-radius:15px;

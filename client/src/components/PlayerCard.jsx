@@ -626,7 +626,8 @@ const PlayerCard = ( {userData}) => {
 		
 		
 		<div class = "ss-stat-div">
-			<div className="cardLabel front-stat-title">{fullProp(prop_title)}</div>
+			<div className="cardLabel front-stat-title">{fullProp(prop_title)} <p class = "stat-disclaimer">*Based on last 5 games </p></div>
+			
 			
 			<>
 				<div class = "stat-square ss-hi" >
@@ -648,8 +649,10 @@ const PlayerCard = ( {userData}) => {
 						
 				</div>
 			</>	
-		
+			
 		</div>
+			
+		
 		
 		
 		
