@@ -231,15 +231,19 @@ function propIdx(prop,league){/*odnt need posiion if ever stat is named uniqeuly
 	}else if (league == "BIG3"){
 		switch(prop){
 			case "points":
-				oidx = 1;break;
+				oidx = 0;break;
 			case "rebounds":
-				oidx = 2;break;
+				oidx = 1;break;
 			case "assists":
-				oidx = 3;break;
+				oidx = 2;break;
 			case "blocks":
 				oidx = 4;break;
 			case "steals":
-				oidx = 5;break;
+				oidx = 3;break;
+			case "3PM":
+			    oidx = 5;break;
+			case "4PM":
+			    oidx = 6;break;
 			
 		}
 		
@@ -361,7 +365,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		
 		row_stats = (		
 			<tr>
-					<td>{last_ssn_stats[0]}</td>
+					<td>2024</td>
 					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
 									
 			</tr>				
