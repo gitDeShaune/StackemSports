@@ -2,7 +2,7 @@ const express = require("express")
 const app = express() 
 const mongoose = require("mongoose")
 
-
+const big3Model = require('./models/BIG3-model')
 const UserModel = require('./models/Users')
 const nbaModel = require('./models/NBA-model')
 const mlbModel = require('./models/MLB-model')
@@ -145,6 +145,37 @@ async function getStatsNBA(){
 app.get("/api/stats/nba", function (req, res){
 	
 	getStatsNBA().then(function(FoundStats){
+		res.json(FoundStats)
+		
+	})
+	
+	
+})
+
+
+async function getStatsBIG3(){
+	//var Stats = null
+	/*switch(arg){
+		case "nba":
+			Stats = await nbaModel.find({});
+		default:
+			Stats = await UserModel.find({});
+			console.log("showing user data error")
+	}
+	*/
+	const Stats = await big3Model.find({});
+	
+	//prop_title: 'rebs'
+	
+	
+	return Stats;
+	
+
+}
+
+app.get("/api/stats/big3", function (req, res){
+	
+	getStatsBIG3().then(function(FoundStats){
 		res.json(FoundStats)
 		
 	})

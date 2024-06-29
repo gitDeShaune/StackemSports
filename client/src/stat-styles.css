@@ -477,6 +477,24 @@ th{
 	margin:auto;
 }
 
+.privacy-policy-container{
+	
+	font-size:.9rem;
+	width:80%;
+	margin:auto;
+	
+}
+
+.privacy-policy-container h1,h2,h3{
+	
+	font-family:LegionFont;
+	
+}
+
+.privacy-policy-header{
+	font-family:LegionFont; /*Shrikhand*/
+}
+
 .about-us-header{
 	font-family:LegionFont; /*Shrikhand*/
 }
@@ -575,6 +593,8 @@ a{
 	//background-color:orange;
 	background-color:blue;
 	//color:black;
+	
+	color:yellow;
 	
 	width:100%;
 	bottom:0;

@@ -22,6 +22,19 @@ export default function Navbar() {
 			</div>
 		</Link>
 		
+		<Link  to="/big3" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./nba-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">BIG3</div></div> 	
+					
+					
+			</div>
+		</Link>
+		
 		
 		
 		<Link  to="/wnba" >
