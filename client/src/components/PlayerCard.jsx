@@ -160,14 +160,14 @@ function find_MAX(stats){
 }
 function find_AVG(stats){
 	var total = 0;
-	for(let i = 0; i < 5;i++){							
+	for(let i = 0; i < stats.length;i++){							
 				total += stats[i]
 				
 				//fill graph_data and now ready for input into graph 
 				//account for negative numbers(eg. only in case of fantasy points)
 	}
 	
-	return total/5;
+	return total/stats.length;
 }
 
 function fill_GRAPHDATA(stats,dates,opps){//added dates to have xaxis with dates on graph
@@ -240,7 +240,7 @@ function propIdx(prop,league){/*odnt need posiion if ever stat is named uniqeuly
 				oidx = 4;break;
 			case "steals":
 				oidx = 3;break;
-			case "FGM":
+			case "fgm":
 			    oidx = 5;break;
 			case "3PM":
 			    oidx = 6;break;

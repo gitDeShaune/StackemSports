@@ -143,7 +143,7 @@ export default function NBA(){
 				<button name = 'steals' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Steals </button>
 				<button name = '3PM' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> 3 Pointers </button>
 				<button name = '4PM' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> 4 Pointers </button>
-				<button name = 'FGM' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> 4 Pointers </button>
+				<button name = 'FGM' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Field Goals Made</button>
 				
 				
 			</div>
