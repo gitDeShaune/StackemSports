@@ -33,49 +33,6 @@ const CardStyle = {
 
 const barColor = "yellow";
 
-function makeTable(opps,stats,dates){
-	let size_array = [] //is made flex so to get data in case of non-five previous games(ie. only 3,or just 7 when looking for 10)
-	//to completely implement, wil have to remove 5 expected constants anyhere in the code
-	size_array = [0,1,2,3,4,5];
-	
-	
-	let tableaux = (
-					<div class = "table-container">
-						
-						<table class = 'stat-table'>
-						<thead >
-									<tr >
-										<th>vs.</th>
-										<th>STAT</th>
-										<th>DATE</th>
-									</tr>
-						</thead>
-						<div class = "table-break"/> 
-						<tbody>
-									
-									{size_array.map((idx) => {
-										{/*hardcoded right now, but should redesign the function to have dates not backwards regardless of size)*/}
-									  return (
-										<tr>
-												<td>{opps[4-idx]}</td>
-												<td>{stats[4-idx]}</td>
-												<td>{dates[4-idx]}</td>
-										</tr>
-									  )
-									})}
-						</tbody>			
-									
-										
-									
-						</table>
-					</div>
-					
-		)
-		
-	return tableaux;	
-	
-	
-}
 
 function makeGraph(graph_data,max,stats){
 	//stats(ie. lfg_stats) is a parameter because I was probably comparing it/using it separately in the previous version of this, before adding opp labels
@@ -271,7 +228,20 @@ function propIdx(prop,league){/*odnt need posiion if ever stat is named uniqeuly
 			
 		}
 		
-	}else if (league == "NHL"){
+	}else if (league == "BIG3"){
+		switch(prop){
+			case "points":
+				oidx = 1;break;
+			case "rebounds":
+				oidx = 2;break;
+			case "assists":
+				oidx = 3;break;
+			case "blocks":
+				oidx = 4;break;
+			case "steals":
+				oidx = 5;break;
+			
+		}
 		
 	}else if (league == "MLB"){
 		
@@ -375,6 +345,27 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 			</tr>				
 		)
 		
+		break;
+	  case "BIG3":
+		size_array = [0,1,2,3,4,5,6];
+		row_headers = (
+			<tr >
+					<th>yEAR</th>
+					<th>{prop4Table(prop)}</th>
+					
+					
+			</tr>
+		
+		
+		)
+		
+		row_stats = (		
+			<tr>
+					<td>{last_ssn_stats[0]}</td>
+					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
+									
+			</tr>				
+		)
 		break;
 	  case "NBA":
 		size_array = [0,1,2,3,4,5,6];

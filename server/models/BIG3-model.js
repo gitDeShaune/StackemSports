@@ -17,6 +17,6 @@ const big3Schema = new mongoose.Schema({
 const big3Model = mongoose.model("big3s", big3Schema)
 
 //had to do 'nbas' for some reason; supposed to be convention, but was only working method as well
-
+module.exports = big3Model;
 
 //position or height

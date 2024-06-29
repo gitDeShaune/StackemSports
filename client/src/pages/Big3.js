@@ -216,64 +216,6 @@ export default function NBA(){
 }
 
 
-/*<Form>
-			
-			<InputGroup>
-				<Form.Control 
-					onChange={(e)=> setSearch(e.target.value)}
-					placeholder = 'search name'/>
-			</InputGroup>
-		
-		</Form>*/
-
-
-/* PRINT DEBUG for empty search bar
-		{
-			search.toLowerCase() == '' &&
-			<div name = 'stat-container'>
-				EMPTY SEARCH BAR
-				{category}
-			</div>
-		}
-		
-		*/
-		
-		
-		
-		/*
-		<div class = "flip-card-container">
-		{listOfUsers.filter((user)=> {
-			if(search != ''){
-				return search.toLowerCase() === '' ? user : user.name.toLowerCase().includes(search)
-			}else{
-				return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
-			}
-		}).map((user) => {
-				
-				//keep as listOfusrr
-			  
-			  return (<div>
-			  <PlayerCard
-					
-					userData={user}
-					
-				  /></div>)
-			  
-			  
-			})
-		}
-		</div>
-		
-		*/
-
-
-
-
-
-
-
-
-
 
 
 
