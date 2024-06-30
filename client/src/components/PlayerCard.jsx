@@ -613,7 +613,7 @@ const PlayerCard = ( {userData}) => {
 	    
         
 		<div class="card-frame"></div>
-		<div class={"inner-card-frame " + league+"-card" + " front-face"}>
+		<div class={"inner-card-frame " + league + " front-face"}>
 			<div class="stat-player-name-box">
 						<div class = "player-name"><strong>{name}</strong></div>							
 			</div>

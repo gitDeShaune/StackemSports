@@ -416,3 +416,27 @@ background-size: cover;
 	//border-bottom-left-radius:15px;
 	//text-align:right;
 }
+
+
+
+.NBA{
+	background-image: url(/src/icons/shohei.jpg);
+	
+}
+
+
+.MLB{
+	//background-image: url(/src/icons/shohei.jpg);
+	
+}
+
+.BIG3{
+	background-image: url(/src/icons/ice-cube.png);
+	//object-fit:contain;
+	
+}
+
+.WNBA{
+	background-image: url(/src/icons/caitlin-clark.png);
+	
+}
