@@ -185,18 +185,28 @@ th{
 }
 
 .WNBA-card{
-	//background-image: url(/src/icons/caitlin-clark.jpg);
-}
-
-.NBA-card{
-	//background-image: url(/src/icons/jordan.jpg);
+	background-image: url(/src/icons/caitlin-clark.png);
 	
 }
+
+
+/*.NBA-card{
+	background-image: url(/src/icons/shohei.jpg);
+	
+}
+*/
 
 .MLB-card{
 	//background-image: url(/src/icons/shohei.jpg);
 	
 }
+
+.BIG3-card{
+	background-image: url(/src/icons/ice-cube.png);
+	//object-fit:contain;
+	
+}
+
 
 
 
