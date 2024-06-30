@@ -120,6 +120,16 @@ export default function MLB(){
 	let user_limit_mlb = 50;//5 * 5 //user_limit should be # of players x max available stats by a player
 	
 	
+	if(window.matchMedia("(pointer: coarse)").matches) {
+		// touchscreen is main input (ie.phone?)
+		user_limit_mlb = 9; //5 is # of categories
+		
+		
+	}else{
+		console.log("NOT TOUCHSCREEN");
+		user_limit_mlb = 50; 
+	}
+	
 	const containerSize = {
 	  height:"auto",
 	}

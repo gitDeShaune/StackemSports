@@ -121,6 +121,16 @@ export default function NBA(){
 	
 	let user_limit_nba = 25;//5 * 5 //user_limit should be # of players x max available stats by a player
 	
+	if(window.matchMedia("(pointer: coarse)").matches) {
+		// touchscreen is main input (ie.phone?)
+		user_limit_nba = 5; //5 is # of categories
+		
+		
+	}else{
+		console.log("NOT TOUCHSCREEN");
+		user_limit_nba = 25; 
+	}
+	
 	/*   filter((item, idx) => idx < 5)
 	
 	*/

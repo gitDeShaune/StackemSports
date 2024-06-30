@@ -98,6 +98,16 @@ export default function NBA(){
 	
 	let user_limit_wnba = 25;//5 * 5 //user_limit should be # of players x max available stats by a player
 	
+	if(window.matchMedia("(pointer: coarse)").matches) {
+		// touchscreen is main input (ie.phone?)
+		user_limit_wnba = 5; //5 is # of categories
+		
+		
+	}else{
+		console.log("NOT TOUCHSCREEN");
+		user_limit_wnba = 25; 
+	}
+	
 	const containerSize = {
 	  height: "auto"
 	}
