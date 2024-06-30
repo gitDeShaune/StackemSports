@@ -1,5 +1,8 @@
 import {Link} from 'react-router-dom'
 
+import {useState, useEffect} from 'react'
+//import Axios from 'axios'
+
 import collection_image from '../icons/sports-cards-collection.jpg';
 
 export default function About(){
