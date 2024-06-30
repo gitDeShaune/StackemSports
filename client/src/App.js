@@ -110,7 +110,7 @@ function App() {
 				<Navbar/>
 			    
 				<Routes>
-				<Route path ="/" element = {<BIG3 />} />
+				<Route path ="/" element = {<About />} />
 				</Routes>
 				<Routes>
 					
