@@ -78,7 +78,7 @@ export default function NBA(){
 	/*setUsersByCategory(e.target.name)*/
 	
 	useEffect(() => {
-		document.title = "WNBA - Stack'em Sports";
+		document.title = "Stack'em Sports | WNBA";
 	}, []);/*to change tab title for different pages */
 	
 	/*buttoner and sample_flippers was here*/

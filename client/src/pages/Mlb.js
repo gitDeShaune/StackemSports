@@ -91,7 +91,7 @@ export default function MLB(){
 	/*setUsersByCategory(e.target.name)*/
 	
 	useEffect(() => {
-		document.title = "MLB - Stack'em Sports";
+		document.title = "Stack'em Sports | MLB";
 	}, []);/*to change tab title for different pages */
 	
 	/*buttoner and sample_flippers was here*/

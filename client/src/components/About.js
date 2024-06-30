@@ -3,6 +3,13 @@ import {Link} from 'react-router-dom'
 import collection_image from '../icons/sports-cards-collection.jpg';
 
 export default function About(){
+	
+	
+	useEffect(() => {
+		document.title = "Stack'em Sports | We Stack'em, YOU Pick'em";
+	}, []);
+	
+	
 
 	return <div>
 	
