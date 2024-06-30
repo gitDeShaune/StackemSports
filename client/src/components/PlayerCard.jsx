@@ -167,7 +167,10 @@ function find_AVG(stats){
 				//account for negative numbers(eg. only in case of fantasy points)
 	}
 	
-	return total/stats.length;
+	var ans = total/stats.length;
+	
+	
+	return Math.round(ans* 100) / 100;
 }
 
 function fill_GRAPHDATA(stats,dates,opps){//added dates to have xaxis with dates on graph
