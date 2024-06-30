@@ -245,9 +245,9 @@ function propIdx(prop,league){/*odnt need posiion if ever stat is named uniqeuly
 				oidx = 3;break;
 			case "fgm":
 			    oidx = 5;break;
-			case "3PM":
+			case "threes":
 			    oidx = 6;break;
-			case "4PM":
+			case "fours":
 			    oidx = 7;break;
 			
 		}
