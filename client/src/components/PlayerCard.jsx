@@ -18,6 +18,31 @@ import { PieChart,
   Cell,
   Label,
   LabelList} from 'recharts'
+  
+  
+  import NBA_img from '../icons/bron-celly.png';
+  import WNBA_img from '../icons/caitlin-clark.png';
+  import BIG3_img from '../icons/ice-cube.png';
+  import MLB_img from '../icons/shohei-3.png';
+  
+function getIMG(league){
+	
+	switch(league){
+		case 'BIG3':
+			return BIG3_img;break;
+		case 'NBA':
+			return NBA_img;break;
+		case 'WNBA':
+			return WNBA_img;break;
+		case 'MLB':
+			return MLB_img;break;
+		
+		
+	}
+	
+	return BIG3_img;
+}
+
 
 const CardStyle = {
   border: "1px solid black",
@@ -30,8 +55,19 @@ const CardStyle = {
 //..maybe something to do with backface visibility
 
 
-
 const barColor = "yellow";
+
+
+
+
+var cardIMG = null;
+
+
+
+
+
+
+
 
 
 function makeGraph(graph_data,max,stats){
@@ -613,11 +649,13 @@ const PlayerCard = ( {userData}) => {
 	    
         
 		<div class="card-frame"></div>
-		<div class={"inner-card-frame " + league + " front-face"}>
+		<div class={"inner-card-frame " + " front-face"}>
+			<div>
 			<div class="stat-player-name-box">
 						<div class = "player-name"><strong>{name}</strong></div>							
 			</div>
-		
+			
+			</div>
 		</div>
 		
 		
@@ -626,6 +664,7 @@ const PlayerCard = ( {userData}) => {
 		
 		
 		<div class = "ss-stat-div">
+			<img class = "league-idol" src = {getIMG(league)} width="140" height="150"/>
 			<div className="cardLabel front-stat-title">{fullProp(prop_title)} <p class = "stat-disclaimer">*Based on last 5 games*</p></div>
 			
 			
@@ -710,7 +749,7 @@ const PlayerCard = ( {userData}) => {
 			<div class = "player-bio-element">Team: {team}</div>
 		  
 		  
-		  <div className="cardLabel">{fullProp(prop_title)}</div>
+		  <div className="cardLabel back-stat-title">{fullProp(prop_title)}</div>
 		  <div className="table-and-graph">
 			  <div>{makeGraph(graph_data,max,lfg_stats)}</div>
 			  

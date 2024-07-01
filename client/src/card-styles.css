@@ -35,12 +35,20 @@
 	
 	letter-spacing:1px;
 	font-size:0.8rem;
+	width:90%;
+	//margin:auto;
+	//justify-content:center;
 	
+}
+
+.back-stat-title{
+	margin:auto;
 	
 }
 
 .front-stat-title{
-	left:20px;/*stat titles are centered, except fr strikeouts*/
+	left:15px;/*stat titles are centered, except fr strikeouts*/
+	//justify-content:center;
 	
 	
 }
@@ -71,7 +79,7 @@
 	//font-size:1.6em;
 	//font-size:1.15rem;
 	
-	font-size:0.75rem;
+	font-size:0.85rem;
 	margin-top:20%;
 	margin:auto;
 	bottom:-3px;/*half cup appearance*/
@@ -181,6 +189,12 @@ border-bottom-left-radius:15px;
 //box-shadow: 0 0 0 12px #333;
 //border-radius: 3px;
 	/*probably put inside card frame; nmot currently being used, just put the stuff in card=frame*/
+	
+	
+	
+	
+
+
 	
 }
 
@@ -344,14 +358,23 @@ background-size: cover;
 
 /*STAT (ss) elements; avg, hi, lo -- circles */
 
+
+/*
+.stat-player-name-box:hover {
+  z-index:5;
+}
+
+.player-name:hover {
+  z-index:5;
+}
+
+*/
+
+
 .stat-player-name-box{
 	
-	//display: flex;
-    //justify-content: center;
-    //align-items: center;
-    //font-family: 'IndustryDemi';
     letter-spacing: normal;
-    //font-size: 0.89rem;/*rem keeps the font relative and stay in box!!*/
+
 	
 	font-size:0.8rem;
     //line-height: 1.33;
@@ -369,23 +392,15 @@ background-size: cover;
 	
 	
 	z-index:2;
-	//font-size:1.3em;
-	//margin:auto;
+
 	
-	//border-width:2px;
 	
-	//background-color:grey;
-	//width:60%;
-	//margin-left:10%;
-	//height: 40px;
-	//border-color:#EC70EC;/*used to be orange at start*/
-	//border-style:solid;
-	//border-width:3px;
-	//border-color:black;
 	
 	border-bottom-right-radius:15px;/*round corner of box*/
 	border-bottom-left-radius:15px;
 	
+	
+	position:relative;
 }
 .player-name{
 	//font-size:1.3em;
@@ -419,24 +434,14 @@ background-size: cover;
 
 
 
-.NBA{
-	//background-image: url(/src/icons/shohei.jpg);
+.league-idol{
+	object-fit:contain;
+	//z-index:3;
+	top:18%;
+	left:8%;
+	//justify-content:center;
+	//margin:auto;
+	position:absolute;
 	
 }
 
-
-.MLB{
-	//background-image: url(/src/icons/shohei.jpg);
-	
-}
-
-.BIG3{
-	background-image: url(/src/icons/ice-cube.png);
-	//object-fit:contain;
-	
-}
-
-.WNBA{
-	background-image: url(/src/icons/caitlin-clark.png);
-	
-}
