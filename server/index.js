@@ -8,6 +8,9 @@ const nbaModel = require('./models/NBA-model')
 const mlbModel = require('./models/MLB-model')
 const wnbaModel = require('./models/WNBA-model')
 const nhlModel = require('./models/NHL-model')
+const kboModel = require('./models/KBO-model')
+
+
 const nbaPlayerModel = require('./models/nba-player-model')
 const nhlPlayerModel = require('./models/nhl-player-model')
 const wnbaPlayerModel = require('./models/wnba-player-model')
@@ -197,6 +200,23 @@ async function getStatsMLB(){
 app.get("/api/stats/mlb", function (req, res){
 	
 	getStatsMLB().then(function(FoundStats){
+		res.json(FoundStats)
+		
+	})
+	
+})
+
+async function getStatsKBO(){
+
+	const Stats = await kboModel.find({});
+	return Stats;
+	
+
+}
+
+app.get("/api/stats/kbo", function (req, res){
+	
+	getStatsKBO().then(function(FoundStats){
 		res.json(FoundStats)
 		
 	})

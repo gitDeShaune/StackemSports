@@ -289,7 +289,7 @@ function propIdx(prop,league){/*odnt need posiion if ever stat is named uniqeuly
 		}
 		
 	}else if (league == "MLB"){
-		
+		//eventually make KBO indices match MLB indices
 		
 		switch(prop){
 			case "Strikeouts(SO)":
@@ -320,6 +320,40 @@ function propIdx(prop,league){/*odnt need posiion if ever stat is named uniqeuly
 				oidx = 2;break;
 			case "Hits Allowed":
 				oidx = 1;break;
+			
+		}	
+			
+	
+	}else if (league == "KBO"){
+		//eventually make KBO indices match MLB indices
+		
+		switch(prop){
+			case "Strikeouts(SO)":
+				oidx = -1;break;//-1 or 8			
+			case "Home Runs":
+				oidx = 7;break;
+			case "Triples":
+				oidx = 6;break;
+			case "Doubles":
+				oidx = 5;break;
+			case "Singles":
+				oidx = 4;break;
+			case "Walks":
+				oidx = 3;break;
+			case "RBIs":
+				oidx = 2;break;
+			case "Runs":
+				oidx = 1;break;
+			case "Hits":
+				oidx = 0;break;			
+			case "Strikeouts(K)":
+				oidx = -1;break;//-1 or 3
+			case "Walks Allowed":
+				oidx = 2;break;
+			case "Runs Allowed":
+				oidx = 1;break;
+			case "Hits Allowed":
+				oidx = 0;break;
 			
 		}	
 			
@@ -385,6 +419,28 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		row_stats = (		
 			<tr>
 					<td width = "30px">{last_ssn_stats[0]}</td>
+					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
+									
+			</tr>				
+		)
+		
+		break;
+	  case "KBO":
+		size_array = [0,1,2,3,4,5,6];
+		row_headers = (
+			<tr >
+					<th width = "30px">yEAR</th>
+					<th >{prop4Table(prop)}</th>
+					
+					
+			</tr>
+		
+		
+		)
+		
+		row_stats = (		
+			<tr>
+					<td width = "30px">2024</td>
 					<td>{last_ssn_stats[propIdx(prop,league)]}</td>
 									
 			</tr>				

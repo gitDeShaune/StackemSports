@@ -86,6 +86,7 @@ const NBA = lazy(() => import('./pages/Nba'))
 const MLB = lazy(() => import('./pages/Mlb'))
 const NHL = lazy(() => import('./pages/Nhl'))
 const BIG3 = lazy(() => import('./pages/Big3'))
+const KBO = lazy(() => import('./pages/Kbo'))
 
 
 
@@ -114,6 +115,7 @@ function App() {
 				</Routes>
 				<Routes>
 					
+					<Route path ="/kbo" element = {<KBO />} />
 					
 					<Route path ="/nba" element = {<NBA />} />
 					<Route path ="/mlb" element = {<MLB />} />
