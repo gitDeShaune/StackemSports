@@ -9,18 +9,7 @@ export default function Navbar() {
 		
 		
 		
-		<Link  to="/nba" >
-			<div class="league-card"> 
-					
-						<div class = "league-icon-container">
-						<img  class="league-icon" src={require("./nba-sil.png")} />
-						</div>
-						
-						<div class="league-name"><div class ="inner-league-name">NBA</div></div> 	
-					
-					
-			</div>
-		</Link>
+		
 		
 		<Link  to="/big3" >
 			<div class="league-card"> 
@@ -51,18 +40,7 @@ export default function Navbar() {
 		</Link>
 		
 		
-		<Link  to="/mlb" >
-			<div class="league-card"> 
-					
-						<div class = "league-icon-container">
-						<img  class="league-icon" src={require("./mlb-sil.png")} />
-						</div>
-						
-						<div class="league-name"><div class ="inner-league-name">MLB</div></div> 	
-					
-					
-			</div>
-		</Link>
+		
 		
 		<Link  to="/kbo" >
 			<div class="league-card"> 
@@ -85,6 +63,34 @@ export default function Navbar() {
 
 
 /*
+
+<Link  to="/mlb" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./mlb-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">MLB</div></div> 	
+					
+					
+			</div>
+		</Link>
+
+<Link  to="/nba" >
+			<div class="league-card"> 
+					
+						<div class = "league-icon-container">
+						<img  class="league-icon" src={require("./nba-sil.png")} />
+						</div>
+						
+						<div class="league-name"><div class ="inner-league-name">NBA</div></div> 	
+					
+					
+			</div>
+		</Link>
+		
+		
 
 <Link  to="/mlb" >
 			<div class="league-card"> 
