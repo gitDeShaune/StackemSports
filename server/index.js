@@ -9,6 +9,9 @@ const mlbModel = require('./models/MLB-model')
 const wnbaModel = require('./models/WNBA-model')
 const nhlModel = require('./models/NHL-model')
 const kboModel = require('./models/KBO-model')
+const lolModel = require('./models/LOL-model')
+
+
 
 
 const nbaPlayerModel = require('./models/nba-player-model')
@@ -124,6 +127,28 @@ app.get("/api/players/mlb", function (req, res){
 
 
 /*------------------------------------------------------------*/
+
+async function getStatsLOL(){
+	
+	const Stats = await lolModel.find({});
+	
+	//prop_title: 'rebs'
+	
+	
+	return Stats;
+	
+
+}
+
+app.get("/api/stats/lol", function (req, res){
+	
+	getStatsLOL().then(function(FoundStats){
+		res.json(FoundStats)
+		
+	})
+	
+	
+})
 
 async function getStatsNBA(){
 	//var Stats = null
