@@ -24,6 +24,7 @@ import { PieChart,
   import WNBA_img from '../icons/caitlin-clark.png';
   import BIG3_img from '../icons/ice-cube.png';
   import MLB_img from '../icons/shohei-3.png';
+  import LOL_img from '../icons/lee-sin-LOL.png';
   
 function getIMG(league){
 	
@@ -36,7 +37,8 @@ function getIMG(league){
 			return WNBA_img;break;
 		case 'MLB':
 			return MLB_img;break;
-		
+		case 'LOL':
+			return LOL_img;break;
 		
 	}
 	
@@ -403,6 +405,28 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 	
 	
 	switch (league) {
+	  case "LOL":
+		size_array = [0,1,2,3,4,5,6];
+		row_headers = (
+			<tr >
+					<th width = "30px">yEAR</th>
+					<th >{prop4Table(prop)}</th>
+					
+					
+			</tr>
+		
+		
+		)
+		
+		row_stats = (		
+			<tr>
+					<td width = "30px">{last_ssn_stats[0]}</td>
+					<td>{0}</td>
+									
+			</tr>				
+		)
+		
+		break;
 	  case "MLB":
 		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
@@ -682,6 +706,7 @@ const PlayerCard = ( {userData}) => {
   var max = 0;
   var min = 500;
   var avg = 0;
+  
   
   let graph_data =[]
 	

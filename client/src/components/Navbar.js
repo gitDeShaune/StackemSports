@@ -55,19 +55,7 @@ export default function Navbar() {
 			</div>
 		</Link>
 		
-		<Link  to="/lol" >
-			<div class="league-card"> 
-					
-						<div class = "league-icon-container">
-						<img  class="league-icon" src={require("./nba-sil.png")} />
-						</div>
-						
-						<div class="league-name"><div class ="inner-league-name">LOL</div></div> 	
-					
-					
-			</div>
-		</Link>
-
+		
 		</nav>
 }
 
