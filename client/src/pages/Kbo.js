@@ -188,7 +188,7 @@ export default function KBO(){
 					}else{
 						return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
 					}
-				}).map((user, index) => {
+				}).slice(0,user_limit_kbo).map((user, index) => {
 						
 						//keep as listOfusrr
 						

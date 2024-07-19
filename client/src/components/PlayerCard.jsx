@@ -243,8 +243,11 @@ function prop4Table(prop){
 			case "hits":
 				return "Hits Per Game";break;	
 			case "Earned Runs Allowed":
-				return "ER Allowed";break;
+				return "ER Allowed";break;	
 			default:
+				if(prop.includes('GM 1-2')){
+					return (prop + " Per Match")//extra space so per match is n next line
+				}
 				return (prop + " Per Game");break;
 	}
 	
@@ -409,7 +412,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
 			<tr >
-					<th width = "30px">yEAR</th>
+					<th >yEAR</th>
 					<th >{prop4Table(prop)}</th>
 					
 					
@@ -420,7 +423,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		
 		row_stats = (		
 			<tr>
-					<td width = "30px">{last_ssn_stats[0]}</td>
+					<td >{2024}</td>
 					<td>{0}</td>
 									
 			</tr>				

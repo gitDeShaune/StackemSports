@@ -84,18 +84,31 @@ table{
 .stat-table td{
 	
 	color:black;
-	
-	
+	border-right:dotted 1px black;
+	justify-content:center;
 }
 
-.stat-table td:first-child {
+.stat-table thead:first-child {
   width: 8em;
-  min-width: 6em;
-  max-width: 8em;
+  //min-width: 6em;/*changed from 6em to 4em, after LOL issues*/
+  max-width: 14em;
   //word-break: break-all;/*idk what this does, but keep it*/
   border-right:dotted 1px black;
   //text-align: left;
   left:2px;
+  
+}
+
+.stat-table tbody:first-child {
+  width: 8em;
+  background-color:blue;
+  //min-width: 6em;/*changed from 6em to 4em, after LOL issues*/
+  max-width: 14em;
+  //word-break: break-all;/*idk what this does, but keep it*/
+  border-right:dotted 1px black;
+  //text-align: left;
+  left:2px;
+  
 }
 
 .stat-table th{

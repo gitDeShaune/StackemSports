@@ -90,17 +90,48 @@ export default function LOL(){
 	/*<hr> is a line break like in prizepicks */
 	
 	const sample_nba_player = {
-	player_name: "Sample James",
-	year: 4,
+	name: "Sample James",
+	league: "LOL",
 	team: "Good Team", 
 	position: "Frontrunner",    
 	last_season_stats: ["33.3","18.2","51.3%","43.0%","4.4","5.0"] , 
+	lfg_opps: ["33.3","18.2","51.3%","43.0%","4.4"],
+	lfg_dates: ["33.3","18.2","51.3%","43.0%","4.4"],
+	lfg_stats: [0,0,0,0,0],
+	prop_title: "Prop",
+	
 	
 	}
 	
+	const sample2 = {
+	name: "Kevin Sample Jr.",
+	league: "LOL",
+	team: "Good Team", 
+	position: "Frontrunner",    
+	last_season_stats: ["33.3","18.2","51.3%","43.0%","4.4","5.0"] , 
+	lfg_opps: ["33.3","18.2","51.3%","43.0%","4.4"],
+	lfg_dates: ["33.3","18.2","51.3%","43.0%","4.4"],
+	lfg_stats: [0,0,0,0,0],
+	prop_title: "Prop",
 	
 	
-
+	}
+	/*
+	
+	name,
+	lfg_dates,
+	lfg_opps,
+	lfg_stats,
+	prop_title,
+	league,
+	last_season_stats,
+	position,
+	team
+	*/
+	
+	
+	//ATTEMPT TO LOWER LCPaint: Load PlayerCards initially, and input userData during search
+	
 	
 	
 	/*
@@ -134,8 +165,55 @@ export default function LOL(){
 	
 	*/
 	
+	function printDivs(max){
+		var p = document.getElementsByClassName("flip-card-container")[0];
+		var newElement = document.createElement('div');
+		newElement.setAttribute('id', "card-" + max);
+		newElement.innerHTML = "<div> HELLO </div>";
+		p.appendChild(newElement);
+		
+
+	}
+	
+	
 	const containerSize = {
 	  height: "auto"
+	}
+	
+	var sum = 0;
+	
+	function render1(){
+		var photoHolder = [];
+		for(var i=1;i<=user_limit_nba;i++){
+			photoHolder.push(
+				(<PlayerCard id = {"card-" + i} userData = {sample_nba_player}/>)
+			);  
+		}
+
+		return (
+			<div class = "flip-card-container">
+				{photoHolder}
+			</div>
+		)
+	}
+	
+	function render2(){
+		
+		return (<PlayerCard id = {"card-" } userData = {sample2}/>)
+		
+	}
+	
+	
+	function findCards(){
+		
+		var p = document.getElementsByClassName("react-card-flip");
+		//var p = document.getElementsByTagName("PlayerCard");
+		//p[0] = render2()
+		//document.getElementsByClassName("react-card-flip").item(0) = d//.item(0);// = render2();
+		//var r = z[0]
+		return p.length
+		//console.log(p.length);
+		
 	}
 					
 	return(<div>
@@ -148,9 +226,9 @@ export default function LOL(){
 				<button name = 'kills' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Kills </button>
 				<button name = 'deaths' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Deaths </button>
 				<button name = 'assists' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists </button>
-				<button name = 'kills_2' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Kills (Games 1 + 2) </button>
-				<button name = 'assists_2' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists (Games 1 + 2) </button>
-				<button name = 'assists_2' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists (Games 1 + 2) </button>
+				<button name = 'kills(gm 1-2)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Kills (Games 1-2) </button>
+				<button name = 'deaths(gm 1-2)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Deaths (Games 1-2) </button>
+				<button name = 'assists(gm 1-2)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Assists (Games 1-2) </button>
 				
 				
 				
@@ -185,25 +263,31 @@ export default function LOL(){
 		
 		
 		
+		
 		<div class = "cards-container" style={containerSize}>
-			<div class = "flip-card-container">
-				{listOfUsers.filter((user)=> {
+			
+			{render1()}
+			{findCards()}
+			
+		</div>
+		
+		{listOfUsers.filter((user)=> {
 					if(search != ''){
 						return search.toLowerCase() === '' ? user : user.name.toLowerCase().includes(search.toLowerCase())
 						/*^changed from includes(search) to includes (search.toLowerCase()) to work for capital letters in search*/
 					}else{
 						return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
 					}
-				}).map((user, index) => {
+				}).slice(0,user_limit_nba).map((user, index) => {
 						
 						//keep as listOfusrr
 						
 						/*there  better be a matching name in players/league an stats/league
 						  ^i should make a case or error statement/condition for this, but i wont for now and hope it doesn't cause a problem
 						  not even doing toLowercase for the user.name stuff under here in the crossUserData*/
-					  if(index  >=  user_limit_nba){/*easier than putting if statement around player card return statement*/
-						  return;
-					  }
+					  //if(index  >=  user_limit_nba){/*easier than putting if statement around player card return statement*/
+						//  return;//obsolete if slice is used insted
+					  //}
 					  
 					  
 					  return (<div>
@@ -218,8 +302,7 @@ export default function LOL(){
 					})
 					
 				}
-			</div>
-		</div>
+		
 		
 		
 	</div>)
