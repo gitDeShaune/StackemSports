@@ -669,7 +669,7 @@ function fullProp(stat_prop){
   }*/
   
   /*, crossUserData*/
-const PlayerCard = ( {userData}) => {
+const PlayerCard = ( props) => {
 	/*took out {} from inside of parenthesis: eg. ({userdata,}) -> (userdata, )*/
   const {
     _id,
@@ -683,7 +683,7 @@ const PlayerCard = ( {userData}) => {
 	position,
 	team
     
-  } = userData; //the stuff has to be named exactly like in the json ; need better names maybe
+  } = props.userData; //the stuff has to be named exactly like in the json ; need better names maybe
   //console.log("Displaying userData")
   //console.log(userData)
   
@@ -720,9 +720,11 @@ const PlayerCard = ( {userData}) => {
   //removed from first first div  style={CardStyle}
   return (
     <ReactCardFlip
+	  id = {props.id}
       className="playerCard"
       isFlipped={isFlipped}
       flipDirection="horizontal"
+	  
     >
       <div
        style={CardStyle}

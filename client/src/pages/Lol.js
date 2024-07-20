@@ -185,8 +185,9 @@ export default function LOL(){
 	function render1(){
 		var photoHolder = [];
 		for(var i=1;i<=user_limit_nba;i++){
+			var dx = i;
 			photoHolder.push(
-				(<PlayerCard id = {"card-" + i} userData = {sample_nba_player}/>)
+				(<PlayerCard id = {"card-" + {dx}} userData = {sample_nba_player}/>)
 			);  
 		}
 
@@ -207,11 +208,14 @@ export default function LOL(){
 	function findCards(){
 		
 		var p = document.getElementsByClassName("react-card-flip");
+		//var d = document.createElement('PlayerCard');
 		//var p = document.getElementsByTagName("PlayerCard");
+		//document.getElementsByClassName("react-card-flip").item(0).innerHTML = (<PlayerCard id = {"card-" + 2} userData = {sample_nba_player}/>);
 		//p[0] = render2()
+		//document.getElementsByClassName("react-card-flip")[0] = d;
 		//document.getElementsByClassName("react-card-flip").item(0) = d//.item(0);// = render2();
 		//var r = z[0]
-		return p.length
+		return p.children[0];
 		//console.log(p.length);
 		
 	}
@@ -266,12 +270,9 @@ export default function LOL(){
 		
 		<div class = "cards-container" style={containerSize}>
 			
-			{render1()}
-			{findCards()}
+			<div class = "flip-card-container">
 			
-		</div>
-		
-		{listOfUsers.filter((user)=> {
+			{listOfUsers.filter((user)=> {
 					if(search != ''){
 						return search.toLowerCase() === '' ? user : user.name.toLowerCase().includes(search.toLowerCase())
 						/*^changed from includes(search) to includes (search.toLowerCase()) to work for capital letters in search*/
@@ -302,6 +303,13 @@ export default function LOL(){
 					})
 					
 				}
+				
+				
+			</div>
+			
+		</div>
+		
+		
 		
 		
 		

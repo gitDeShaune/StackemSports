@@ -194,7 +194,7 @@ export default function NBA(){
 					}else{
 						return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
 					}
-				}).map((user, index) => {
+				}).slice(0,user_limit_nba).map((user, index) => {
 						
 						//keep as listOfusrr
 						
