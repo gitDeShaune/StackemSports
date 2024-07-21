@@ -46,7 +46,7 @@ mongoose.connect(uri
 
 /* POST REQUEST */
 
-app.post("/api/UI/create-comment", (req,res) => {
+app.post("/api/UI/create-comment", async (req,res) => {
 	
 	const txt = req.body;
 	const newComment = new commentModel(txt);
