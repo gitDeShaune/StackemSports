@@ -16,7 +16,7 @@ export default function ContactUs(){
 	const [txt,setTxt] = useState("")
 	
 	const createComment = () => {
-		Axios.post("https://stackemsports.onrender.com/api/UI/create-comment", {txt,});//.then((response) =>
+		Axios.post("https://stackemsports.onrender.com/api/UI/create-comment", {txt,})//.then((response) =>
 		//alert("USER CREATED");/*dont really care about response*/
 		//});
 		

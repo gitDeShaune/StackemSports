@@ -10,6 +10,7 @@ const wnbaModel = require('./models/WNBA-model')
 const nhlModel = require('./models/NHL-model')
 const kboModel = require('./models/KBO-model')
 const lolModel = require('./models/LOL-model')
+const commentModel = require('./models/commentModel')
 
 
 
@@ -45,11 +46,11 @@ mongoose.connect(uri
 
 /* POST REQUEST */
 
-app.post("api/UI/create-comment", async (req,res) => {
+app.post("/api/UI/create-comment", (req,res) => {
 	
 	const txt = req.body;
 	const newComment = new commentModel(txt);
-	await newComent.save();
+	await newComment.save();
 	
 	res.json(txt); /*checking if data was found, elte later*/
 	
