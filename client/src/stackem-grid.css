@@ -27,12 +27,21 @@ r-sidebar{
 /*put below in different css file*/
 .photo-grid{
 	display:grid;
+	//grid-gap:5px;
 	width:90%;
+	height:200px;
 	//object-fit:contain;
 	//justify-content:center;
+	flex-wrap:wrap;
 	margin:auto;
-	grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+	grid-template-columns: repeat(auto-fit, minmax(50px,1fr));
+	grid-template-areas:
+	"auto auto auto auto"
 }
+
+/*.available{
+	grid-area:available;
+}*/
 
 .contact-us-container{/*should have same stuff as about-us container*/
 	width:80%;

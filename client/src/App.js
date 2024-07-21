@@ -38,6 +38,7 @@ import Header from './components/Header'
 
 import React, {lazy,Suspense} from 'react';
 
+/*
 import { PieChart,
   Pie,
   Tooltip,
@@ -48,6 +49,8 @@ import { PieChart,
   CartesianGrid,
   Bar,
   ResponsiveContainer} from 'recharts'
+  */
+  
 
 import {Route,Routes} from 'react-router-dom'
 //.import Home from './pages/Home'
@@ -90,12 +93,55 @@ const KBO = lazy(() => import('./pages/Kbo'))
 const LOL = lazy(() => import('./pages/Lol'))
 
 
+/*
+async function getData(){
+	
+	
+Axios.get("https://stackemsports.onrender.com/api/stats/kbo").then((response) => {
+			kboData = response.data
+})
+
+Axios.get("https://stackemsports.onrender.com/api/stats/wnba").then((response) => {
+				wnbaData = response.data
+			})
+			
+Axios.get("https://stackemsports.onrender.com/api/stats/lol").then((response) => {
+				lolData = response.data
+			})
+			
+		
+Axios.get("https://stackemsports.onrender.com/api/stats/big3").then((response) => {
+				big3Data = response.data
+			})	
+	
+	
+	
+
+}
+
+
+let kboData;
+	
+let wnbaData;
+
+let lolData;
+
+let big3Data;
+*/
+
+//probably have this include the help links and about and contact at bottom of page
+
+
+
+
 
 
 
 function App() {
 	
 	const [listOfUsers, setListOfUsers] = useState([ ])
+	
+	
 	
 
 	return (

@@ -11,6 +11,8 @@ import { v4 as uuidv4 } from "uuid";
 
 //import Navbar from './components/Navbar' //take away {} when it is default export
 import React from 'react'
+
+/*
 import { PieChart,
   Pie,
   Tooltip,
@@ -21,6 +23,8 @@ import { PieChart,
   CartesianGrid,
   Bar,
   ResponsiveContainer} from 'recharts'
+  
+  */
 
 import {Route,Routes} from 'react-router-dom'
 //import Home from './pages/Home'
@@ -32,13 +36,13 @@ import Form from 'react-bootstrap/Form'
 
 
 //import '../general-styles.css'
-import '../table-chart.css'
-import '../stat-styles.css'
+//import '../table-chart.css'
+//import '../stat-styles.css'
 
 import $ from 'jquery';
-import ReactCardFlip from 'react-card-flip'
+//import ReactCardFlip from 'react-card-flip'
 
-import '../search-styles.css'
+//import '../search-styles.css'
 
 
 
@@ -68,25 +72,14 @@ export default function KBO(){
 		setIsFlipped(!isFlipped);
 	}
 	
-	/*
-	useEffect(()=>{
-		Axios.get("https://stackemsports.onrender.com/api/stats/kbo").then((response) => {
-			setListOfUsers(response.data)
-		})//api endpoint rmemeebrr
-	}, [])
 	
-	useEffect(()=>{
-		Axios.get("https://stackemsports.onrender.com/api/players/kbo").then((response) => {
-			setListOfLeaguePlayers(response.data)
-		})//api endpoint rmemeebrr
-	}, [])
-	*/
 	
 	useEffect(()=>{
 		Axios.get("https://stackemsports.onrender.com/api/stats/kbo").then((response) => {
 			setListOfUsers(response.data)
 		})//api endpoint rmemeebrr
 	}, [])
+	
 	
 	/*setUsersByCategory(e.target.name)*/
 	
@@ -117,7 +110,7 @@ export default function KBO(){
 	
 	}
 	
-	let user_limit_kbo = 50;//5 * 5 //user_limit should be # of players x max available stats by a player
+	let user_limit_kbo = 30;//5 * 5 //user_limit should be # of players x max available stats by a player
 	
 	
 	if(window.matchMedia("(pointer: coarse)").matches) {

@@ -8,6 +8,8 @@ import cba from '../icons/cba-logo.jpeg'
 import lol from '../icons/lol-logo.jpg'
 
 
+//width = '200px' height = '200px'
+
 
 export default function SportsAvailable(){
 
@@ -24,16 +26,17 @@ export default function SportsAvailable(){
 		
 		<h2> BASKETBALL </h2>
 		<div class="photo-grid">
-		  <img src={nba}/>
-		  <img src={wnba}/>
-		  <img src={b3} width = '200px' height = '200px'/>
-		  <img src={cba} width = '200px' height = '200px'/>
+		  <img class="available" src={nba} height = '200em' width = '200em'/>
+		  <img class="available" src={wnba} height = '200em' width = '200em' />
+		  <img class="available" src={b3 } height = '200em' width = '200em'/>
+		  <img class="available" src={cba} height = '200em' width = '200em'/>
 		</div>
 		<h2> BASEBALL </h2>
 		<div class="photo-grid">
-		  <img src={kbo} width = '200px' height = '200px'/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
+		  <img class="available" src={kbo} height = '200em' width = '200em'/>
+		  <img class="available" src="https://via.placeholder.com/200x200.jpg" height = '200em' width = '200em' />
+		  <img class="available" src="https://via.placeholder.com/200x200.jpg" height = '200em' width = '200em'/>
+		  <img class="available" src="https://via.placeholder.com/200x200.jpg" height = '200em' width = '200em'/>
 		  
 		</div>
 		<h2> ESPORTS </h2>
