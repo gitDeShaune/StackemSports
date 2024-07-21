@@ -26,42 +26,39 @@ export default function SportsAvailable(){
 		
 		<h2> BASKETBALL </h2>
 		<div class="photo-grid">
-		  <img class="available" src={nba} height = '200em' width = '200em'/>
-		  <img class="available" src={wnba} height = '200em' width = '200em' />
-		  <img class="available" src={b3 } height = '200em' width = '200em'/>
-		  <img class="available" src={cba} height = '200em' width = '200em'/>
+		  <img class="available" src={nba} height = '85%' width = '80%'/>
+		  <img class="available" src={wnba} height = '85%' width = '80%' />
+		  <img class="available" src={b3 } height = '85%' width = '80%'/>
+		  <img class="available" src={cba} height = '85%' width = '80%'/>
 		</div>
-		<h2> BASEBALL </h2>
-		<div class="photo-grid">
-		  <img class="available" src={kbo} height = '200em' width = '200em'/>
-		  <img class="available" src="https://via.placeholder.com/200x200.jpg" height = '200em' width = '200em' />
-		  <img class="available" src="https://via.placeholder.com/200x200.jpg" height = '200em' width = '200em'/>
-		  <img class="available" src="https://via.placeholder.com/200x200.jpg" height = '200em' width = '200em'/>
-		  
-		</div>
+		<br/>
 		<h2> ESPORTS </h2>
 		<div class="photo-grid">
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
 		  
 		</div>
+		<br/>
+		<h2> BASEBALL </h2>
+		<div class="photo-grid">
+		  <img class="available" src={kbo} height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		</div>
+		<br/>
 		<h2> FOOTBALL </h2>
 		<div class="photo-grid">
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
 		  
 		</div>
-		<h2> SOCCER </h2>
-		<div class="photo-grid">
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  <img src="https://via.placeholder.com/200x200.jpg"/>
-		  
-		</div>
-		
-		
+		<br/>
+			
 		
 		</div>
 		

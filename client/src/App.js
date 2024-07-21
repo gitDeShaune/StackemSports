@@ -73,6 +73,10 @@ import InputGroup from 'react-bootstrap/InputGroup'
 //import SportsAvailable from './components/Sports-Available' /*need to move About and priv and etc to pages and make it work*/
 //import ContactUs from './components/ContactUs'
 //import About from './components/About'
+
+//import KBO from './pages/Kbo'
+
+
 const About = lazy(() => import('./components/About'))
 const PrivacyPolicy = lazy(() => import('./components/PrivacyPolicy'))
 const SportsAvailable = lazy(() => import('./components/Sports-Available'))
@@ -83,6 +87,8 @@ const ContactUs = lazy(() => import('./components/ContactUs'))
 //import NBA from './pages/Nba'
 //import MLB from './pages/Mlb'
 //import NHL from './pages/Nhl'
+
+
 
 const WNBA = lazy(() => import('./pages/Wnba'))
 const NBA = lazy(() => import('./pages/Nba'))

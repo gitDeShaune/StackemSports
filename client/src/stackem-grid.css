@@ -29,7 +29,7 @@ r-sidebar{
 	display:grid;
 	//grid-gap:5px;
 	width:90%;
-	height:200px;
+	height:20%;
 	//object-fit:contain;
 	//justify-content:center;
 	flex-wrap:wrap;
