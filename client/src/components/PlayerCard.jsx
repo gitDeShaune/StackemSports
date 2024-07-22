@@ -100,7 +100,7 @@ function makeGraph(graph_data,max,stats){
 				  
 				  <div className="graph">
 				  
-<ResponsiveContainer  width="99%" width = {240}  aspect = {1.2} height={100} >
+<ResponsiveContainer  width="99%" width = {240 }  aspect = {1.2} height={100} >
 					
 					<BarChart 
 					  width={800} 
@@ -718,6 +718,11 @@ const PlayerCard = ( props) => {
   //avg = find_AVG(lfg_stats);//does this work; no becasue avg for the bar chart would need to be defined before the function 
   
   //removed from first first div  style={CardStyle}
+  
+  
+ 
+  
+  
   return (
     <ReactCardFlip
 	  id = {props.id}
