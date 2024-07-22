@@ -18,3 +18,27 @@
 	
 	
 }
+
+
+/*contact us*/
+
+
+.contact-us-page{
+	
+	
+	
+	
+}
+#message{
+	//min-width: 40px;
+	width:400px;
+	min-height:80px;
+	//flex:wrap;
+	
+}
+
+#send-msg{
+	font-family:LegionFont;
+	
+	width:100px
+}

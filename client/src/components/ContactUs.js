@@ -16,9 +16,12 @@ export default function ContactUs(){
 	const [txt,setTxt] = useState("")
 	
 	const createComment = () => {
-		Axios.post("https://stackemsports.onrender.com/api/UI/create-comment", {txt,})//.then((response) =>
-		//alert("USER CREATED");/*dont really care about response*/
-		//});
+		if (txt.trim().length > 5){
+			Axios.post("https://stackemsports.onrender.com/api/UI/create-comment", {txt,})//.then((response) =>
+		
+		}
+		document.getElementById("message").value= '';
+		return false;
 		
 	};
 
@@ -33,13 +36,14 @@ export default function ContactUs(){
 
 		<div class = "contact-us-container">
 		
-			<p> You can request to add a sports leauge, new players, and any other questions by emailing us at <strong>info@stackemsports.com</strong></p>
+			<p> You can request to add a sports leauge, new players, or submit any other questions and suggestions by filling in the textbox or by emailing us directly at <strong>info@stackemsports.com</strong></p>
 		
 		
-			<div>
-				<input type="text" placeholder="Say something..." onChange={(event) => {setTxt(event.target.value); }} />
-				<button onClick={createComment}> Send </button>
-			</div>
+			<form id = "msg-box"  onsubmit = 'createComment;return false;'>
+				<textarea id = "message" width = '200em'  placeholder="Say something..." onChange={(event) => {setTxt(event.target.value); }} />
+				
+			</form>
+				<button id = 'send-msg' type = "button" onClick={createComment}>Send</button>
 		
 		</div>
 	
