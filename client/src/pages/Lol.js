@@ -127,12 +127,14 @@ export default function LOL(){
 	
 	let user_limit_nba = 25;//5 * 5 //user_limit should be # of players x max available stats by a player
 	
-	let grid_row_count = 5
+	let grid_row_count = 5;
+	
+	let grid_col_count = 5;
 	
 	if(window.matchMedia("(pointer: coarse)").matches) {
 		// touchscreen is main input (ie.phone?)
 		user_limit_nba = 8; //5 is # of categories
-		grid_row_count = 2;//2 might be posible
+		grid_row_count = 1;//2 might be posible
 		
 	}else{
 		console.log("NOT TOUCHSCREEN");
@@ -169,7 +171,12 @@ export default function LOL(){
 	
 	//cardList
 	
-	
+	/*if ((window.devicePixelRatio * 100) % 80 < 7){
+		//size is close enugh to 80%
+		grid_row_count-=1;
+		//grid_col_count -=1
+	}
+	*/
 	
 	
 	//var height = 1000;
@@ -245,7 +252,7 @@ export default function LOL(){
 				}).slice(0,user_limit_nba).map((user, index) => {
 						
 					
-					  cardList[Math.floor(index/grid_row_count)][index%grid_row_count] = ( <PlayerCard userData={user}/>  ) 
+					  cardList[index%grid_row_count][Math.floor(index/grid_row_count)] = ( <PlayerCard userData={user}/>  ) 
 					  
 					  
 					  })
@@ -255,14 +262,14 @@ export default function LOL(){
 				}
 			
 			
-				<div style={{ flex: '1 1 auto' }}>
+				<div class = "grid-holder" style={{ flex: '1 1 auto' }}>
 				<AutoSizer disableHeight>
 				{({width }) => (
 				
 					<FixedSizeGrid 
 						
 						columnCount={grid_row_count}
-						columnWidth={230}
+						columnWidth={228}
 						height={1580}
 						rowCount={grid_row_count+1}
 						rowHeight={300}

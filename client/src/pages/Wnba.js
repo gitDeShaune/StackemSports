@@ -44,6 +44,9 @@ import $ from 'jquery';
 //import '../search-styles.css'
 
 
+import {FixedSizeList, FixedSizeGrid} from 'react-window';// as List as List
+import AutoSizer from "react-virtualized-auto-sizer";
+
 
 
 
@@ -99,21 +102,49 @@ export default function NBA(){
 	}
 	
 	
-	let user_limit_wnba = 25;//5 * 5 //user_limit should be # of players x max available stats by a player
+	let user_limit_nba = 25;//5 * 5 //user_limit should be # of players x max available stats by a player
+	
+	let grid_row_count = 5;
+	
+	let grid_col_count = 5;
 	
 	if(window.matchMedia("(pointer: coarse)").matches) {
 		// touchscreen is main input (ie.phone?)
-		user_limit_wnba = 5; //5 is # of categories
-		
+		user_limit_nba = 8; //5 is # of categories
+		grid_row_count = 1;//2 might be posible
 		
 	}else{
 		console.log("NOT TOUCHSCREEN");
-		user_limit_wnba = 25; 
+		grid_row_count = 5;
+		user_limit_nba = 25; 
 	}
+	
+
 	
 	const containerSize = {
 	  height: "auto"
 	}
+	
+	
+	
+	var sum = 0;
+	
+	
+	
+	var cardList = Array(grid_row_count).fill(0);//[0,0,0,0,0];//Array(grid_row_count);//[][];
+	
+	cardList = [[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>]]
+	
+	//var Cards;
+	
+	
+	var Cards = ({columnIndex,rowIndex,style}) => (
+	
+		<div style = {style} > 
+		{cardList[columnIndex][rowIndex]}
+		</div>
+	
+	)
 					
 	return(<div >
 	
@@ -150,38 +181,63 @@ export default function NBA(){
 		<div class = "cards-container" style = {containerSize}>
 		
 		<div class = "flip-card-container">
+			
 			{listOfUsers.filter((user)=> {
-				if(search != ''){
-					return search.toLowerCase() === '' ? user : user.name.toLowerCase().includes(search.toLowerCase())
-					/*^changed from includes(search) to includes (search.toLowerCase()) to work for capital letters in search*/
-				}else{
-					return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
-				}
-			}).slice(0,user_limit_wnba).map((user, index) => {
+					if(search != ''){
+						cardList = [[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>]]
+	
+						
+						return search.toLowerCase() === '' ? user : user.name.toLowerCase().includes(search.toLowerCase())
+						/*^changed from includes(search) to includes (search.toLowerCase()) to work for capital letters in search*/
+					}else{
+						cardList = [[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>],[<div/>,<div/>,<div/>,<div/>,<div/>]]
+	
+						
+						return category.toLowerCase() === '' ? user : user.prop_title.toLowerCase() == category
+						
+						
+					}
+				}).slice(0,user_limit_nba).map((user, index) => {
+						
 					
-					//keep as listOfusrr
-					
-					/*there  better be a matching name in players/league an stats/league
-					  ^i should make a case or error statement/condition for this, but i wont for now and hope it doesn't cause a problem
-					  not even doing toLowercase for the user.name stuff under here in the crossUserData*/
-				  
-				  
-				  if(index  >=  user_limit_wnba){/*easier than putting if statement around player card return statement*/
-						  return;
-				  }
+					  cardList[index%grid_row_count][Math.floor(index/grid_row_count)] = ( <PlayerCard userData={user}/>  ) 
 					  
-				  return (<div>
-				  <PlayerCard
+					  
+					  })
+					  
+					  
+					
+				}
+			
+			
+				<div class = "grid-holder" style={{ flex: '1 1 auto' }}>
+				<AutoSizer disableHeight>
+				{({width }) => (
+				
+					<FixedSizeGrid 
 						
-						userData={user}
+						columnCount={grid_row_count}
+						columnWidth={228}
+						height={1580}
+						rowCount={grid_row_count+1}
+						rowHeight={300}
+						width={1250}
 						
+					
+					>
+					
+						{Cards}
 						
-					  /></div>)
-				  
-				  
-				})
-			}
-		</div>
+					</FixedSizeGrid>
+					
+					)}
+					
+				</AutoSizer>
+				</div>
+				
+			
+				
+			</div>
 		</div>
 		
 		
