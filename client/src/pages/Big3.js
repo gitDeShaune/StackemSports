@@ -118,7 +118,7 @@ export default function NBA(){
 
 	
 	
-	let user_limit_nba = 25;//5 * 5 //user_limit should be # of players x max available stats by a player
+	let user_limit_nba = 50;//5 * 5 //user_limit should be # of players x max available stats by a player
 	
 	let grid_row_count = 5;
 	
@@ -126,11 +126,13 @@ export default function NBA(){
 	
 	if(window.matchMedia("(pointer: coarse)").matches) {
 		// touchscreen is main input (ie.phone?)
-		user_limit_nba = 8; //5 is # of categories
+		user_limit_nba = 25; //5 is # of categories
 		grid_row_count = 1;//2 might be posible
+		grid_col_count = 25;
 		
 	}else{
 		console.log("NOT TOUCHSCREEN");
+		grid_col_count = 5;
 		grid_row_count = 5;
 		user_limit_nba = 25; 
 	}
@@ -244,7 +246,7 @@ export default function NBA(){
 						columnCount={grid_row_count}
 						columnWidth={228}
 						height={1580}
-						rowCount={grid_row_count+1}
+						rowCount={grid_col_count+1}
 						rowHeight={300}
 						width={1250}
 						
