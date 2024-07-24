@@ -5,6 +5,10 @@ export default function Navbar() {
 	//<Link to = "/" className = "site-title">PICKS.COM</Link>
 	/*no more list now it is divs inside of div??*/
 	/*edit it at some point to make the image part of the link*/
+	
+	//should use useEffect or jut a function and a value? which one is quicker/less taxing
+	
+	
 	return <nav className="nav">
 		
 		

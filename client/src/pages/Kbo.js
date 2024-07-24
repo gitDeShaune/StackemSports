@@ -236,7 +236,7 @@ export default function KBO(){
 			
 			
 				<div class = "grid-holder" style={{ flex: '1 1 auto' }}>
-				<AutoSizer disableHeight>
+				<AutoSizer disableHeight class = "grid-holder">
 				{({width }) => (
 				
 					<FixedSizeGrid 
@@ -246,7 +246,7 @@ export default function KBO(){
 						height={1580}
 						rowCount={grid_col_count+1}
 						rowHeight={300}
-						width={1250}
+						width={1200}
 						
 					
 					>

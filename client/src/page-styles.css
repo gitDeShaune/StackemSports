@@ -45,7 +45,13 @@
 
 
 .grid-holder{
-	margin-left:14px;
+	//margin-left:34px;
+	//margin:20px;
+	
+	margin-left:2%;
+	margin-right:2%;
 	justify-content:center;
 	overflow:clip;
+	align-items: center;
+	
 }

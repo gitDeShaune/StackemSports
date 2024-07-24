@@ -238,7 +238,7 @@ export default function NBA(){
 			
 			
 				<div class = "grid-holder" style={{ flex: '1 1 auto' }}>
-				<AutoSizer disableHeight>
+				<AutoSizer disableHeight class = "grid-holder">
 				{({width }) => (
 				
 					<FixedSizeGrid 
@@ -248,7 +248,7 @@ export default function NBA(){
 						height={1580}
 						rowCount={grid_col_count+1}
 						rowHeight={300}
-						width={1250}
+						width={1200}
 						
 					
 					>

@@ -148,7 +148,7 @@ export default function WNBA(){
 	
 	)
 					
-	return(<div >
+	return(<div>
 	
 
 		
@@ -212,20 +212,18 @@ export default function WNBA(){
 				}
 			
 			
-				<div class = "grid-holder" style={{ flex: '1 1 auto' }}>
-				<AutoSizer disableHeight>
+				<div class = "grid-holder" style={{ flex: '1 1 auto'}}>
+				<AutoSizer disableHeight class = "grid-holder">
 				{({width }) => (
 				
-					<FixedSizeGrid 
-						
+					<FixedSizeGrid 					
 						columnCount={grid_row_count}
 						columnWidth={228}
 						height={1580}
 						rowCount={grid_col_count+1}
 						rowHeight={300}
-						width={1250}
+						width={1200}
 						
-					
 					>
 					
 						{Cards}
