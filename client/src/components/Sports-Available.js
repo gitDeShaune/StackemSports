@@ -34,7 +34,7 @@ export default function SportsAvailable(){
 		<br/>
 		<h2> ESPORTS </h2>
 		<div class="photo-grid">
-		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
+		  <img src={lol} height = '85%' width = '80%'/>
 		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
 		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
 		  <img src="https://via.placeholder.com/200x200.jpg" height = '85%' width = '80%'/>
