@@ -5,6 +5,9 @@ import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 //import RatingBox from "./ratingBox";
 
+
+
+
 import { PieChart,
   Pie,
   Tooltip,
@@ -17,7 +20,8 @@ import { PieChart,
   ResponsiveContainer,
   Cell,
   Label,
-  LabelList} from 'recharts'
+  LabelList,
+  Text} from 'recharts'
   
   
   import NBA_img from '../icons/bron-celly.png';
@@ -64,6 +68,22 @@ const barColor = "yellow";
 
 var cardIMG = null;
 
+const CustomXAxisTick = ({ x, y, payload }: any) => {
+    if (payload && payload.value) {
+      return (
+        <Text
+            fontSize={"12px"}
+            width={"12px"}
+            x={x} 
+            y={y} 
+            textAnchor="middle" 
+            verticalAnchor="start"
+        >{payload.value}</Text>
+      );
+    }
+    return null;
+};
+
 
 
 
@@ -94,6 +114,9 @@ function makeGraph(graph_data,max,stats){
 	
 	
 	/*fill='lightblue' in <CartesianGrid gives the graph background a color*/
+	
+	// <XAxis xAxisId={1}  dataKey="date" >
+	
 	let graph = (
 	<div >
 				<div style={{ textAlign: "center" }}>
@@ -111,7 +134,8 @@ function makeGraph(graph_data,max,stats){
 					  
 					>
 					  <CartesianGrid strokeDasharray="3 3" />
-					  <XAxis xAxisId={0} interval = {0} dataKey="opp" >
+					 
+					  <XAxis xAxisId={0}    tick={<CustomXAxisTick/>} interval = {0} dataKey="opp" >
 						
 					  </XAxis>
 					  <XAxis xAxisId={1}  dataKey="date" >
@@ -424,7 +448,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		row_stats = (		
 			<tr>
 					<td >{2024}</td>
-					<td>{0}</td>
+					<td>{last_ssn_stats[0]}</td>
 									
 			</tr>				
 		)
