@@ -29,6 +29,8 @@ import { PieChart,
   import BIG3_img from '../icons/ice-cube.png';
   import MLB_img from '../icons/shohei-3.png';
   import LOL_img from '../icons/lee-sin-LOL.png';
+  import KBO_img from '../icons/kbo-guy.png';
+  
   
 function getIMG(league){
 	
@@ -43,6 +45,8 @@ function getIMG(league){
 			return MLB_img;break;
 		case 'LOL':
 			return LOL_img;break;
+		case 'KBO':
+			return KBO_img;break;
 		
 	}
 	

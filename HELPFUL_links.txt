@@ -64,3 +64,6 @@ https://stackoverflow.com/questions/46160461/how-do-you-set-the-document-title-i
 https://stackoverflow.com/questions/42374873/limit-items-in-a-map-loop
 
 ^ limit number of cards in the container ; map array prototype
+
+https://stackoverflow.com/questions/46875822/recharts-wordwrap-x-axis-label
+^multiline xaxis
