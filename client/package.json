@@ -11,6 +11,7 @@
     "canvas": "^2.11.2",
     "chartjs-node-canvas": "^4.1.6",
     "jquery": "^3.7.1",
+    "mdb-react-ui-kit": "^8.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-card-flip": "^1.2.2",

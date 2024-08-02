@@ -140,7 +140,7 @@ export default function MLB(){
 		
 		
 		<div class="stat-search-n-nav">
-			
+			<h1 class="page-header"> MLB </h1>
 				
 			<div name = 'baseball-stat-gallery' class="stat-nav"  >
 					<button name = 'hits' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Hits </button>

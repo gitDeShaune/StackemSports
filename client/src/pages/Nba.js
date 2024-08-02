@@ -143,7 +143,10 @@ export default function NBA(){
 	
 		
 		
+		
 		<nav class="stat-search-n-nav">
+		
+			<h1 class="page-header"> NBA </h1>
 			
 			<div name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points </button>

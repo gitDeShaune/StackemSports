@@ -1,5 +1,9 @@
 import {Link} from 'react-router-dom'
 
+import React, { useState } from 'react';
+
+
+
 
 export default function Navbar() {
 	//<Link to = "/" className = "site-title">PICKS.COM</Link>
@@ -9,8 +13,10 @@ export default function Navbar() {
 	//should use useEffect or jut a function and a value? which one is quicker/less taxing
 	
 	
-	return <nav className="nav">
 		
+
+	
+	return <nav className="nav">
 		
 		
 		
@@ -60,9 +66,14 @@ export default function Navbar() {
 					
 			</div>
 		</Link>
+		
+		
+
 
 		
 		</nav>
+		
+	
 }
 
 

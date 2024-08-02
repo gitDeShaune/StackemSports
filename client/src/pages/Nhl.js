@@ -107,6 +107,7 @@ export default function MLB(){
 		
 		
 		<div class="stat-search-n-nav">
+			<h1 class="page-header"> NHL </h1>
 			
 			<div name = 'hockey-stat-gallery' class="stat-nav"  >
 					<button name = 'SOG' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Shots On Goal </button>

@@ -165,6 +165,8 @@ export default function KBO(){
 		
 		
 		<div class="stat-search-n-nav">
+		
+			<h1 class="page-header"> KBO </h1>
 			
 				
 			<div name = 'baseball-stat-gallery' class="stat-nav"  >
