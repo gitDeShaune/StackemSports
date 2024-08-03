@@ -89,8 +89,6 @@ export default function Footer() {
       </section>
 
       <section class="text-center footer-links mb-5">
-		
-		<a href="https://buymeacoffee.com/stackemsports" target="_blank" class="fa"><img src={bmc} width="300" height="60" /></a>
 		<a href="https://www.reddit.com/r/StackemSports/" target="_blank" class="fa fa-reddit" ><img src={reddit} width="40" height="40" /></a>
         <a href="https://x.com/STACKEMSPORTS" target="_blank" class="fa fa-twitter"><img src={twt} width="40" height="40" /></a>
         
@@ -127,6 +125,10 @@ export default function Footer() {
 		
 	</div>
 }
+
+
+		<a href="https://buymeacoffee.com/stackemsports" target="_blank" class="fa"><img src={bmc} width="300" height="60" /></a>
+		
 */
 
 
