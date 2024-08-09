@@ -5,18 +5,31 @@ import logo from '../icons/stackem-with-text-mid.png';
 import {useState, useEffect} from 'react'
 import Axios from 'axios'
 
+import { slide as Menu } from 'react-burger-menu'
 
 			
 export default function Header() {
 	//<Link to = "/" className = "site-title">PICKS.COM</Link>
 	
-	
+	/*showSettings(event){
+		event.preventDefault();
+			//.
+			//.
+			//.
+	}*/
 	
 	return <div className="header">
 		
+		
+		<Menu  left width={ 140 }>
+			<a id="home" className="menu-item" href="/">Home</a>
+			<a id="about" className="menu-item" href="/about-us">About</a>
+			<a id="contact" className="menu-item" href="/contact">Contact</a>
+			<a  className="menu-item--small" href="">Settings</a>
+	    </Menu>
 
 	
-		<img src={logo} alt="Logo" /> 
+		<img src={logo} alt="Logo"/>
 		
 		
 		
