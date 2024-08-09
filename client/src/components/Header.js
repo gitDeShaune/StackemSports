@@ -21,14 +21,7 @@ export default function Header() {
 	return <div className="header">
 		
 		
-		<Menu  left width={ 140 }>
-			<a id="home" className="menu-item" href="/">Home</a>
-			<a id="about" className="menu-item" href="/about-us">About</a>
-			<a id="contact" className="menu-item" href="/contact">Contact</a>
-			<a  className="menu-item--small" href="">Settings</a>
-	    </Menu>
-
-	
+		
 		<img src={logo} alt="Logo"/>
 		
 		
@@ -36,6 +29,22 @@ export default function Header() {
 		
 	</div>
 }
+
+
+/*
+
+<Menu  left width={ 140 }>
+			<a id="home" className="menu-item" href="/">Home</a>
+			<a id="about" className="menu-item" href="/about-us">About</a>
+			<a id="contact" className="menu-item" href="/contact">Contact</a>
+			<a  className="menu-item--small" href="">Settings</a>
+	    </Menu>
+
+	
+
+
+
+*/
 /*<li class="hideOnMobile"><a href="#">About Us</a></li> in second ul
 
 /* <svg width="200" xmlns="http://www.w3.org/2000/svg"> */
