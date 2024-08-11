@@ -24,12 +24,12 @@ import { PieChart,
   Text} from 'recharts'
   
   
-  import NBA_img from '../icons/bron-celly.png';
-  import WNBA_img from '../icons/caitlin-clark.png';
-  import BIG3_img from '../icons/ice-cube.png';
-  import MLB_img from '../icons/shohei-3.png';
-  import LOL_img from '../icons/lee-sin-LOL.png';
-  import KBO_img from '../icons/kbo-guy.png';
+  import NBA_img from '../icons/bron-celly.webp';
+  import WNBA_img from '../icons/caitlin-clark.webp';
+  import BIG3_img from '../icons/ice-cube.webp';
+  import MLB_img from '../icons/shohei-3.webp';
+  import LOL_img from '../icons/lee-sin-LOL.webp';
+  import KBO_img from '../icons/kbo-guy.webp';
   
   
 function getIMG(league){
