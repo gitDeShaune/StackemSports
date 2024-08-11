@@ -40,7 +40,7 @@ export default function ContactUs(){
 		
 		
 			<form id = "msg-box"  onsubmit = 'createComment;return false;'>
-				<textarea id = "message" width = '200em'  placeholder="Say something..." onChange={(event) => {setTxt(event.target.value); }} />
+				<textarea id = "message" width = '60%'  placeholder="Say something..." onChange={(event) => {setTxt(event.target.value); }} />
 				
 			</form>
 				<button id = 'send-msg' type = "button" onClick={createComment}>Send</button>
