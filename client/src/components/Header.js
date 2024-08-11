@@ -13,7 +13,7 @@ import { slide as Menu } from 'react-burger-menu'
 //onclick={closeNav()}
 
 const barStyle240 = {
-  width: "240px",
+  width: "260px",
 };
 
 const barStyle0 = {
@@ -67,7 +67,7 @@ export default function Header() {
 		
 		<Sidebar class = "hambo"/>
 		
-		<div  class = "header-logo"> <img width="90%" height = "60" src={logo} alt="Logo"/> </div>
+		<div  class = "header-logo" ><a href ='/wnba'> <img width="90%" height = "60" src={logo} alt="Logo"/> </a></div>
 		
 		
 		
