@@ -228,11 +228,14 @@ Link{
 	
 	//position:relative;
 	//position:absolute;
-	display: flex;/*also seems to cntribute to no space between divs*/
+	
+	//display: flex;/*also seems to cntribute to no space between divs*/
 	
 	
 	font-family:LegionFont; /*Shrikhand*/
 	
+	
+	padding:0px;
 	
 	width:100%;
 	top:0px;

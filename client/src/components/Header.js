@@ -2,11 +2,51 @@ import {Link} from 'react-router-dom'
 //import logo from '../icons/stacked-sports-logo-with-words.png';
 import logo from '../icons/stackem-with-text-mid.png';
 
+import hambo from '../icons/hamburger-icon.webp';
+
 import {useState, useEffect} from 'react'
 import Axios from 'axios'
 
 import { slide as Menu } from 'react-burger-menu'
 
+
+//onclick={closeNav()}
+
+const barStyle240 = {
+  width: "240px",
+};
+
+const barStyle0 = {
+  width: "0px",
+};
+
+var barStyle = barStyle240;
+
+const Sidebar =(props) =>{
+	
+	
+	const [sideSize, setSideSize] = useState(barStyle0);
+	//style={CardStyle}
+     //   onClick={() => setIsFlipped((prev) => !prev)}
+	return <>
+		<div class = "hambo"> <img src={hambo}  width="40" height="40" onClick={()=> setSideSize(barStyle240)}/></div>
+		<div id="mySidenav" class="sidenav" style={sideSize}>
+			<button class="closebtn" onClick={()=> setSideSize(barStyle0)}>&times;</button>
+			  <a href="/about">About Us</a>
+			  <a href="/sports-available">Sports Available</a>
+			  <a href="/contact-us">Contact Us/ Request A Player</a>
+			</div>
+			
+			
+	
+	</>
+	
+	
+	
+	
+	
+	
+}
 			
 export default function Header() {
 	//<Link to = "/" className = "site-title">PICKS.COM</Link>
@@ -18,11 +58,17 @@ export default function Header() {
 			//.
 	}*/
 	
+	
+	
 	return <div className="header">
 		
 		
 		
-		<img src={logo} alt="Logo"/>
+		
+		<Sidebar class = "hambo"/>
+		
+		<div  class = "header-logo"> <img width="90%" height = "60" src={logo} alt="Logo"/> </div>
+		
 		
 		
 		
