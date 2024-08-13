@@ -166,7 +166,7 @@ function App() {
 				<Navbar/>
 			    
 				<Routes>
-				<Route path ="/" element = {<SportsAvailable />} />
+				<Route path ="/" element = {<WNBA />} />
 				</Routes>
 				<Routes>
 					
