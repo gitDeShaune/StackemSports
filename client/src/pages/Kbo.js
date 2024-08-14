@@ -254,7 +254,7 @@ export default function KBO(){
 			
 			
 				<div class = "grid-holder" style={{ flex: '1 1 auto' }}>
-				<AutoSizer disableHeight class = "grid-holder">
+				<AutoSizer disableHeight class = "grid-holder" style = {gridStyle}>
 				{({width }) => (
 				
 					<FixedSizeGrid 
