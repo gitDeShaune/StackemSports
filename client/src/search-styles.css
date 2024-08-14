@@ -3,7 +3,7 @@
 
 .search-container{
 	//background:blue;
-	background:#aeb5fe; /*purple, formerly lightgreen*/
+	background:var(--container-color); /*purple, formerly lightgreen*/
 	
 	width:100%;
 	height:50px;
@@ -81,7 +81,7 @@
 	
 	height:100%;
 	
-	background-color:#aeb5fe; /*purple, formerly lightgreen*/
+	background-color:var(--container-color); /*purple, formerly lightgreen*/
 }
 
 

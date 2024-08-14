@@ -67,7 +67,7 @@ footer .form-control {
 .footer-container{
 	
 	border-width:0px;
-	background-color:#aeb5fe; /*purple, formerly lightgreen*/
+	background-color:var(--container-color); /*purple, formerly lightgreen*/
 	justify-content:center;
 	
 }

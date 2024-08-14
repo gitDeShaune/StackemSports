@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:root{
+	--container-color: #aeb5fe;/**/
+		
+}
 /*html{
 	
 	min-height:100%;
@@ -93,7 +97,7 @@ body .container {
   //padding: 10px; /* 10px padding */
   //border: 2px solid red;
   //background-clip: content-box; /* <---- */
-  box-shadow: inset 0 0 0 28px #aeb5fe; /*purple, formerly lightgreen*/ 
+  box-shadow: inset 0 0 0 28px var(--container-color); /*purple, formerly lightgreen*/ 
   //border-style:solid;
   //border-left:3px;
   //border-right:3px;
@@ -169,7 +173,7 @@ grid-template-columns: repeat(2, 1fr);
 	//top:0.3rem;
 	
 	
-	background-color:#aeb5fe; /*purple, formerly lightgreen*/
+	background-color:var(--container-color); /*purple, formerly lightgreen*/
 	
 	
 	
@@ -209,8 +213,8 @@ grid-template-columns: repeat(2, 1fr);
 }
 
 hr{
-	background-color:#aeb5fe; /*purple, formerly lightgreen*/
-	//border-color:#aeb5fe; /*purple, formerly lightgreen*/
+	background-color:var(--container-color); /*purple, formerly lightgreen*/
+	//border-color:var(--container-color); /*purple, formerly lightgreen*/
 }
 
 

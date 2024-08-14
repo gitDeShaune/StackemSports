@@ -14,7 +14,7 @@ flex-wrap:wrap;
 justify-content:center;/*justified;*/
 margin:auto;
 height:auto;
-background-color:#aeb5fe; /*purple, formerly lightgreen*/
+background-color:var(--container-color); /*purple, formerly lightgreen*/
 object-fit:contain;
 
 }

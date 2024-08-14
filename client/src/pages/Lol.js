@@ -129,7 +129,7 @@ export default function LOL(){
 	  
 	};
 	const computerStyle = {
-	  marginLeft: "2%",
+	  marginLeft: "4%",
 	  
 	};
 	
@@ -204,7 +204,7 @@ export default function LOL(){
 		
 		<nav class="stat-search-n-nav">
 		
-			<h1 class="page-header"> League off Legends </h1>
+			<h1 class="page-header"> League of Legends </h1>
 			
 			<div name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'kills' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Kills </button>
