@@ -119,17 +119,33 @@ export default function KBO(){
 	
 	let grid_col_count = 5;
 	
+	var gridStyle;
+	
+	const phoneStyle = {
+	  marginLeft: "16%",
+	  
+	};
+	const computerStyle = {
+	  marginLeft: "2%",
+	  
+	};
+	
+	
 	if(window.matchMedia("(pointer: coarse)").matches) {
 		// touchscreen is main input (ie.phone?)
 		user_limit_nba = 25; //5 is # of categories
 		grid_row_count = 1;//2 might be posible
 		grid_col_count = 25;
 		
+		gridStyle = phoneStyle;
+		
 	}else{
 		console.log("NOT TOUCHSCREEN");
 		grid_col_count = 5;
 		grid_row_count = 5;
 		user_limit_nba = 25; 
+		
+		gridStyle = computerStyle;
 	}
 	
 

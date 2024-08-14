@@ -111,6 +111,21 @@ table{
   
 }
 
+
+.stat-table tr:first-child {
+	font-size:0.9em;
+  width: 10em;
+  //background-color:blue;
+  min-width: 10%;/*changed from 6em to 4em, after LOL issues*/
+  //max-width: 14em;
+  //word-break: break-all;/*idk what this does, but keep it*/
+  border-right:dotted 1px black;
+  //text-align: left;
+  left:2px;
+  
+}
+
+
 .stat-table th{
 	border-right:solid;
 	border-style:solid;
@@ -121,6 +136,12 @@ table{
 	border-right: solid 1px black; 
   border-left: solid 1px black;
 	//justify-content:center;
+	
+}
+
+.td-year{
+	
+	color:red;
 	
 }
 

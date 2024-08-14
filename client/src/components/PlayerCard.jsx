@@ -96,7 +96,7 @@ const CustomXAxisTick = ({ x, y, payload }: any) => {
 
 
 
-function makeGraph(graph_data,max,stats){
+function makeGraph(graph_data,max,stats, league){
 	//stats(ie. lfg_stats) is a parameter because I was probably comparing it/using it separately in the previous version of this, before adding opp labels
 	//don't let stat confuse, in dataKey = "xxx", xxx is the name of the data category in graph_data, ie. xxx: ###
 	
@@ -121,28 +121,35 @@ function makeGraph(graph_data,max,stats){
 	
 	// <XAxis xAxisId={1}  dataKey="date" >
 	
+	let ht = 20;
+	if (league == "LOL"){
+		ht = 45;
+	}else{
+		ht = 20;
+	}
+	
 	let graph = (
 	<div >
 				<div style={{ textAlign: "center" }}>
 				  
 				  <div className="graph">
 				  
-<ResponsiveContainer  width="99%" width = {240 }  aspect = {1.2} height={100} >
+<ResponsiveContainer  width="99%" width = {255 }  aspect = {1.2} height={100} >
 					
 					<BarChart 
 					  width={800} 
 					  height={250} 
 					  data={graph_data} 
-					  margin={{ top: 15, right: 10, left: 10, bottom: 5 }}
+					  margin={{ top: 15, right: 10, left: 0, bottom: 5 }}
 					  barSize={10}
 					  
 					>
 					  <CartesianGrid strokeDasharray="3 3" />
 					 
-					  <XAxis xAxisId={0}    tick={<CustomXAxisTick/>} interval = {0} dataKey="opp" >
+					  <XAxis xAxisId={0}  width={5} height ={ht} tick={<CustomXAxisTick/>} interval = {0} dataKey="opp" >
 						
 					  </XAxis>
-					  <XAxis xAxisId={1}  dataKey="date" >
+					  <XAxis xAxisId={1}    dataKey="date" >
 						
 					  </XAxis >
 					  
@@ -155,7 +162,7 @@ function makeGraph(graph_data,max,stats){
 				  </div>
 				</div>
 	</div>)
-	
+	//margin={{ top: 15, right: 10, left: 10, bottom: 5 }}
 	/*need x-axis id to have multiple ones;  https://github.com/recharts/recharts/issues/1732*/
 	/*either add opps to graph_data creation or just add it separately in this makeGraph function, to get the x-axis label names to show */
 	return graph;
@@ -870,7 +877,7 @@ const PlayerCard = ( props) => {
 		  
 		  <div className="cardLabel back-stat-title">{fullProp(prop_title)}</div>
 		  <div className="table-and-graph">
-			  <div>{makeGraph(graph_data,max,lfg_stats)}</div>
+			  <div>{makeGraph(graph_data,max,lfg_stats,league)}</div>
 			  
 		  </div>  
 		  

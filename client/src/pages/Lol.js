@@ -122,7 +122,16 @@ export default function LOL(){
 	
 	}
 
+	var gridStyle;
 	
+	const phoneStyle = {
+	  marginLeft: "16%",
+	  
+	};
+	const computerStyle = {
+	  marginLeft: "2%",
+	  
+	};
 	
 	
 	let user_limit_nba = 50;//5 * 5 //user_limit should be # of players x max available stats by a player
@@ -137,11 +146,15 @@ export default function LOL(){
 		grid_row_count = 1;//2 might be posible
 		grid_col_count = 25;
 		
+		gridStyle = phoneStyle;
+		
 	}else{
 		console.log("NOT TOUCHSCREEN");
 		grid_col_count = 5;
 		grid_row_count = 5;
 		user_limit_nba = 25; 
+		
+		gridStyle = computerStyle;
 	}
 	
 
@@ -181,6 +194,7 @@ export default function LOL(){
 	*/
 	
 	
+	
 	//var height = 1000;
 	//var width = 500;
 					
@@ -190,7 +204,7 @@ export default function LOL(){
 		
 		<nav class="stat-search-n-nav">
 		
-			<h1 class="page-header"> League of Legends </h1>
+			<h1 class="page-header"> League off Legends </h1>
 			
 			<div name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'kills' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Kills </button>
@@ -267,7 +281,7 @@ export default function LOL(){
 			
 			
 				<div class = "grid-holder" style={{ flex: '1 1 auto' }}>
-				<AutoSizer disableHeight class = "grid-holder">
+				<AutoSizer disableHeight class = "grid-holder" style = {gridStyle}>
 				{({width }) => (
 				
 					<FixedSizeGrid 
