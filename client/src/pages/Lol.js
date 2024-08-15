@@ -48,6 +48,8 @@ import $ from 'jquery';
 import {FixedSizeList, FixedSizeGrid} from 'react-window';// as List as List
 import AutoSizer from "react-virtualized-auto-sizer";
 
+import srch from '../icons/search-icon.png';
+
 
 
 
@@ -232,6 +234,7 @@ export default function LOL(){
 			
 					<div class = "search">
 						<span class="search-icon material-symbols-outlined"></span>
+						<img src={srch}  width = "20px"/>
 						<input class="search-input" type="search" placeholder="Search for player" onChange={(e)=> setSearch(e.target.value)}/>
 					</div>
 			

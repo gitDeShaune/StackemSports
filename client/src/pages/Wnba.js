@@ -47,6 +47,8 @@ import $ from 'jquery';
 import {FixedSizeList, FixedSizeGrid} from 'react-window';// as List as List
 import AutoSizer from "react-virtualized-auto-sizer";
 
+import srch from '../icons/search-icon.png';
+
 
 
 
@@ -187,7 +189,9 @@ export default function WNBA(){
 			<form>
 			
 					<div class = "search">
+						<img src={srch}  width = "20px"/>
 						<span class="search-icon material-symbols-outlined"></span>
+						
 						<input class="search-input" type="search" placeholder="Search for player" onChange={(e)=> setSearch(e.target.value)}/>
 					</div>
 			
