@@ -83,6 +83,8 @@ body {
   background-image: url(/src/icons/stackem-logo-pattern.jpg);
   //background-repeat: repeat;
   
+  scrollbar-color: darkblue var(--container-color);
+  
   
   
 }
