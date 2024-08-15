@@ -26,9 +26,14 @@
 	height:34px;
 	padding: var(--padding);
 	border-radius: 10px;
-	background: white;
+	
+	border-color:blue;
+	background: white;/*darkblue;/*white;*/
+	opacity:0.40;
 	//background:red;
 }
+
+
 
 .search-icon{
 	background-image:url(/src/icons/search-icon.png);
