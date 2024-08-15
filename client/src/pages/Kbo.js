@@ -184,7 +184,7 @@ export default function KBO(){
 		
 		
 		<div class="stat-search-n-nav">
-		
+			<br/>
 			<h1 class="page-header"> KBO </h1>
 			
 				

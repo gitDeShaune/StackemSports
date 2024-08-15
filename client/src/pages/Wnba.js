@@ -170,7 +170,7 @@ export default function WNBA(){
 
 		
 		<div class="stat-search-n-nav">
-			
+			<br/>
 			<h1 class="page-header"> WNBA </h1>
 			<div name = 'basketball-stat-gallery' class="stat-nav"  >
 				<button name = 'points' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Points </button>

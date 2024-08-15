@@ -3,7 +3,7 @@
 }
 
 :root{
-	--container-color: #aeb5fe;/**/
+	--container-color: #0384f6;/*#aeb5fe;/**/
 		
 }
 /*html{
@@ -82,6 +82,8 @@ body {
   
   background-image: url(/src/icons/stackem-logo-pattern.jpg);
   background-repeat: repeat;
+  
+  
 }
 
 body .container {

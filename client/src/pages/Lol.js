@@ -203,7 +203,7 @@ export default function LOL(){
 		
 		
 		<nav class="stat-search-n-nav">
-		
+			<br/>
 			<h1 class="page-header"> League of Legends </h1>
 			
 			<div name = 'basketball-stat-gallery' class="stat-nav"  >
