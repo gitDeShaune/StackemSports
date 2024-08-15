@@ -174,8 +174,11 @@ export default function KBO(){
 		</div>
 	
 	)
-					
-	return(<div >
+		
+
+	
+	
+	return(<div class = "grid-fill" >
 	
 
 		

@@ -198,7 +198,7 @@ export default function LOL(){
 	//var height = 1000;
 	//var width = 500;
 					
-	return(<div>
+	return(<div class = "grid-fill">
 	
 		
 		

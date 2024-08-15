@@ -130,7 +130,7 @@ body .container {
 
   //background-color:lightblue;
   //background-color:#F0FFFF;
-  background-color:white;/*white background*//*the background behind react-flip-container and above*/
+  background-color:var(--container-color); /*white;/*white background*//*the background behind react-flip-container and above*/
   
   
   /*need to find a way to get the checkered just in card box, not full container, will probably need solution not in this class */

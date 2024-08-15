@@ -180,7 +180,7 @@ export default function NBA(){
 	
 	)
 					
-	return(<div>
+	return(<div  class = "grid-fill">
 	
 		
 		
