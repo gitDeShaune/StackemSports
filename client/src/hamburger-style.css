@@ -16,7 +16,7 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: yellow;/*#818181;*/
+  color: var(--yellow);/*#818181;*/
   display: block;
   transition: 0.3s;
   
@@ -38,7 +38,7 @@
   right: 20px;
   font-size: 36px;
   
-  color:yellow;
+  color:var(--yellow);
   
   
   

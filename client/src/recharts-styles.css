@@ -36,7 +36,7 @@
 
 ResponsiveContainer{
 	
-	background-color:blue;
+	background-color:var(--blue);
 	z-index:3;
 	//width:100%;
 	width:80%;

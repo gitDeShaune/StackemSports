@@ -22,7 +22,7 @@
 .page-header{
 	font-family:LegionFont; 
 	letter-spacing:0.4em;
-	color:darkblue;
+	color:darkvar(--blue);
 }
 
 /*contact us*/

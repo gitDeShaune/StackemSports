@@ -89,7 +89,7 @@ th{
 .player-season-stats{
 	
 	display:block;
-	max-width:100%;
+	width:100%;
 	//position:absolute;
 	
 	
@@ -121,7 +121,7 @@ th{
 	//height:50%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	background:skyblue;
+	background:skyvar(--blue);
 	
 	
 }
@@ -135,7 +135,7 @@ th{
 .back-card{
 	
 	transform: rotateY(180deg);
-	background-color: light-blue;
+	background-color: light-var(--blue);
 }
 
 /*.front-card{
@@ -218,7 +218,7 @@ th{
 	height:100%;
 	border-style:solid; 
 	border-width:20px;
-	//border-color:blue;
+	//border-color:var(--blue);
 	
 	//position:absolute;
 	//margin:auto;
@@ -303,7 +303,7 @@ th{
 	
 	font-family: LegionFont; /*Shrikhand*/
 	
-	//background-color:lightblue;
+	//background-color:lightvar(--blue);
 	
 	min-width:300px;
 	//min-height:300px;
@@ -346,7 +346,7 @@ th{
 
 .react-card-flip{
 	//perspective:none;
-	//color:blue;
+	//color:var(--blue);
 	//transition: transform 500ms ease-in-out;
 	//z-index:auto;
 	//height: 100px;
@@ -534,7 +534,7 @@ th{
 	
 	
 	//border-style:solid;
-	//border-color:blue;
+	//border-color:var(--blue);
 	
 }
 
@@ -587,10 +587,10 @@ a{
 
 	
 	//background-color:orange;
-	background-color:blue;
+	background-color:var(--blue);
 	//color:black;
 	
-	color:yellow;
+	color:var(--yellow);
 	
 	width:100%;
 	bottom:0;
@@ -678,9 +678,9 @@ a{
 	
 	border-width:6px;
 	//border-color:red;
-	border-color:blue;
+	border-color:var(--blue);
 	//border-top:12px;
-	//border-top-color:blue;
+	//border-top-color:var(--blue);
 	border-style:solid;
 	margin:0;
 	padding:0;
@@ -707,9 +707,9 @@ a{
 	font-family: LegionFont; /*Shrikhand*/
 	font-size:0.74rem;
 	color:white;
-	background-color:blue;
+	background-color:var(--blue);
 	//border-color:#001acd;
-	border-color:blue;
+	border-color:var(--blue);
 	
 	
 }

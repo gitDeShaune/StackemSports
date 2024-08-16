@@ -40,16 +40,17 @@ table{
 }
 
 
-.table-containers{
+.table-container{
 	
 	
 	/*rounded corner*/
-	border-style:solid;
+	//border-style:solid;
 	//background-color:grey;
-	//width:62.5%;/*kepth the color of thead aligned with chart*/
-	max-width:100%;
+	width:100%;/*kepth the color of thead aligned with chart*/
+	//max-width:100%;
 	//margin:auto;
 	z-index:3;
+	
 	
 	bottom:0;
 	//font-family: Impact, fantasy;/*only effects before table break*/
@@ -59,7 +60,7 @@ table{
 
 .table-break{
 	
-	background-color:blue;
+	background-color:var(--blue);
 	width:565%;
 	height:10px;
 	margin-right:auto;
@@ -73,7 +74,7 @@ table{
 /*.stat-table th{ /*first child css for width might be better, but more costly so doing a class instead
 	border-right:solid;
 	border-style:solid;
-	border-color:blue;
+	border-color:var(--blue);
 	
 	border-right: solid 1px black; 
   border-left: solid 1px black;
@@ -101,11 +102,11 @@ table{
 
 .stat-table tbody:first-child {
   width: 8em;
-  background-color:blue;
+  background-color:var(--blue);
   //min-width: 6em;/*changed from 6em to 4em, after LOL issues*/
   max-width: 14em;
   //word-break: break-all;/*idk what this does, but keep it*/
-  border-right:dotted 1px black;
+  //border-right:none 1px black;
   //text-align: left;
   left:2px;
   
@@ -115,11 +116,11 @@ table{
 .stat-table tr:first-child {
 	font-size:0.9em;
   width: 10em;
-  //background-color:blue;
+  //background-color:var(--blue);
   min-width: 10%;/*changed from 6em to 4em, after LOL issues*/
   //max-width: 14em;
   //word-break: break-all;/*idk what this does, but keep it*/
-  border-right:dotted 1px black;
+  //border-right:dotted 1px black;
   //text-align: left;
   left:2px;
   
@@ -129,9 +130,9 @@ table{
 .stat-table th{
 	border-right:solid;
 	border-style:solid;
-	border-color:blue;
+	border-color:var(--blue);
 	color:white;
-	background-color:blue;
+	background-color:var(--blue);
 	
 	border-right: solid 1px black; 
   border-left: solid 1px black;
@@ -148,7 +149,7 @@ table{
 .stat-table{
 	font-size:.6rem;
 	background-color:lightgrey;
-	//width:100%;
+	width:100%;
 	//border-collapse:collapse;
 }
 .graph{

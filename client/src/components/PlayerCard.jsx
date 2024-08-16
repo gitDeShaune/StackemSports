@@ -65,7 +65,7 @@ const CardStyle = {
 //..maybe something to do with backface visibility
 
 
-const barColor = "yellow";
+const barColor = "var(--yellow)";
 
 
 

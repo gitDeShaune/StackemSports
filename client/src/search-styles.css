@@ -2,7 +2,7 @@
 
 
 .search-container{
-	//background:blue;
+	//background:var(--blue);
 	background:var(--container-color); /*purple, formerly lightgreen*/
 	
 	width:100%;
@@ -29,7 +29,7 @@
 	
 	
 	
-	background: white;/*darkblue;/*white;*/
+	background: white;/*darkvar(--blue);/*white;*/
 	opacity:0.60;
 	//background:red;
 }

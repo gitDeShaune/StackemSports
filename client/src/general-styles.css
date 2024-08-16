@@ -4,6 +4,8 @@
 
 :root{
 	--container-color: #6fbcff;/*#6fbcff; /*0384f6;/*#aeb5fe;/**/
+	--yellow: yellow;
+	--blue: darkblue;
 		
 }
 /*html{
@@ -31,7 +33,7 @@
 hr{
 	
 	size: 50%;
-	color:blue;
+	color:var(--blue);
 	border-top: 1px solid red;
 }
 
@@ -42,7 +44,7 @@ br .card-br{
 
 
 #colored-div{/*website background */
-	//background-color: lightblue;
+	//background-color: lightvar(--blue);
 	 //background-image: url(/src/icons/orange-gradient.JPG);
 	 //background-image: url(/src/icons/image.jpg);
 	 //background-image: url(/src/icons/pokemon-checkered.jpg);
@@ -72,7 +74,7 @@ body {
   //margin: 0;
   
   //background-color: #DBF9FC;
-  //background-color: blue;
+  //background-color: var(--blue);
   min-height:100vh;
   height:100%;
   
@@ -142,7 +144,7 @@ body .container {
   
   //background-image: url(/src/icons/pokemon-checkered.jpg);
 
-  //background-color:lightblue;
+  //background-color:lightvar(--blue);
   //background-color:#F0FFFF;
   background-color:var(--container-color); /*white;/*white background*//*the background behind react-flip-container and above*/
   
@@ -238,7 +240,7 @@ Link{
 }
 
 .header{
-	background-color: blue;
+	background-color: var(--blue);
 	margin:0;
 	
 	//height:120px;
@@ -270,7 +272,7 @@ Link{
 .footer{
 	/*issue here, too long*/
 	background-color: grey;
-  color: blue;/*just seems to affect text and bullet color*/
+  color: var(--blue);/*just seems to affect text and bullet color*/
   display: flex;
   //display:block;
   justify-content: space-between;
