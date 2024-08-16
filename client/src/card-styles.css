@@ -200,20 +200,27 @@ border-bottom-left-radius:15px;
 }
 
 
+.CardFront{
+	//background-image: url(/src/icons/purple-blue-gradient.jpg);
+	
+	
+}
+
 .card-frame{
 	
-	font-family: LegionFont; /*Shrikhand*/
+	//font-family: LegionFont; /*Shrikhand*/
 position:absolute;
 top:0;
 overflow:visible;
  height:100%;
  
  width:100%;
- background-color:red;
+ //background-color:red;
  //background-color:black;
  
  
- 
+
+ //background-image: url(/src/icons/pokemon-checkered.jpg);
  //background-image: url(/src/icons/purple-blue-gradient.jpg);
  //background-image: url(/src/icons/orange-gradient.JPG);
  background-image: url(/src/icons/blue-white-gradient.jpg);
