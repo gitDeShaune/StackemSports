@@ -269,7 +269,7 @@ export default function NBA(){
 						columnWidth={228}
 						height={1580}
 						rowCount={grid_col_count+1}
-						rowHeight={300}
+						rowHeight={320}
 						width={1200}
 						
 					
