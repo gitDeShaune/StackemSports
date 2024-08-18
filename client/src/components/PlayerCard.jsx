@@ -795,24 +795,19 @@ const PlayerCard = ( props) => {
 			
 			
 			<>
-				<div class = "stat-square ss-hi" >
-						<div class = "ss-stat">{find_MAX(lfg_stats)}</div>
-						<div class="ss-title">MAX </div>
-						
-				</div>
+				
 				
 				<div class = "stat-square ss-avg">
+						<div class="ss-title">AVERAGE </div>
 						<div class = "ss-stat">{find_AVG(lfg_stats)}</div>
-						<div class="ss-title">AVG </div>
+						
+						
+						
 						
 				</div>	
 				
 				
-				<div class = "stat-square ss-lo" >
-						<div class = "ss-stat">{find_MIN(lfg_stats)}</div>
-						<div class="ss-title">MIN </div>
-						
-				</div>
+				
 			</>	
 			
 		</div>
@@ -901,6 +896,22 @@ export default PlayerCard;
 //https://codesandbox.io/s/react-new --work on online/remotely
 ////float:left/right changed the game and made me able to put divs side by side
 
+
+/*
+<div class = "stat-square ss-lo" >
+						<div class = "ss-stat">{find_MIN(lfg_stats)}</div>
+						<div class="ss-title">MIN </div>
+						
+				</div>
+
+
+<div class = "stat-square ss-hi" >
+						<div class = "ss-stat">{find_MAX(lfg_stats)}</div>
+						<div class="ss-title">MAX </div>
+						
+				</div>
+				
+*/
 
 /*
 

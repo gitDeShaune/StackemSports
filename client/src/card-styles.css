@@ -56,7 +56,12 @@
 
 .ss-title{
 	//background-color:#66FF99;
-	background-color:#ADD8E6;
+	//background-color:#ADD8E6;
+	background-color:darkblue;
+	color: var(--yellow);
+	letter-spacing: 0.15em;
+	
+	
 	height:10%;
 	width:100%;
 	position:relative;
@@ -67,6 +72,11 @@
 	
 }
 .ss-stat{
+	
+	//font-family:Times New Roman;
+	//color:darkblue;
+	
+	
 	//background-color:grey;
 	//color:dark-grey;
 	background-color:white;
@@ -286,15 +296,19 @@ background-size: cover;
 	//height:3em;
 	//width:30%;
 	
+	//border-width:yellow;
+	
 	
 	height:20%;
-	width:22%;
-	border-radius: 45%;/*the value is subject to change when resizing other parts of the card*/
+	width:58%;
+	//border-radius: 40%;/*the value is subject to change when resizing other parts of the card*/
 	/*^ was 35% bf grouping the circle elements*/
 	
 	
+	border-color:darkblue;
+	
 	/*i want this to look like a ball/circle consistently. The size keeps changing*/
-	overflow:hidden;
+	//overflow:hidden;
 	
 	/*^circle effecting elements*/
 	
@@ -308,7 +322,7 @@ background-size: cover;
 	//width:35px;
 	//padding-bottom:20%;
 	
-	//background-color:green;
+	background-color:white;/*green;*/
 	
 	//margin:auto;
 	//display:inline-block;
@@ -350,9 +364,13 @@ background-size: cover;
 	//margin-left:30%;
 	//margin-left:2%;/*for vertical stack*/
 	//z-index:2;
-	//margin-left:10%;
+	margin-left:15%;
 	
-	margin-right:15px;
+	//margin-right:15px;
+	
+	border:solid;
+	border-width:2px;
+	border-color:darkblue;
 	
 
 }
