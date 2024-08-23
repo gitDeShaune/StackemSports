@@ -233,7 +233,7 @@ border-bottom-left-radius:15px;
 
 .CardFront{
 	//background-image: url(/src/icons/purple-blue-gradient.jpg);
-	background-image: url(/src/icons/copia-card.png);
+	background-image: url(/src/icons/copia-card.webp);
 	
 	
 }
@@ -382,7 +382,7 @@ background-size: cover;
 	//margin-left:30%;
 	//margin-left:2%;/*for vertical stack*/
 	//z-index:2;
-	margin-left:8%;
+	margin-left:12%;
 	
 	
 	//margin-right:15px;
@@ -434,11 +434,12 @@ background-size: cover;
 	//height:10%;
 	
 	//height:auto;
-	
+	//padding-right:-2px;
 	
 	/*^imported from name pp*/
 	//object-fit:cover;
 	
+	left:1px;
 	
 	z-index:2;
 
@@ -481,10 +482,25 @@ background-size: cover;
 	 
 	
 	//border-bottom-right-radius:15px;/*round corner of box*/
-	border-bottom-left-radius:12px;
+	border-bottom-left-radius:9px;
 	//text-align:right;
 }
 
+
+.stk-svg{
+	
+  //width: 30px;
+  //text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-left:67%;
+  margin-bottom: 20px;
+  bottom:-3.5%;
+  position:absolute;
+  
+	
+	
+}
 
 
 .league-idol{

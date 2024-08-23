@@ -5,6 +5,7 @@ import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 //import RatingBox from "./ratingBox";
 
+import stk from '../icons/stackem-square.svg';
 
 
 
@@ -809,6 +810,8 @@ const PlayerCard = ( props) => {
 				<div className="cardLabel front-stat-title disclaimer">
 					<p class = "stat-disclaimer">*Based on last 5 games*</p>
 				</div>
+				
+				<img class = "stk-svg" src = {stk} width = "35"/>
 				
 				
 				
