@@ -4,7 +4,7 @@ import nba from '../icons/nba-logo.webp';
 import wnba from '../icons/wnba-logo.jpg';
 import kbo from '../icons/kbo-logo.jpg'
 import b3 from '../icons/big3-logo.jpg'
-import cba from '../icons/cba-logo.jpeg'
+import pba from '../icons/pba-logo.webp'
 import lol from '../icons/lol-logo.webp'
 
 
@@ -29,7 +29,7 @@ export default function SportsAvailable(){
 		  <a ><img class="available" src={nba} height = '85%' width = '80%'/></a>
 		  <a href = '/wnba'><img class="available"  src={wnba} height = '85%' width = '80%' /></a>
 		  <a href = '/big3'><img class="available" src={b3 } height = '85%' width = '80%'/></a>
-		  <a> <img class="available" src={cba} height = '85%' width = '80%'/></a>
+		  <a> <img class="available" src={pba} height = '85%' width = '80%'/></a>
 		</div>
 		<br/>
 		<h2> ESPORTS </h2>

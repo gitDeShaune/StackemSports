@@ -755,7 +755,7 @@ const PlayerCard = ( props) => {
   //removed from first first div  style={CardStyle}
   
   
- 
+  /*no longer stat-square in with ss-avg*/
   
   
   return (
@@ -791,10 +791,10 @@ const PlayerCard = ( props) => {
 		
 		<div class = "ss-stat-div">
 			<img class = "league-idol" fetchpriority="high" src = {getIMG(league)} width="140" height="150"/>
-			<div className="cardLabel front-stat-title">{fullProp(prop_title)} <p class = "stat-disclaimer">*Based on last 5 games*</p></div>
+			<div className="cardLabel front-stat-title prop-title">{fullProp(prop_title)} </div>
 			
 			
-			<>
+			
 				
 				
 				<div class = "stat-square ss-avg">
@@ -806,9 +806,15 @@ const PlayerCard = ( props) => {
 						
 				</div>	
 				
+				<div className="cardLabel front-stat-title disclaimer">
+					<p class = "stat-disclaimer">*Based on last 5 games*</p>
+				</div>
 				
 				
-			</>	
+				
+				
+			
+			
 			
 		</div>
 			
