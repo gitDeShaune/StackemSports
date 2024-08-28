@@ -13,7 +13,7 @@
 	<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 	<link rel="canonical" href="https://stackemsports.com/wnba" />
 
-	<meta property="og:site_name" content="Stack'em Sports" />
+	<meta property= "og:site_name" content="Stack'em Sports" />
 	
 	
     <!--<meta name="viewport" content="width=device-width, initial-scale=1" /> under this is for landscape portrait issue-->
@@ -24,7 +24,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Stack'em Sports gives you recent player data from all of your favorite sports: basketball(WNBA, NBA, BIG3), baseball(MLB, KBO), and esports(League of Legends)."
+      content="Stack'em Sports is home to all player data from all of your favorite sports: basketball(WNBA, NBA, BIG3), baseball(MLB, KBO), and esports(League of Legends)."
     />
 	
 	<!--<link rel="apple-touch-icon" href="%PUBLIC_URL%/stackem-logo-256x256.png" /> -->
@@ -44,6 +44,16 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Stack'em Sports | We Stack'em, You Pick'em</title>
+	
+	<script type="application/ld+json">
+		{
+		  "@context" : "https://schema.org",
+		  "@type" : "WebSite",
+		  "name" : "Stack'em Sports",
+		  "url" : "https://stackemsports.com/"
+		}
+   </script>
+  
   </head>
   <body>
   
@@ -58,6 +68,7 @@
 	
 	</script>
     <div id="root"></div>
+	<meta itemprop="name" content="Stack'em Sports"/>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
