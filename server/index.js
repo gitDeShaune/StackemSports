@@ -11,6 +11,8 @@ const nhlModel = require('./models/NHL-model')
 const kboModel = require('./models/KBO-model')
 const lolModel = require('./models/LOL-model')
 const commentModel = require('./models/commentModel')
+const ufcModel = require('./models/ufcModel')
+
 
 
 
@@ -140,6 +142,28 @@ app.get("/api/players/mlb", function (req, res){
 
 
 /*------------------------------------------------------------*/
+
+async function getStatsUFC(){
+	
+	const Stats = await ufcModel.find({});
+	
+	//prop_title: 'rebs'
+	
+	
+	return Stats;
+	
+
+}
+
+app.get("/api/stats/ufc", function (req, res){
+	
+	getStatsUFC().then(function(FoundStats){
+		res.json(FoundStats)
+		
+	})
+	
+	
+})
 
 async function getStatsLOL(){
 	

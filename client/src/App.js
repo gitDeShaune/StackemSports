@@ -99,6 +99,8 @@ const NHL = lazy(() => import('./pages/Nhl'))
 const BIG3 = lazy(() => import('./pages/Big3'))
 const KBO = lazy(() => import('./pages/Kbo'))
 const LOL = lazy(() => import('./pages/Lol'))
+const UFC = lazy(() => import('./pages/UFC'))
+
 
 
 /*
@@ -178,6 +180,8 @@ function App() {
 					<Route path ="/wnba" element = {<WNBA />} />
 					<Route path ="/big3" element = {<BIG3 />} />
 					<Route path ="/lol" element = {<LOL />} />
+					<Route path ="/ufc" element = {<UFC />} />
+					
 					
 					
 					<Route path ="/about" element = {<About />} />
