@@ -66,7 +66,7 @@ export default function UFC(){
 	//console.log(search)
 	
 	//var category = ''
-	const [category,setCategory] = useState('sig. strikes landed')
+	const [category,setCategory] = useState('strikes(landed)')
 	const [usersByCategory, setUsersByCategory] = useState([])
 	
 	
@@ -175,8 +175,8 @@ export default function UFC(){
 			<br/>
 			<h1 class="page-header"> WNBA </h1>
 			<div name = 'basketball-stat-gallery' class="stat-nav"  >
-				<button name = 'sig. strikes landed' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Sig. Strikes Landed</button>
-				<button name = 'sig. strikes attempted' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Sig. Strikes Attempted </button>
+				<button name = 'strikes(landed)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Sig. Strikes Landed</button>
+				<button name = 'strikes(attempts)' class="stat-button" onClick={(e)=> setCategory(e.target.name)}> Sig. Strikes Attempted </button>
 				</div>
 			
 			

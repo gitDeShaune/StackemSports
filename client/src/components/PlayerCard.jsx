@@ -31,6 +31,7 @@ import { PieChart,
   import MLB_img from '../icons/shohei-3.webp';
   import LOL_img from '../icons/lee-sin-LOL.webp';
   import KBO_img from '../icons/kbo-guy.webp';
+  import UFC_img from '../icons/izzy-ufc.webp';
   
   
 function getIMG(league){
@@ -48,7 +49,8 @@ function getIMG(league){
 			return LOL_img;break;
 		case 'KBO':
 			return KBO_img;break;
-		
+		case 'UFC':
+			return UFC_img;break;
 	}
 	
 	return BIG3_img;
@@ -81,6 +83,23 @@ const CustomXAxisTick = ({ x, y, payload }: any) => {
             width={"12px"}
             x={x} 
             y={y} 
+            textAnchor="middle" 
+            verticalAnchor="start"
+        >{payload.value}</Text>
+      );
+    }
+    return null;
+};
+
+
+const CustomXAxisTick2 = ({ x, y, payload }: any) => {
+    if (payload && payload.value) {
+      return (
+        <Text
+            fontSize={"13px"}
+            width={"10px"}
+            x={x} 
+            y={y+16} 
             textAnchor="middle" 
             verticalAnchor="start"
         >{payload.value}</Text>
@@ -150,7 +169,7 @@ function makeGraph(graph_data,max,stats, league){
 					  <XAxis xAxisId={0}  width={5} height ={ht} tick={<CustomXAxisTick/>} interval = {0} dataKey="opp" >
 						
 					  </XAxis>
-					  <XAxis xAxisId={1}    dataKey="date" >
+					  <XAxis xAxisId={1}    dataKey="date"  tick={{ fill: 'black' }} tick={<CustomXAxisTick2/>} interval = {0} height ={ht+ 10} >
 						
 					  </XAxis >
 					  
@@ -449,7 +468,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		row_headers = (
 			<tr >
 					<th >yEAR</th>
-					<th >PROP</th>
+					<th >2024</th>
 					
 					
 			</tr>
@@ -459,8 +478,7 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 		
 		row_stats = (		
 			<tr>
-					<td >{2024}</td>
-					<td>WORDS</td>
+					
 									
 			</tr>				
 		)
@@ -900,8 +918,14 @@ const PlayerCard = ( props) => {
 		  
 		    <div class = "player-bio-element">Position: {position}  </div>
 			
-		 
-			<div class = "player-bio-element">Team: {team}</div>
+			
+			{team != name &&
+				<div class = "player-bio-element">Team: {team}</div>
+			  
+			
+			}
+			
+			
 		  
 		  
 		  <div className="cardLabel back-stat-title">{fullProp(prop_title)}</div>
