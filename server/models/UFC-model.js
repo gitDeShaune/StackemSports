@@ -9,7 +9,8 @@ const ufcSchema = new mongoose.Schema({
 	lfg_dates: {type: [String],required: true,},  
 	lfg_stats: {type: [Number],required: true,}, 
 	position: {type: String,required: true,},    
-	
+	last_season_stats: {type: [String],required: true,}, 
+	team:{ type: String, required: true},
 	});
 	
 	

@@ -444,6 +444,28 @@ function makeSeasonTable(last_ssn_stats,league,prop){/*NEED to include prop_titl
 	
 	
 	switch (league) {
+	   case "UFC":
+		size_array = [0,1,2,3,4,5,6];
+		row_headers = (
+			<tr >
+					<th >yEAR</th>
+					<th >PROP</th>
+					
+					
+			</tr>
+		
+		
+		)
+		
+		row_stats = (		
+			<tr>
+					<td >{2024}</td>
+					<td>WORDS</td>
+									
+			</tr>				
+		)
+		
+		break;
 	  case "LOL":
 		size_array = [0,1,2,3,4,5,6];
 		row_headers = (
@@ -723,6 +745,7 @@ const PlayerCard = ( props) => {
   //console.log("Displaying userData")
   //console.log(userData)
   
+  
   /*
   const {
 	 
@@ -876,6 +899,8 @@ const PlayerCard = ( props) => {
 		  <div className = "player-season-stats">{makeSeasonTable(last_season_stats,league,prop_title)}</div>
 		  
 		    <div class = "player-bio-element">Position: {position}  </div>
+			
+		 
 			<div class = "player-bio-element">Team: {team}</div>
 		  
 		  
