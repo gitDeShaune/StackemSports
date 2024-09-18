@@ -11,7 +11,7 @@ const nhlModel = require('./models/NHL-model')
 const kboModel = require('./models/KBO-model')
 const lolModel = require('./models/LOL-model')
 const commentModel = require('./models/commentModel')
-const ufcModel = require('./models/ufcModel')
+const ufcModel = require('./models/UFC-Model')
 
 
 

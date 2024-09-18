@@ -55,7 +55,7 @@ import srch from '../icons/search-icon.png';
 
 
 
-export default function WNBA(){
+export default function UFC(){
 	//<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	const [listOfUsers, setListOfUsers] = useState([ ])
 	
@@ -66,7 +66,7 @@ export default function WNBA(){
 	//console.log(search)
 	
 	//var category = ''
-	const [category,setCategory] = useState('points')
+	const [category,setCategory] = useState('sig. strikes landed')
 	const [usersByCategory, setUsersByCategory] = useState([])
 	
 	
